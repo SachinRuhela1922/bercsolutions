@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import {Link} from 'react-router-dom'
 import './Navbar.css';
 
 const Navbar = () => {
@@ -9,7 +10,7 @@ const Navbar = () => {
   const dropdownTimeoutRef = useRef(null);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
+    { name: 'Home', path: '/' },
     { name: 'About us', href: '#about' },
     { name: 'Infrastructure', href: '#infrastructure' },
     { 
@@ -99,7 +100,7 @@ const Navbar = () => {
           <a href="/">
             <div className="logo-content">
               <span className="logo-icon">⚡</span>
-              <span className="logo-text">Berc Solutions</span>
+              <span className="logo-text">Berc Group</span>
             </div>
           </a>
         </div>
@@ -112,10 +113,10 @@ const Navbar = () => {
               onMouseEnter={() => item.hasDropdown && handleDropdownEnter(index)}
               onMouseLeave={() => item.hasDropdown && handleDropdownLeave()}
             >
-              <a href={item.href} className="nav-link">
+              <Link to={item.path} className="nav-link">
                 {item.name}
                 {item.hasDropdown && <span className="dropdown-arrow">▼</span>}
-              </a>
+              </Link>
               
               {item.hasDropdown && openDropdown === index && (
                 <div className="dropdown-menu">
