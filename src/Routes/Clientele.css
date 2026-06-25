@@ -1,0 +1,479 @@
+/* ============================================
+   CLIENTELE PAGE - POWER SOLUTIONS
+   ============================================ */
+
+.clientele-page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1a1a2e;
+  background: #f8fafc;
+}
+
+.clientele-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.clientele-subtitle {
+  text-align: center;
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.clientele-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 5rem 0;
+  text-align: center;
+  color: white;
+}
+
+.clientele-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.clientele-hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* ============================================
+   STATS SECTION
+   ============================================ */
+.clientele-stats {
+  padding: 4rem 0;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.clientele-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  text-align: center;
+}
+
+.clientele-stat {
+  padding: 1rem;
+}
+
+.clientele-stat-number {
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 0.3rem;
+}
+
+.clientele-stat-label {
+  display: block;
+  font-size: 1rem;
+  color: #64748b;
+}
+
+/* ============================================
+   SECTIONS (Residential, Commercial, Industrial)
+   ============================================ */
+.clientele-residential,
+.clientele-commercial,
+.clientele-industrial {
+  padding: 4rem 0;
+}
+
+.clientele-residential {
+  background: white;
+}
+
+.clientele-commercial {
+  background: #f8fafc;
+}
+
+.clientele-industrial {
+  background: white;
+}
+
+.clientele-residential h2,
+.clientele-commercial h2,
+.clientele-industrial h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.clientele-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.clientele-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.clientele-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border-color: #f59e0b;
+}
+
+.clientele-card-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.clientele-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.clientele-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.clientele-card-tag {
+  display: inline-block;
+  padding: 0.2rem 1rem;
+  background: #fef3c7;
+  color: #d97706;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ============================================
+   TESTIMONIALS SECTION
+   ============================================ */
+.clientele-testimonials {
+  padding: 4rem 0;
+  background: #f8fafc;
+}
+
+.clientele-testimonials h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.clientele-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.clientele-testimonial {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.clientele-testimonial:hover {
+  border-color: #f59e0b;
+  transform: translateY(-3px);
+}
+
+.clientele-testimonial-rating {
+  color: #f59e0b;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.clientele-testimonial p {
+  color: #475569;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.clientele-testimonial-author strong {
+  display: block;
+  color: #1a1a2e;
+  margin-bottom: 0.2rem;
+}
+
+.clientele-testimonial-author span {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   BRANDS SECTION
+   ============================================ */
+.clientele-brands {
+  padding: 4rem 0;
+  background: white;
+}
+
+.clientele-brands h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.clientele-brands-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1.5rem;
+}
+
+.clientele-brand {
+  background: #f8fafc;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.clientele-brand:hover {
+  border-color: #f59e0b;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.clientele-brand span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.clientele-brand p {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1a1a2e;
+}
+
+/* ============================================
+   LOCATIONS SECTION
+   ============================================ */
+.clientele-locations {
+  padding: 4rem 0;
+  background: #f8fafc;
+}
+
+.clientele-locations h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.clientele-locations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.clientele-location {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.clientele-location h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.clientele-location ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.clientele-location ul li {
+  padding: 0.4rem 0;
+  color: #475569;
+  font-size: 0.95rem;
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.clientele-location ul li:last-child {
+  border-bottom: none;
+}
+
+.clientele-location:hover {
+  border-color: #f59e0b;
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.clientele-cta {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  text-align: center;
+}
+
+.clientele-cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.clientele-cta-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.clientele-btn-primary {
+  padding: 0.8rem 2.5rem;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clientele-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+  .clientele-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clientele-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clientele-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clientele-brands-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .clientele-locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .clientele-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .clientele-hero-content p {
+    font-size: 1rem;
+  }
+
+  .clientele-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .clientele-stat-number {
+    font-size: 2.2rem;
+  }
+
+  .clientele-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clientele-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clientele-brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clientele-locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clientele-residential h2,
+  .clientele-commercial h2,
+  .clientele-industrial h2,
+  .clientele-testimonials h2,
+  .clientele-brands h2,
+  .clientele-locations h2,
+  .clientele-cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .clientele-container {
+    padding: 0 1.2rem;
+  }
+
+  .clientele-hero {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .clientele-hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .clientele-stat-number {
+    font-size: 1.8rem;
+  }
+
+  .clientele-stat-label {
+    font-size: 0.9rem;
+  }
+
+  .clientele-brands-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .clientele-card {
+    padding: 1.5rem;
+  }
+
+  .clientele-testimonial {
+    padding: 1.5rem;
+  }
+
+  .clientele-location {
+    padding: 1.5rem;
+  }
+}

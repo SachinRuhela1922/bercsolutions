@@ -11,39 +11,28 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Home', path: '/' },
-    { name: 'About us', href: '#about' },
-    { name: 'Infrastructure', href: '#infrastructure' },
-    { 
-      name: 'Products', 
-      href: '#products',
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'Solar Inverters', href: '#solar-inverters' },
-        { name: 'Solar Panels', href: '#solar-panels' },
-        { name: 'Battery Storage', href: '#battery-storage' },
-        { name: 'Power Generators', href: '#generators' },
-        { name: 'UPS Systems', href: '#ups' },
-        { name: 'Charge Controllers', href: '#charge-controllers' }
-      ]
-    },
-    { 
-      name: 'Service', 
-      href: '#service',
-      hasDropdown: true,
-      dropdownItems: [
-        { name: 'Installation', href: '#installation' },
-        { name: 'Maintenance', href: '#maintenance' },
-        { name: 'Technical Support', href: '#tech-support' },
-        { name: 'Consultation', href: '#consultation' },
-        { name: 'Emergency Repair', href: '#emergency' },
-        { name: 'Performance Audit', href: '#audit' }
-      ]
-    },
-    { name: 'Clientele', href: '#clientele' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'BusinessOpportunities', href: '#opportunities' },
-    { name: 'Support', href: '#support' },
-    { name: 'Contact us', href: '#contact' }
+    { name: 'About us', path: '/about' },
+    { name: 'Products', path: '/products' },
+    { name: 'Infrastructure', path: '/infrastructure' },
+    
+    // { 
+    //   name: 'Service', 
+    //   path: '/service',
+    //   hasDropdown: true,
+    //   dropdownItems: [
+    //     { name: 'Installation', href: '#installation' },
+    //     { name: 'Maintenance', href: '#maintenance' },
+    //     { name: 'Technical Support', href: '#tech-support' },
+    //     { name: 'Consultation', href: '#consultation' },
+    //     { name: 'Emergency Repair', href: '#emergency' },
+    //     { name: 'Performance Audit', href: '#audit' }
+    //   ]
+    // },
+    { name: 'Clientele', path: '/clientele' },
+    { name: 'Testimonials', path: '/testimonials' },
+    { name: 'BusinessOpportunities', path: '/opportunities' },
+    { name: 'Support', path: '/support' },
+    { name: 'Contact us', path: '/contact' }
   ];
 
   useEffect(() => {
@@ -160,25 +149,25 @@ const Navbar = () => {
                     </button>
                     <div className={`mobile-dropdown-content ${mobileOpenDropdown === index ? 'open' : ''}`}>
                       {item.dropdownItems.map((dropdownItem, idx) => (
-                        <a
+                        <Link
                           key={idx}
-                          href={dropdownItem.href}
+                          to={dropdownItem.path}
                           className="mobile-dropdown-link"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           {dropdownItem.name}
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </>
                 ) : (
-                  <a
-                    href={item.href}
+                  <Link
+                    to={item.path}
                     className="mobile-nav-link"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}
