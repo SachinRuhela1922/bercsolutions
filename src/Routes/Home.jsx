@@ -1,8 +1,7 @@
-// App.js
+// App.js - Complete Updated Version
 
 import { useState, useEffect, createContext } from 'react';
-
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar';
 import ProductDetail from '../components/ProductDetail';
 import '../App.css';
 import Footer from '../components/Footer';
@@ -50,27 +49,387 @@ function Home() {
   }, []);
 
   const productsData = {
-    inverters: [
-      { id: 1, name: 'Hybrid Inverter', category: 'inverters', price: '₹45,000', oldPrice: '₹55,000', rating: 4.8, reviews: 234, capacity: '3kW - 10kW', warranty: '10-year', efficiency: '96%', features: ['Wi-Fi monitoring', 'Smart energy management', 'Touch LCD display', 'Grid & solar compatible'], description: 'The Hybrid Inverter intelligently manages power from solar panels, batteries, and the grid. Perfect for homes wanting energy independence.', longDescription: 'Our advanced hybrid inverter features real-time energy monitoring, automatic switching between power sources, and seamless battery integration. With 10-year warranty and IP65 rating, it\'s built to last in all weather conditions.', images: ['https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600', 'https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600'], badge: 'Best Seller' },
-      { id: 2, name: 'Grid-Tie Inverter', category: 'inverters', price: '₹28,000', oldPrice: '₹35,000', rating: 4.6, reviews: 156, capacity: '1kW - 100kW', warranty: '8-year', efficiency: '98.5%', features: ['Remote firmware update', 'Anti-islanding protection', 'Wi-Fi monitoring', 'UL certified'], description: 'Professional grid-tie inverter for commercial installations with highest efficiency.', longDescription: 'Designed for commercial solar installations, this grid-tie inverter offers industry-leading 98.5% efficiency. Features advanced MPPT technology and remote monitoring capabilities.', images: ['https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600'], badge: '' },
-      { id: 3, name: 'Off-Grid Inverter', category: 'inverters', price: '₹32,000', oldPrice: '₹40,000', rating: 4.7, reviews: 189, capacity: '1kW - 15kW', warranty: '8-year', efficiency: '94%', features: ['Pure sine wave', 'LCD display', 'Battery priority mode', 'Generator compatible'], description: 'Perfect for remote locations with battery backup solution.', longDescription: 'Off-grid living made easy with our pure sine wave inverter. Compatible with all battery types and includes generator auto-start feature.', images: ['https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600'], badge: '' }
+    "voltage": [
+      {
+        "id": 1,
+        "name": "Single Phase Servo Voltage Stabilizer",
+        "category": "voltage",
+        "price": "₹40,000",
+        "oldPrice": "₹55,000",
+        "rating": 4.8,
+        "reviews": 234,
+        "capacity": "1 KVA – 150 KVA",
+        "warranty": "10-year",
+        "efficiency": "96%",
+        "features": [
+          "Automatic voltage correction",
+          "Indoor installation",
+          "High & Low voltage cut-off",
+          "Bypass switch",
+          "Low maintenance",
+          "Precision voltage regulation",
+          "Reliable performance",
+          "Suitable for continuous operation"
+        ],
+        "description": "Best Electric Single Phase Servo Voltage Stabilizer is specially designed for continuous indoor use. It automatically maintains constant output voltage even when input voltage fluctuates.",
+        "longDescription": "Best Electric Single Phase Servo Voltage Stabilizer is specially designed for continuous indoor use. It automatically maintains constant output voltage even when input voltage fluctuates. It is suitable for residential, commercial and industrial applications requiring stable power supply.",
+        "images": [
+          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600",
+          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+        ],
+        "badge": "Best Seller",
+        "specifications": {
+          "Capacity": "1 KVA – 150 KVA",
+          "Input Voltage": "140V – 270V AC",
+          "Output Voltage": "230V ±1%",
+          "Input Frequency": "50Hz ±10%",
+          "Output Frequency": "50Hz ±1%",
+          "Output Waveform": "Quasi Sine Wave",
+          "Cut-Off": "High & Low Output Side with Bypass"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Three Phase Servo Voltage Stabilizer",
+        "category": "voltage",
+        "price": "₹85,000",
+        "oldPrice": "₹1,10,000",
+        "rating": 4.7,
+        "reviews": 189,
+        "capacity": "3 KVA – 2000 KVA",
+        "warranty": "10-year",
+        "efficiency": "97%",
+        "features": [
+          "Three phase voltage correction",
+          "Heavy duty industrial design",
+          "High & Low voltage protection",
+          "Indoor installation",
+          "Continuous operation",
+          "Low maintenance"
+        ],
+        "description": "Designed for industrial applications, the Three Phase Servo Voltage Stabilizer automatically regulates fluctuating voltage and delivers balanced output for heavy electrical equipment.",
+        "longDescription": "Designed for industrial applications, the Three Phase Servo Voltage Stabilizer automatically regulates fluctuating voltage and delivers balanced output for heavy electrical equipment.",
+        "images": [
+          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+        ],
+        "badge": "Industrial",
+        "specifications": {
+          "Capacity": "3 KVA – 2000 KVA",
+          "Input Voltage": "300V – 470V AC",
+          "Output Voltage": "415V ±5%",
+          "Input Frequency": "50Hz ±10%",
+          "Output Frequency": "50Hz ±1%",
+          "Output Waveform": "Quasi Sine Wave",
+          "DC Voltage": "12V / 24V / 48V",
+          "Cut-Off": "High & Low Output Side with Bypass"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Automatic Voltage Stabilizer",
+        "category": "voltage",
+        "price": "₹12,000",
+        "oldPrice": "₹16,000",
+        "rating": 4.5,
+        "reviews": 312,
+        "capacity": "1 KVA, 2 KVA, 3 KVA, 5 KVA, 7 KVA",
+        "warranty": "5-year",
+        "efficiency": "92%",
+        "features": [
+          "Automatic voltage correction",
+          "Fast response",
+          "Compact design",
+          "Energy efficient",
+          "Low maintenance",
+          "Suitable for home & commercial use"
+        ],
+        "description": "Automatic Voltage Stabilizer maintains proper voltage for domestic and commercial appliances like refrigerators, televisions, air conditioners, pumps and lighting systems.",
+        "longDescription": "Automatic Voltage Stabilizer maintains proper voltage for domestic and commercial appliances like refrigerators, televisions, air conditioners, pumps and lighting systems.",
+        "images": [
+          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+        ],
+        "badge": "",
+        "specifications": {
+          "Capacity": "1 KVA, 2 KVA, 3 KVA, 5 KVA, 7 KVA",
+          "Input Voltage": "90V – 280V AC",
+          "Output Voltage": "200V – 240V ±10%",
+          "Input Frequency": "50Hz ±10%",
+          "Output Frequency": "50Hz ±1%",
+          "Output Waveform": "Sine Wave"
+        }
+      }
     ],
-    panels: [
-      { id: 4, name: 'Monocrystalline Panels', category: 'panels', price: '₹18,500', oldPrice: '₹22,000', rating: 4.9, reviews: 312, wattage: '540W - 650W', warranty: '25-year', efficiency: '22%', features: ['High efficiency', 'All-black design', 'PID resistant', '25-year linear warranty'], description: 'Highest efficiency panels with premium all-black aesthetics.', longDescription: 'Our monocrystalline panels feature PERC technology and half-cut cells for maximum performance even in low-light conditions.', images: ['https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600'], badge: 'Premium' },
-      { id: 5, name: 'Polycrystalline Panels', category: 'panels', price: '₹13,500', oldPrice: '₹16,500', rating: 4.5, reviews: 278, wattage: '450W - 550W', warranty: '20-year', efficiency: '18%', features: ['Cost-effective', 'Durable frame', '12-year product warranty'], description: 'Budget-friendly solar panels with reliable performance.', longDescription: 'Perfect for large-scale installations where budget is a priority. These panels offer excellent value without compromising on quality.', images: ['https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600'], badge: '' },
-      { id: 6, name: 'Bifacial Panels', category: 'panels', price: '₹24,000', oldPrice: '₹30,000', rating: 4.8, reviews: 145, wattage: '550W - 670W', warranty: '30-year', efficiency: '23%', features: ['Dual-side generation', 'Glass-glass design', 'Higher yield', 'Snow shedding'], description: 'Dual-side power generation for maximum output in commercial settings.', longDescription: 'Generate up to 30% more energy with bifacial technology. Ideal for ground-mounted systems and flat roofs with reflective surfaces.', images: ['https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600'], badge: 'New' }
+    "upssystems": [
+      {
+        "id": 4,
+        "name": "Online UPS System",
+        "category": "ups",
+        "price": "₹55,000",
+        "oldPrice": "₹70,000",
+        "rating": 4.9,
+        "reviews": 156,
+        "capacity": "1 KVA – 50 KVA",
+        "warranty": "3-year",
+        "efficiency": "95%",
+        "features": [
+          "True Online Technology",
+          "Zero transfer time",
+          "Pure sine wave output",
+          "Battery charging system",
+          "Reliable backup",
+          "High efficiency"
+        ],
+        "description": "Best Electric Online UPS provides uninterrupted power with zero transfer time. It continuously supplies power through the inverter while charging batteries simultaneously.",
+        "longDescription": "Best Electric Online UPS provides uninterrupted power with zero transfer time. It continuously supplies power through the inverter while charging batteries simultaneously.",
+        "images": [
+          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+        ],
+        "badge": "Premium",
+        "specifications": {
+          "Capacity": "1 KVA – 50 KVA",
+          "Input Voltage": "180V – 270V AC",
+          "Output Voltage": "230V AC",
+          "Input Frequency": "50Hz ±10%",
+          "Output Frequency": "50Hz ±1%",
+          "Output Waveform": "Sine Wave",
+          "Backup Time": "10–30 Minutes",
+          "DC Voltage": "96V / 120V / 180V / 360V DC",
+          "Indicators": "Mains, Charging, UPS ON, Battery Low",
+          "Alarms": "Mains Fail, Battery Low"
+        }
+      },
+      {
+        "id": 5,
+        "name": "Offline UPS System",
+        "category": "ups",
+        "price": "₹8,500",
+        "oldPrice": "₹12,000",
+        "rating": 4.3,
+        "reviews": 423,
+        "capacity": "500VA, 800VA, 1250VA, 1600VA, 2000VA",
+        "warranty": "2-year",
+        "efficiency": "88%",
+        "features": [
+          "Automatic battery switching",
+          "Fast transfer time",
+          "PWM & MOSFET Technology",
+          "Quasi sine wave output",
+          "Battery protection",
+          "Reliable backup"
+        ],
+        "description": "Offline UPS automatically switches to battery during power failure and protects equipment against voltage fluctuations.",
+        "longDescription": "Offline UPS automatically switches to battery during power failure and protects equipment against voltage fluctuations.",
+        "images": [
+          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+        ],
+        "badge": "",
+        "specifications": {
+          "Capacity": "500VA, 800VA, 1250VA, 1600VA, 2000VA",
+          "Input Voltage": "180V – 270V AC",
+          "Output Voltage": "220V – 240V AC",
+          "Input Frequency": "50Hz ±10%",
+          "Output Frequency": "50Hz ±1%",
+          "Transfer Time": "4 ms",
+          "Backup Time": "10–30 Minutes",
+          "Output Waveform": "Quasi Sine Wave",
+          "DC Voltage": "12V / 24V / 48V"
+        }
+      }
     ],
-    batteries: [
-      { id: 7, name: 'Lithium-Ion Batteries', category: 'batteries', price: '₹85,000', oldPrice: '₹1,05,000', rating: 4.9, reviews: 198, capacity: '5kWh - 15kWh', warranty: '10-year', cycles: '6000+', features: ['Deep discharge', 'BMS protection', 'Wall-mountable', 'Scalable system'], description: 'Modern LiFePO4 battery storage with long cycle life.', longDescription: 'Safe and reliable lithium iron phosphate batteries with integrated BMS. Scalable from 5kWh to 30kWh for complete home backup.', images: ['https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600'], badge: 'Eco-Friendly' },
-      { id: 8, name: 'Tubular Batteries', category: 'batteries', price: '₹18,000', oldPrice: '₹22,000', rating: 4.4, reviews: 423, capacity: '150Ah - 200Ah', warranty: '5-year', cycles: '1500+', features: ['Low maintenance', 'High backup', 'Tall tubular design'], description: 'Heavy-duty lead-acid batteries for high power applications.', longDescription: 'Proven technology with excellent performance in high-temperature conditions. Ideal for areas with frequent power cuts.', images: ['https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600'], badge: '' }
+    "inverters": [
+      {
+        "id": 6,
+        "name": "Sine Wave Inverter",
+        "category": "inverters",
+        "price": "₹15,000",
+        "oldPrice": "₹22,000",
+        "rating": 4.6,
+        "reviews": 278,
+        "capacity": "300VA – 1000 KVA",
+        "warranty": "5-year",
+        "efficiency": "90%",
+        "features": [
+          "PWM Technology",
+          "Constant Voltage & Current Charging",
+          "Fully Automatic",
+          "Low Maintenance",
+          "Silent Operation",
+          "Pollution Free",
+          "Indoor Installation",
+          "Auto Reset",
+          "Battery Protection",
+          "Overload Protection",
+          "Short Circuit Protection"
+        ],
+        "description": "Best Electric Sine Wave Inverter provides uninterrupted backup power for homes, hospitals and commercial establishments.",
+        "longDescription": "Best Electric Sine Wave Inverter provides uninterrupted backup power for homes, hospitals and commercial establishments. It converts DC power into AC power with automatic charging and overload protection.",
+        "images": [
+          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+        ],
+        "badge": "Best Seller",
+        "specifications": {
+          "Capacity": "300VA – 1000 KVA",
+          "Input Voltage": "230V AC",
+          "Output Voltage": "230V AC",
+          "Input Frequency": "50Hz ±10%",
+          "Output Frequency": "50Hz ±1%",
+          "Output Waveform": "Quasi Sine Wave",
+          "Protections": "Battery Short Circuit, Overload, Low Battery, Over Charging",
+          "Indicators": "Low Battery, Charging, Overload, Charged, Inverter ON, Mains ON"
+        }
+      }
     ],
-    generators: [
-      { id: 9, name: 'Diesel Generators', category: 'generators', price: '₹65,000', oldPrice: '₹78,000', rating: 4.6, reviews: 312, capacity: '5kVA - 500kVA', warranty: '3-year', fuel: 'Diesel', features: ['AVR technology', 'Low fuel consumption', 'Auto start/stop', 'Silent operation'], description: 'Industrial-grade diesel generators for continuous power.', longDescription: 'Reliable power backup for industries and commercial complexes. Features advanced AVR for stable voltage and eco-friendly engines.', images: ['https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600'], badge: 'Industrial' },
-      { id: 10, name: 'Solar Generators', category: 'generators', price: '₹32,000', oldPrice: '₹45,000', rating: 4.7, reviews: 167, capacity: '1000W - 5000W', warranty: '2-year', type: 'Portable', features: ['Silent operation', 'Solar ready', 'Multiple outputs', 'LCD display'], description: 'Eco-friendly portable power stations for outdoor and emergency use.', longDescription: 'Clean, silent power for camping, tailgating, or home emergency. Recharge via solar panels or wall outlet in hours.', images: ['https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600'], badge: 'Portable' }
+    "transformers": [
+      {
+        "id": 7,
+        "name": "Isolation Transformer",
+        "category": "transformers",
+        "price": "₹45,000",
+        "oldPrice": "₹60,000",
+        "rating": 4.7,
+        "reviews": 167,
+        "capacity": "1 KVA – 2000 KVA",
+        "warranty": "8-year",
+        "efficiency": "98%",
+        "features": [
+          "Complete electrical isolation",
+          "Shock protection",
+          "Heavy-duty construction",
+          "Automatic operation",
+          "Low maintenance",
+          "Long service life"
+        ],
+        "description": "Isolation Transformers electrically isolate the power input from the output to protect sensitive equipment from electrical noise and shocks.",
+        "longDescription": "Isolation Transformers electrically isolate the power input from the output to protect sensitive equipment from electrical noise and shocks.",
+        "images": [
+          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+        ],
+        "badge": "",
+        "specifications": {
+          "Capacity": "1 KVA – 2000 KVA",
+          "Input Voltage": "230V AC",
+          "Output Voltage": "230V AC",
+          "Input Frequency": "50Hz ±10%",
+          "Output Frequency": "50Hz ±1%",
+          "Output Waveform": "Quasi Sine Wave"
+        }
+      }
+    ],
+    "powers": [
+      {
+        "id": 8,
+        "name": "Automatic Phase Sequence Corrector",
+        "category": "power",
+        "price": "₹25,000",
+        "oldPrice": "₹35,000",
+        "rating": 4.5,
+        "reviews": 134,
+        "capacity": "10 Amp – 1000 Amp",
+        "warranty": "3-year",
+        "efficiency": "99%",
+        "features": [
+          "Automatic phase correction",
+          "Prevents motor damage",
+          "Suitable for lifts & motors",
+          "Industrial use",
+          "Reliable operation",
+          "Low maintenance"
+        ],
+        "description": "This device automatically corrects wrong phase sequence in three-phase supply, preventing equipment damage and reducing production downtime.",
+        "longDescription": "This device automatically corrects wrong phase sequence in three-phase supply, preventing equipment damage and reducing production downtime.",
+        "images": [
+          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+        ],
+        "badge": "Industrial",
+        "specifications": {
+          "Capacity": "10 Amp – 1000 Amp",
+          "Input Voltage": "340V – 480V AC",
+          "Output Voltage": "340V – 480V AC",
+          "Input Frequency": "50Hz ±10%",
+          "Output Frequency": "50Hz ±1%",
+          "Output Waveform": "Quasi Sine Wave"
+        }
+      },
+      {
+        "id": 9,
+        "name": "Automatic Phase & Neutral Balancing System",
+        "category": "power",
+        "price": "₹1,25,000",
+        "oldPrice": "₹1,60,000",
+        "rating": 4.9,
+        "reviews": 89,
+        "capacity": "415V, 3 Phase + Neutral, 4 Wire",
+        "warranty": "5-year",
+        "efficiency": "95%",
+        "features": [
+          "Equalizes phase voltage",
+          "Reduces neutral current",
+          "Generates third phase if one phase fails",
+          "Prevents neutral failure hazards",
+          "Energy saving",
+          "Digital monitoring",
+          "Overload protection",
+          "Short circuit protection"
+        ],
+        "description": "The Automatic Phase & Neutral Balancing System improves power quality by balancing phase voltages, reducing neutral current and protecting sensitive electrical equipment.",
+        "longDescription": "The Automatic Phase & Neutral Balancing System improves power quality by balancing phase voltages, reducing neutral current and protecting sensitive electrical equipment.",
+        "images": [
+          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+        ],
+        "badge": "Premium",
+        "specifications": {
+          "Input Supply": "415V, 3 Phase + Neutral, 4 Wire",
+          "Frequency": "50Hz ±5%",
+          "Working Principle": "Magnetic Symmetry",
+          "Phase Angle": "Maintains 120°",
+          "Neutral Protection": "Yes",
+          "Phase Equalization": "Reduces imbalance by 40–60%",
+          "Third Phase Generation": "Yes",
+          "Energy Saving": "Yes",
+          "Overload Protection": "MCCB/MCB",
+          "Neutral Current Protection": "Yes",
+          "Display": "Digital 7-Segment Auto Scanning (Voltage, Current & Frequency)",
+          "Cooling Type": "Oil Cooled (ONAN)",
+          "Oil Moisture Protection": "Silica Gel Breather"
+        }
+      }
+    ],
+    "batteries": [
+      {
+        "id": 10,
+        "name": "Battery Range",
+        "category": "batteries",
+        "price": "₹8,000",
+        "oldPrice": "₹12,000",
+        "rating": 4.4,
+        "reviews": 567,
+        "capacity": "12V 7Ah to 12V 200Ah",
+        "warranty": "3-year",
+        "efficiency": "90%",
+        "features": [
+          "SMF Batteries",
+          "Tubular Batteries",
+          "Authorized dealer for Exide",
+          "Authorized dealer for Amaron",
+          "Deep discharge",
+          "Long life"
+        ],
+        "description": "Premium quality SMF and Tubular batteries for all UPS and inverter applications. Authorized dealer for Exide and Amaron.",
+        "longDescription": "Premium quality SMF and Tubular batteries for all UPS and inverter applications. Authorized dealer for Exide and Amaron. Available in voltage range 12V 7Ah to 12V 200Ah.",
+        "images": [
+          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+        ],
+        "badge": "",
+        "specifications": {
+          "Voltage Range": "12V 7Ah to 12V 200Ah",
+          "Types": "SMF Batteries, Tubular Batteries",
+          "Brands": "Exide, Amaron"
+        }
+      }
     ]
   };
 
-  const allProducts = [...productsData.inverters, ...productsData.panels, ...productsData.batteries, ...productsData.generators];
+  const allProducts = [...productsData.voltage, ...productsData.upssystems, ...productsData.inverters, ...productsData.transformers, ...productsData.powers, ...productsData.batteries];
 
   return (
     <UIContext.Provider value={{ openProductDetail, selectedProduct, closeProductDetail }}>
@@ -78,21 +437,199 @@ function Home() {
         <Navbar />
         
         <main>
-          {/* Hero Section */}
+          {/* Hero Section - Enhanced with Animations */}
           <section id="home" className="hero">
             <div className="hero-overlay"></div>
             <div className="hero-bg-image"></div>
-            <div className="hero-content animate-on-scroll">
-              <h1 className="hero-title">Power Your Future with <span className="highlight">Clean Energy</span></h1>
-              <p className="hero-subtitle">Premium Solar Inverters, Panels, Battery Storage & Generators for Homes & Businesses</p>
+            
+            {/* Floating Particles */}
+            <div className="particles">
+              <div className="particle"></div>
+              <div className="particle"></div>
+              <div className="particle"></div>
+              <div className="particle"></div>
+              <div className="particle"></div>
+              <div className="particle"></div>
+              <div className="particle"></div>
+              <div className="particle"></div>
+              <div className="particle"></div>
+              <div className="particle"></div>
+              <div className="particle"></div>
+              <div className="particle"></div>
+            </div>
+
+            <div className="hero-content">
+              <h1 className="hero-title">
+                <span className="word">Power</span>
+                <span className="word">Your</span>
+                <span className="word">Future</span>
+                <span className="word">with</span>
+                <span className="word highlight">Clean</span>
+                <span className="word highlight">Equipment</span>
+              </h1>
+              <p className="hero-subtitle">
+                <span className="typewriter">Premium Stabilizer, UPS, Battery Storage &amp; Inverter for Homes &amp; Businesses</span>
+              </p>
               <div className="hero-buttons">
-                <button className="btn-primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>Get Free Consultation →</button>
-                <button className="btn-secondary" onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}>Explore Products</button>
+                <button className="btn-primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
+                  Get Free Consultation <i className="fas fa-arrow-right"></i>
+                </button>
+                <button className="btn-secondary" onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}>
+                  Explore Products <i className="fas fa-chevron-right"></i>
+                </button>
               </div>
               <div className="hero-stats">
-                <div className="stat"><h3>500+</h3><p>Happy Customers</p></div>
-                <div className="stat"><h3>150+</h3><p>Projects Completed</p></div>
-                <div className="stat"><h3>24/7</h3><p>Technical Support</p></div>
+                <div className="stat">
+                  <h3>500<span className="counter-suffix">+</span></h3>
+                  <p>Happy Customers</p>
+                </div>
+                <div className="stat">
+                  <h3>150<span className="counter-suffix">+</span></h3>
+                  <p>Projects Completed</p>
+                </div>
+                <div className="stat">
+                  <h3>24/7</h3>
+                  <p>Technical Support</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="scroll-indicator">
+              <span>Scroll</span>
+              <i className="fas fa-chevron-down"></i>
+            </div>
+          </section>
+
+          {/* Products Section */}
+          <section id="products" className="section products" style={{backgroundColor: '#ffffff'}}>
+            <div className="container">
+              <h2 className="section-title animate-on-scroll">Our Premium Products</h2>
+              <p className="section-subtitle animate-on-scroll">Cutting-edge solutions for all your power needs</p>
+              
+              <div className="product-category">
+                <h3 className="category-title animate-on-scroll">⚡ Voltage Stabilizers :</h3>
+                <div className="products-grid">
+                  {productsData.voltage.map(product => (
+                    <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
+                      {product.badge && <span className="product-badge">{product.badge}</span>}
+                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
+                      <div className="product-info">
+                        <h4>{product.name}</h4>
+                        <p>{product.description}</p>
+                        <ul className="product-features">
+                          {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
+                        </ul>
+                        <div className="product-price">{product.price}</div>
+                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="product-category">
+                <h3 className="category-title animate-on-scroll">🟦 UPS Systems</h3>
+                <div className="products-grid">
+                  {productsData.upssystems.map(product => (
+                    <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
+                      {product.badge && <span className="product-badge">{product.badge}</span>}
+                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
+                      <div className="product-info">
+                        <h4>{product.name}</h4>
+                        <p>{product.description}</p>
+                        <ul className="product-features">
+                          {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
+                        </ul>
+                        <div className="product-price">{product.price}</div>
+                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="product-category">
+                <h3 className="category-title animate-on-scroll">🔼 Inverters</h3>
+                <div className="products-grid">
+                  {productsData.inverters.map(product => (
+                    <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
+                      {product.badge && <span className="product-badge">{product.badge}</span>}
+                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
+                      <div className="product-info">
+                        <h4>{product.name}</h4>
+                        <p>{product.description}</p>
+                        <ul className="product-features">
+                          {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
+                        </ul>
+                        <div className="product-price">{product.price}</div>
+                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="product-category">
+                <h3 className="category-title animate-on-scroll">⚡ Transformers</h3>
+                <div className="products-grid">
+                  {productsData.transformers.map(product => (
+                    <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
+                      {product.badge && <span className="product-badge">{product.badge}</span>}
+                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
+                      <div className="product-info">
+                        <h4>{product.name}</h4>
+                        <p>{product.description}</p>
+                        <ul className="product-features">
+                          {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
+                        </ul>
+                        <div className="product-price">{product.price}</div>
+                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="product-category">
+                <h3 className="category-title animate-on-scroll">⚡ Power Management Systems</h3>
+                <div className="products-grid">
+                  {productsData.powers.map(product => (
+                    <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
+                      {product.badge && <span className="product-badge">{product.badge}</span>}
+                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
+                      <div className="product-info">
+                        <h4>{product.name}</h4>
+                        <p>{product.description}</p>
+                        <ul className="product-features">
+                          {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
+                        </ul>
+                        <div className="product-price">{product.price}</div>
+                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="product-category">
+                <h3 className="category-title animate-on-scroll">⚡ Batteries</h3>
+                <div className="products-grid">
+                  {productsData.batteries.map(product => (
+                    <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
+                      {product.badge && <span className="product-badge">{product.badge}</span>}
+                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
+                      <div className="product-info">
+                        <h4>{product.name}</h4>
+                        <p>{product.description}</p>
+                        <ul className="product-features">
+                          {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
+                        </ul>
+                        <div className="product-price">{product.price}</div>
+                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
@@ -130,98 +667,6 @@ function Home() {
                 <div className="infra-card animate-on-scroll"><div className="infra-icon">🔬</div><h3>R&D Center</h3><p>Dedicated research lab for cutting-edge solutions</p></div>
                 <div className="infra-card animate-on-scroll"><div className="infra-icon">📦</div><h3>Warehouse</h3><p>Large-scale inventory with 24/7 logistics</p></div>
                 <div className="infra-card animate-on-scroll"><div className="infra-icon">🎓</div><h3>Training Center</h3><p>Professional training for technicians</p></div>
-              </div>
-            </div>
-          </section>
-
-          {/* Products Section */}
-          <section id="products" className="section products" style={{backgroundColor: '#ffffff'}}>
-            <div className="container">
-              <h2 className="section-title animate-on-scroll">Our Premium Products</h2>
-              <p className="section-subtitle animate-on-scroll">Cutting-edge solutions for all your power needs</p>
-              
-              <div className="product-category">
-                <h3 className="category-title animate-on-scroll">🔆 Solar Inverters</h3>
-                <div className="products-grid">
-                  {productsData.inverters.map(product => (
-                    <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
-                      {product.badge && <span className="product-badge">{product.badge}</span>}
-                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
-                      <div className="product-info">
-                        <h4>{product.name}</h4>
-                        <p>{product.description}</p>
-                        <ul className="product-features">
-                          {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
-                        </ul>
-                        <div className="product-price">{product.price}</div>
-                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="product-category">
-                <h3 className="category-title animate-on-scroll">🟦 Solar Panels</h3>
-                <div className="products-grid">
-                  {productsData.panels.map(product => (
-                    <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
-                      {product.badge && <span className="product-badge">{product.badge}</span>}
-                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
-                      <div className="product-info">
-                        <h4>{product.name}</h4>
-                        <p>{product.description}</p>
-                        <ul className="product-features">
-                          {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
-                        </ul>
-                        <div className="product-price">{product.price}</div>
-                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="product-category">
-                <h3 className="category-title animate-on-scroll">🔋 Battery Storage</h3>
-                <div className="products-grid">
-                  {productsData.batteries.map(product => (
-                    <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
-                      {product.badge && <span className="product-badge">{product.badge}</span>}
-                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
-                      <div className="product-info">
-                        <h4>{product.name}</h4>
-                        <p>{product.description}</p>
-                        <ul className="product-features">
-                          {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
-                        </ul>
-                        <div className="product-price">{product.price}</div>
-                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="product-category">
-                <h3 className="category-title animate-on-scroll">⚡ Power Generators</h3>
-                <div className="products-grid">
-                  {productsData.generators.map(product => (
-                    <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
-                      {product.badge && <span className="product-badge">{product.badge}</span>}
-                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
-                      <div className="product-info">
-                        <h4>{product.name}</h4>
-                        <p>{product.description}</p>
-                        <ul className="product-features">
-                          {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
-                        </ul>
-                        <div className="product-price">{product.price}</div>
-                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
-                      </div>
-                    </div>
-                  ))}
-                </div>
               </div>
             </div>
           </section>

@@ -17,751 +17,504 @@ function Products() {
 
   // Product Data
   const products = {
-    solar: {
-      name: "Solar Panels",
-      icon: "☀️",
-      subCategories: [
-        {
-          name: "Monocrystalline",
-          items: [
-            {
-              id: 1,
-              name: "Mono 400W Solar Panel",
-              price: 8500,
-              rating: 4.8,
-              reviews: 124,
-              specs: ["22% Efficiency", "25-Year Warranty", "Anti-Reflective Coating", "PID Resistant"],
-              features: ["High efficiency", "Low light performance", "Durable design"],
-              image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop",
-              badge: "Best Seller",
-              category: "solar",
-              subCategory: "Monocrystalline",
-              description: "High-performance monocrystalline solar panel designed for maximum energy output. Perfect for residential and commercial installations.",
-              fullSpecs: [
-                { label: "Power Output", value: "400W" },
-                { label: "Efficiency", value: "22%" },
-                { label: "Warranty", value: "25 Years" },
-                { label: "Cell Type", value: "Monocrystalline" },
-                { label: "Dimensions", value: "2094 x 1038 x 35mm" },
-                { label: "Weight", value: "22.5 kg" },
-                { label: "Operating Temp", value: "-40°C to +85°C" },
-                { label: "Certification", value: "IEC 61215, IEC 61730" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop"
-              ]
-            },
-            {
-              id: 2,
-              name: "Mono 450W Solar Panel",
-              price: 9500,
-              rating: 4.9,
-              reviews: 98,
-              specs: ["22.5% Efficiency", "25-Year Warranty", "Anti-Reflective Coating", "PID Resistant"],
-              features: ["High efficiency", "Excellent performance", "Premium quality"],
-              image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop",
-              badge: "Popular",
-              category: "solar",
-              subCategory: "Monocrystalline",
-              description: "Premium monocrystalline solar panel with advanced cell technology for superior performance in all weather conditions.",
-              fullSpecs: [
-                { label: "Power Output", value: "450W" },
-                { label: "Efficiency", value: "22.5%" },
-                { label: "Warranty", value: "25 Years" },
-                { label: "Cell Type", value: "Monocrystalline" },
-                { label: "Dimensions", value: "2094 x 1038 x 35mm" },
-                { label: "Weight", value: "23.5 kg" },
-                { label: "Operating Temp", value: "-40°C to +85°C" },
-                { label: "Certification", value: "IEC 61215, IEC 61730" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop"
-              ]
-            },
-            {
-              id: 3,
-              name: "Mono 550W Solar Panel",
-              price: 11500,
-              rating: 4.7,
-              reviews: 76,
-              specs: ["23% Efficiency", "25-Year Warranty", "Anti-Reflective Coating", "PID Resistant"],
-              features: ["Ultra high efficiency", "Superior performance", "Heavy duty"],
-              image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop",
-              category: "solar",
-              subCategory: "Monocrystalline",
-              description: "Ultra-high efficiency monocrystalline panel with advanced PERC technology for maximum power generation.",
-              fullSpecs: [
-                { label: "Power Output", value: "550W" },
-                { label: "Efficiency", value: "23%" },
-                { label: "Warranty", value: "25 Years" },
-                { label: "Cell Type", value: "Monocrystalline PERC" },
-                { label: "Dimensions", value: "2278 x 1134 x 35mm" },
-                { label: "Weight", value: "28.5 kg" },
-                { label: "Operating Temp", value: "-40°C to +85°C" },
-                { label: "Certification", value: "IEC 61215, IEC 61730" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop"
-              ]
-            },
-            {
-              id: 4,
-              name: "Mono 600W Solar Panel",
-              price: 13500,
-              rating: 4.9,
-              reviews: 45,
-              specs: ["23.5% Efficiency", "25-Year Warranty", "Anti-Reflective Coating", "PID Resistant"],
-              features: ["Maximum efficiency", "Industrial grade", "Best in class"],
-              image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop",
-              badge: "New",
-              category: "solar",
-              subCategory: "Monocrystalline",
-              description: "Industry-leading 600W monocrystalline panel with next-generation cell technology for unmatched performance.",
-              fullSpecs: [
-                { label: "Power Output", value: "600W" },
-                { label: "Efficiency", value: "23.5%" },
-                { label: "Warranty", value: "25 Years" },
-                { label: "Cell Type", value: "Monocrystalline" },
-                { label: "Dimensions", value: "2384 x 1134 x 35mm" },
-                { label: "Weight", value: "30.5 kg" },
-                { label: "Operating Temp", value: "-40°C to +85°C" },
-                { label: "Certification", value: "IEC 61215, IEC 61730" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop"
-              ]
-            }
-          ]
-        },
-        {
-          name: "Polycrystalline",
-          items: [
-            {
-              id: 5,
-              name: "Poly 350W Solar Panel",
-              price: 7500,
-              rating: 4.5,
-              reviews: 89,
-              specs: ["19% Efficiency", "25-Year Warranty", "Cost Effective", "Reliable"],
-              features: ["Budget friendly", "Good performance", "Trusted quality"],
-              image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop",
-              category: "solar",
-              subCategory: "Polycrystalline",
-              description: "Cost-effective polycrystalline solar panel offering reliable performance for budget-conscious customers.",
-              fullSpecs: [
-                { label: "Power Output", value: "350W" },
-                { label: "Efficiency", value: "19%" },
-                { label: "Warranty", value: "25 Years" },
-                { label: "Cell Type", value: "Polycrystalline" },
-                { label: "Dimensions", value: "2000 x 1000 x 35mm" },
-                { label: "Weight", value: "20.5 kg" },
-                { label: "Operating Temp", value: "-40°C to +85°C" },
-                { label: "Certification", value: "IEC 61215" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop"
-              ]
-            },
-            {
-              id: 6,
-              name: "Poly 400W Solar Panel",
-              price: 8900,
-              rating: 4.6,
-              reviews: 67,
-              specs: ["19.5% Efficiency", "25-Year Warranty", "Cost Effective", "Reliable"],
-              features: ["Great value", "Reliable performance", "Durable"],
-              image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop",
-              category: "solar",
-              subCategory: "Polycrystalline",
-              description: "High-value polycrystalline panel with improved efficiency and durability for residential installations.",
-              fullSpecs: [
-                { label: "Power Output", value: "400W" },
-                { label: "Efficiency", value: "19.5%" },
-                { label: "Warranty", value: "25 Years" },
-                { label: "Cell Type", value: "Polycrystalline" },
-                { label: "Dimensions", value: "2094 x 1038 x 35mm" },
-                { label: "Weight", value: "22 kg" },
-                { label: "Operating Temp", value: "-40°C to +85°C" },
-                { label: "Certification", value: "IEC 61215" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    inverter: {
-      name: "Inverters",
-      icon: "⚡",
-      subCategories: [
-        {
-          name: "Solar Inverters",
-          items: [
-            {
-              id: 7,
-              name: "Solar Inverter 3kW",
-              price: 25000,
-              rating: 4.7,
-              reviews: 56,
-              specs: ["3kW Capacity", "MPPT Technology", "IP65 Rating", "5-Year Warranty"],
-              features: ["High efficiency", "Smart monitoring", "Safe operation"],
-              image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
-              badge: "Popular",
-              category: "inverter",
-              subCategory: "Solar Inverters",
-              description: "Smart 3kW solar inverter with advanced MPPT technology for optimal solar energy conversion.",
-              fullSpecs: [
-                { label: "Power Rating", value: "3kW" },
-                { label: "Input Voltage", value: "12V/24V" },
-                { label: "Output Voltage", value: "230V AC" },
-                { label: "Efficiency", value: "95%" },
-                { label: "MPPT", value: "Yes" },
-                { label: "IP Rating", value: "IP65" },
-                { label: "Warranty", value: "5 Years" },
-                { label: "Dimensions", value: "450 x 350 x 150mm" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop"
-              ]
-            },
-            {
-              id: 8,
-              name: "Solar Inverter 5kW",
-              price: 35000,
-              rating: 4.8,
-              reviews: 78,
-              specs: ["5kW Capacity", "MPPT Technology", "IP65 Rating", "5-Year Warranty"],
-              features: ["Premium performance", "Advanced monitoring", "Reliable"],
-              image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
-              badge: "Best Seller",
-              category: "inverter",
-              subCategory: "Solar Inverters",
-              description: "High-performance 5kW solar inverter with advanced monitoring and maximum power point tracking.",
-              fullSpecs: [
-                { label: "Power Rating", value: "5kW" },
-                { label: "Input Voltage", value: "24V/48V" },
-                { label: "Output Voltage", value: "230V AC" },
-                { label: "Efficiency", value: "96%" },
-                { label: "MPPT", value: "Yes" },
-                { label: "IP Rating", value: "IP65" },
-                { label: "Warranty", value: "5 Years" },
-                { label: "Dimensions", value: "550 x 400 x 180mm" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop"
-              ]
-            },
-            {
-              id: 9,
-              name: "Solar Inverter 10kW",
-              price: 55000,
-              rating: 4.9,
-              reviews: 34,
-              specs: ["10kW Capacity", "MPPT Technology", "IP65 Rating", "5-Year Warranty"],
-              features: ["Commercial grade", "High capacity", "Industrial quality"],
-              image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
-              category: "inverter",
-              subCategory: "Solar Inverters",
-              description: "Commercial-grade 10kW solar inverter designed for large-scale installations and industrial applications.",
-              fullSpecs: [
-                { label: "Power Rating", value: "10kW" },
-                { label: "Input Voltage", value: "48V/96V" },
-                { label: "Output Voltage", value: "415V 3-Phase" },
-                { label: "Efficiency", value: "97%" },
-                { label: "MPPT", value: "Yes" },
-                { label: "IP Rating", value: "IP65" },
-                { label: "Warranty", value: "5 Years" },
-                { label: "Dimensions", value: "650 x 500 x 200mm" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop"
-              ]
-            }
-          ]
-        },
-        {
-          name: "Home Inverters",
-          items: [
-            {
-              id: 10,
-              name: "Home Inverter 1kW",
-              price: 12000,
-              rating: 4.6,
-              reviews: 145,
-              specs: ["1kW Capacity", "Pure Sine Wave", "LCD Display", "3-Year Warranty"],
-              features: ["Compact design", "Easy installation", "Quiet operation"],
-              image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
-              category: "inverter",
-              subCategory: "Home Inverters",
-              description: "Compact 1kW home inverter with pure sine wave output for sensitive electronic devices.",
-              fullSpecs: [
-                { label: "Power Rating", value: "1kW" },
-                { label: "Input Voltage", value: "12V" },
-                { label: "Output Voltage", value: "230V AC" },
-                { label: "Waveform", value: "Pure Sine Wave" },
-                { label: "Display", value: "LCD" },
-                { label: "Warranty", value: "3 Years" },
-                { label: "Dimensions", value: "300 x 250 x 120mm" },
-                { label: "Weight", value: "8 kg" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop"
-              ]
-            },
-            {
-              id: 11,
-              name: "Home Inverter 2kW",
-              price: 18000,
-              rating: 4.7,
-              reviews: 112,
-              specs: ["2kW Capacity", "Pure Sine Wave", "LCD Display", "3-Year Warranty"],
-              features: ["Powerful", "Efficient", "Smart features"],
-              image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
-              badge: "Popular",
-              category: "inverter",
-              subCategory: "Home Inverters",
-              description: "Powerful 2kW home inverter with advanced features and intelligent battery management.",
-              fullSpecs: [
-                { label: "Power Rating", value: "2kW" },
-                { label: "Input Voltage", value: "24V" },
-                { label: "Output Voltage", value: "230V AC" },
-                { label: "Waveform", value: "Pure Sine Wave" },
-                { label: "Display", value: "LCD with Smart Features" },
-                { label: "Warranty", value: "3 Years" },
-                { label: "Dimensions", value: "380 x 300 x 150mm" },
-                { label: "Weight", value: "12 kg" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    battery: {
-      name: "Batteries",
-      icon: "🔋",
-      subCategories: [
-        {
-          name: "Lithium-ion Batteries",
-          items: [
-            {
-              id: 12,
-              name: "Lithium Battery 100Ah",
-              price: 15000,
-              rating: 4.8,
-              reviews: 89,
-              specs: ["100Ah Capacity", "Deep Cycle", "5-Year Warranty", "Maintenance Free"],
-              features: ["Long life", "Fast charging", "Lightweight"],
-              image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop",
-              badge: "Best Seller",
-              category: "battery",
-              subCategory: "Lithium-ion Batteries",
-              description: "Premium 100Ah lithium-ion battery with advanced BMS for maximum safety and performance.",
-              fullSpecs: [
-                { label: "Capacity", value: "100Ah" },
-                { label: "Voltage", value: "12.8V" },
-                { label: "Cycle Life", value: "2000+ Cycles" },
-                { label: "Chemistry", value: "LiFePO4" },
-                { label: "Weight", value: "13 kg" },
-                { label: "Warranty", value: "5 Years" },
-                { label: "BMS", value: "Yes" },
-                { label: "Dimensions", value: "330 x 170 x 220mm" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&h=400&fit=crop"
-              ]
-            },
-            {
-              id: 13,
-              name: "Lithium Battery 150Ah",
-              price: 22000,
-              rating: 4.9,
-              reviews: 67,
-              specs: ["150Ah Capacity", "Deep Cycle", "5-Year Warranty", "Maintenance Free"],
-              features: ["Premium quality", "High capacity", "Reliable"],
-              image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop",
-              category: "battery",
-              subCategory: "Lithium-ion Batteries",
-              description: "High-capacity 150Ah lithium-ion battery with superior deep-cycle performance.",
-              fullSpecs: [
-                { label: "Capacity", value: "150Ah" },
-                { label: "Voltage", value: "12.8V" },
-                { label: "Cycle Life", value: "2500+ Cycles" },
-                { label: "Chemistry", value: "LiFePO4" },
-                { label: "Weight", value: "17 kg" },
-                { label: "Warranty", value: "5 Years" },
-                { label: "BMS", value: "Yes" },
-                { label: "Dimensions", value: "350 x 180 x 240mm" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&h=400&fit=crop"
-              ]
-            },
-            {
-              id: 14,
-              name: "Lithium Battery 200Ah",
-              price: 28000,
-              rating: 4.9,
-              reviews: 45,
-              specs: ["200Ah Capacity", "Deep Cycle", "5-Year Warranty", "Maintenance Free"],
-              features: ["Industrial grade", "Heavy duty", "Maximum capacity"],
-              image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop",
-              badge: "New",
-              category: "battery",
-              subCategory: "Lithium-ion Batteries",
-              description: "Maximum capacity 200Ah lithium-ion battery designed for heavy-duty industrial applications.",
-              fullSpecs: [
-                { label: "Capacity", value: "200Ah" },
-                { label: "Voltage", value: "12.8V" },
-                { label: "Cycle Life", value: "3000+ Cycles" },
-                { label: "Chemistry", value: "LiFePO4" },
-                { label: "Weight", value: "22 kg" },
-                { label: "Warranty", value: "5 Years" },
-                { label: "BMS", value: "Yes" },
-                { label: "Dimensions", value: "380 x 200 x 260mm" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&h=400&fit=crop"
-              ]
-            }
-          ]
-        },
-        {
-          name: "Tubular Batteries",
-          items: [
-            {
-              id: 15,
-              name: "Tubular Battery 150Ah",
-              price: 12000,
-              rating: 4.5,
-              reviews: 234,
-              specs: ["150Ah Capacity", "Deep Discharge", "3-Year Warranty", "Water Fill"],
-              features: ["Budget friendly", "Durable", "Reliable"],
-              image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop",
-              category: "battery",
-              subCategory: "Tubular Batteries",
-              description: "Reliable tubular battery with deep discharge capability for uninterrupted power backup.",
-              fullSpecs: [
-                { label: "Capacity", value: "150Ah" },
-                { label: "Voltage", value: "12V" },
-                { label: "Type", value: "Tubular" },
-                { label: "Deep Discharge", value: "Yes" },
-                { label: "Weight", value: "35 kg" },
-                { label: "Warranty", value: "3 Years" },
-                { label: "Maintenance", value: "Water Fill Required" },
-                { label: "Dimensions", value: "400 x 180 x 250mm" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&h=400&fit=crop"
-              ]
-            },
-            {
-              id: 16,
-              name: "Tubular Battery 200Ah",
-              price: 16000,
-              rating: 4.6,
-              reviews: 189,
-              specs: ["200Ah Capacity", "Deep Discharge", "3-Year Warranty", "Water Fill"],
-              features: ["Excellent value", "Long lasting", "Trusted"],
-              image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop",
-              badge: "Popular",
-              category: "battery",
-              subCategory: "Tubular Batteries",
-              description: "High-capacity tubular battery with excellent deep discharge recovery and long life.",
-              fullSpecs: [
-                { label: "Capacity", value: "200Ah" },
-                { label: "Voltage", value: "12V" },
-                { label: "Type", value: "Tubular" },
-                { label: "Deep Discharge", value: "Yes" },
-                { label: "Weight", value: "40 kg" },
-                { label: "Warranty", value: "3 Years" },
-                { label: "Maintenance", value: "Water Fill Required" },
-                { label: "Dimensions", value: "450 x 190 x 260mm" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&h=400&fit=crop"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    generator: {
-      name: "Generators",
-      icon: "🔄",
-      subCategories: [
-        {
-          name: "Diesel Generators",
-          items: [
-            {
-              id: 17,
-              name: "Diesel Generator 5kVA",
-              price: 45000,
-              rating: 4.6,
-              reviews: 56,
-              specs: ["5kVA Capacity", "Silent Operation", "Automatic Start", "2-Year Warranty"],
-              features: ["Fuel efficient", "Quiet", "Reliable"],
-              image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
-              category: "generator",
-              subCategory: "Diesel Generators",
-              description: "Fuel-efficient 5kVA diesel generator with silent operation and automatic start feature.",
-              fullSpecs: [
-                { label: "Power Rating", value: "5kVA" },
-                { label: "Fuel Type", value: "Diesel" },
-                { label: "Noise Level", value: "65 dB" },
-                { label: "Start Type", value: "Automatic" },
-                { label: "Fuel Tank", value: "20L" },
-                { label: "Runtime", value: "8 Hours" },
-                { label: "Warranty", value: "2 Years" },
-                { label: "Weight", value: "120 kg" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop"
-              ]
-            },
-            {
-              id: 18,
-              name: "Diesel Generator 10kVA",
-              price: 75000,
-              rating: 4.7,
-              reviews: 78,
-              specs: ["10kVA Capacity", "Silent Operation", "Automatic Start", "2-Year Warranty"],
-              features: ["Powerful", "Efficient", "Industrial quality"],
-              image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
-              badge: "Popular",
-              category: "generator",
-              subCategory: "Diesel Generators",
-              description: "Powerful 10kVA diesel generator ideal for commercial and industrial applications.",
-              fullSpecs: [
-                { label: "Power Rating", value: "10kVA" },
-                { label: "Fuel Type", value: "Diesel" },
-                { label: "Noise Level", value: "68 dB" },
-                { label: "Start Type", value: "Automatic" },
-                { label: "Fuel Tank", value: "35L" },
-                { label: "Runtime", value: "10 Hours" },
-                { label: "Warranty", value: "2 Years" },
-                { label: "Weight", value: "180 kg" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop"
-              ]
-            },
-            {
-              id: 19,
-              name: "Diesel Generator 25kVA",
-              price: 150000,
-              rating: 4.8,
-              reviews: 45,
-              specs: ["25kVA Capacity", "Silent Operation", "Automatic Start", "2-Year Warranty"],
-              features: ["Heavy duty", "Commercial grade", "Superior performance"],
-              image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
-              badge: "Best Seller",
-              category: "generator",
-              subCategory: "Diesel Generators",
-              description: "Heavy-duty 25kVA diesel generator designed for maximum power output and reliability.",
-              fullSpecs: [
-                { label: "Power Rating", value: "25kVA" },
-                { label: "Fuel Type", value: "Diesel" },
-                { label: "Noise Level", value: "72 dB" },
-                { label: "Start Type", value: "Automatic" },
-                { label: "Fuel Tank", value: "60L" },
-                { label: "Runtime", value: "12 Hours" },
-                { label: "Warranty", value: "2 Years" },
-                { label: "Weight", value: "320 kg" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop"
-              ]
-            }
-          ]
-        },
-        {
-          name: "Petrol Generators",
-          items: [
-            {
-              id: 20,
-              name: "Petrol Generator 2kVA",
-              price: 25000,
-              rating: 4.4,
-              reviews: 123,
-              specs: ["2kVA Capacity", "Portable", "Easy Start", "2-Year Warranty"],
-              features: ["Portable", "Lightweight", "Easy to use"],
-              image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
-              category: "generator",
-              subCategory: "Petrol Generators",
-              description: "Portable 2kVA petrol generator perfect for home backup and outdoor use.",
-              fullSpecs: [
-                { label: "Power Rating", value: "2kVA" },
-                { label: "Fuel Type", value: "Petrol" },
-                { label: "Noise Level", value: "62 dB" },
-                { label: "Start Type", value: "Recoil" },
-                { label: "Fuel Tank", value: "12L" },
-                { label: "Runtime", value: "6 Hours" },
-                { label: "Warranty", value: "2 Years" },
-                { label: "Weight", value: "35 kg" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop"
-              ]
-            },
-            {
-              id: 21,
-              name: "Petrol Generator 3kVA",
-              price: 32000,
-              rating: 4.5,
-              reviews: 98,
-              specs: ["3kVA Capacity", "Portable", "Easy Start", "2-Year Warranty"],
-              features: ["Reliable", "Portable", "Great value"],
-              image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
-              category: "generator",
-              subCategory: "Petrol Generators",
-              description: "Reliable 3kVA petrol generator with excellent fuel efficiency and portability.",
-              fullSpecs: [
-                { label: "Power Rating", value: "3kVA" },
-                { label: "Fuel Type", value: "Petrol" },
-                { label: "Noise Level", value: "64 dB" },
-                { label: "Start Type", value: "Recoil/Electric" },
-                { label: "Fuel Tank", value: "15L" },
-                { label: "Runtime", value: "7 Hours" },
-                { label: "Warranty", value: "2 Years" },
-                { label: "Weight", value: "45 kg" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    hybrid: {
-      name: "Hybrid Systems",
-      icon: "🌐",
-      subCategories: [
-        {
-          name: "Solar + Inverter",
-          items: [
-            {
-              id: 22,
-              name: "Hybrid System 3kW",
-              price: 85000,
-              rating: 4.9,
-              reviews: 34,
-              specs: ["3kW Solar + Inverter", "Complete System", "5-Year Warranty", "Includes Installation"],
-              features: ["Complete solution", "Plug and play", "Ready to use"],
-              image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop",
-              badge: "Best Seller",
-              category: "hybrid",
-              subCategory: "Solar + Inverter",
-              description: "Complete 3kW hybrid system with solar panels and inverter - everything you need for solar power.",
-              fullSpecs: [
-                { label: "System Size", value: "3kW" },
-                { label: "Solar Panels", value: "8 x 375W" },
-                { label: "Inverter Type", value: "Hybrid" },
-                { label: "Warranty", value: "5 Years" },
-                { label: "Installation", value: "Included" },
-                { label: "Annual Generation", value: "4,500 kWh" },
-                { label: "CO2 Savings", value: "3.2 tons/year" },
-                { label: "Roof Space", value: "25 sq.m" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop"
-              ]
-            },
-            {
-              id: 23,
-              name: "Hybrid System 5kW",
-              price: 125000,
-              rating: 4.9,
-              reviews: 28,
-              specs: ["5kW Solar + Inverter", "Complete System", "5-Year Warranty", "Includes Installation"],
-              features: ["Full system", "Premium quality", "Energy efficient"],
-              image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop",
-              badge: "Popular",
-              category: "hybrid",
-              subCategory: "Solar + Inverter",
-              description: "Complete 5kW hybrid solar system with premium components and professional installation.",
-              fullSpecs: [
-                { label: "System Size", value: "5kW" },
-                { label: "Solar Panels", value: "14 x 375W" },
-                { label: "Inverter Type", value: "Hybrid" },
-                { label: "Warranty", value: "5 Years" },
-                { label: "Installation", value: "Included" },
-                { label: "Annual Generation", value: "7,500 kWh" },
-                { label: "CO2 Savings", value: "5.3 tons/year" },
-                { label: "Roof Space", value: "42 sq.m" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop"
-              ]
-            }
-          ]
-        },
-        {
-          name: "Solar + Battery",
-          items: [
-            {
-              id: 24,
-              name: "Solar System with Battery 2kW",
-              price: 95000,
-              rating: 4.8,
-              reviews: 23,
-              specs: ["2kW Solar + Battery", "Complete System", "5-Year Warranty", "Includes Installation"],
-              features: ["Complete solution", "Energy storage", "Efficient"],
-              image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&h=300&fit=crop",
-              category: "hybrid",
-              subCategory: "Solar + Battery",
-              description: "Complete 2kW solar system with battery storage for 24/7 power availability.",
-              fullSpecs: [
-                { label: "System Size", value: "2kW" },
-                { label: "Solar Panels", value: "5 x 400W" },
-                { label: "Battery", value: "5kWh Lithium" },
-                { label: "Warranty", value: "5 Years" },
-                { label: "Installation", value: "Included" },
-                { label: "Annual Generation", value: "3,000 kWh" },
-                { label: "Backup Time", value: "3-4 Hours" },
-                { label: "Roof Space", value: "15 sq.m" }
-              ],
-              images: [
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop",
-                "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop"
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  };
+    
+  "voltage": {
+    "name": "Voltage Stabilizers",
+    "icon": "⚡",
+    "subCategories": [
+      {
+        "name": "Servo Voltage Stabilizers",
+        "items": [
+          {
+            "id": 1,
+            "name": "Single Phase Servo Voltage Stabilizer",
+            "price": 40000,
+            "oldPrice": 55000,
+            "rating": 4.8,
+            "reviews": 234,
+            "specs": [
+              "1 KVA – 150 KVA Capacity",
+              "140V – 270V AC Input",
+              "230V ±1% Output",
+              "50Hz ±10% Input Frequency"
+            ],
+            "features": [
+              "Automatic voltage correction",
+              "Indoor installation",
+              "High & Low voltage cut-off",
+              "Bypass switch",
+              "Low maintenance",
+              "Precision voltage regulation",
+              "Reliable performance",
+              "Suitable for continuous operation"
+            ],
+            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "badge": "Best Seller",
+            "category": "voltage",
+            "subCategory": "Servo Voltage Stabilizers",
+            "description": "Best Electric Single Phase Servo Voltage Stabilizer is specially designed for continuous indoor use. It automatically maintains constant output voltage even when input voltage fluctuates.",
+            "fullSpecs": [
+              { "label": "Capacity", "value": "1 KVA – 150 KVA" },
+              { "label": "Input Voltage", "value": "140V – 270V AC" },
+              { "label": "Output Voltage", "value": "230V ±1%" },
+              { "label": "Input Frequency", "value": "50Hz ±10%" },
+              { "label": "Output Frequency", "value": "50Hz ±1%" },
+              { "label": "Output Waveform", "value": "Quasi Sine Wave" },
+              { "label": "Cut-Off", "value": "High & Low Output Side with Bypass" }
+            ],
+            "images": [
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Three Phase Servo Voltage Stabilizer",
+            "price": 85000,
+            "oldPrice": 110000,
+            "rating": 4.7,
+            "reviews": 189,
+            "specs": [
+              "3 KVA – 2000 KVA Capacity",
+              "300V – 470V AC Input",
+              "415V ±5% Output",
+              "50Hz ±10% Input Frequency"
+            ],
+            "features": [
+              "Three phase voltage correction",
+              "Heavy duty industrial design",
+              "High & Low voltage protection",
+              "Indoor installation",
+              "Continuous operation",
+              "Low maintenance"
+            ],
+            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "badge": "Industrial",
+            "category": "voltage",
+            "subCategory": "Servo Voltage Stabilizers",
+            "description": "Designed for industrial applications, the Three Phase Servo Voltage Stabilizer automatically regulates fluctuating voltage and delivers balanced output for heavy electrical equipment.",
+            "fullSpecs": [
+              { "label": "Capacity", "value": "3 KVA – 2000 KVA" },
+              { "label": "Input Voltage", "value": "300V – 470V AC" },
+              { "label": "Output Voltage", "value": "415V ±5%" },
+              { "label": "Input Frequency", "value": "50Hz ±10%" },
+              { "label": "Output Frequency", "value": "50Hz ±1%" },
+              { "label": "Output Waveform", "value": "Quasi Sine Wave" },
+              { "label": "DC Voltage", "value": "12V / 24V / 48V" },
+              { "label": "Cut-Off", "value": "High & Low Output Side with Bypass" }
+            ],
+            "images": [
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Automatic Voltage Stabilizers",
+        "items": [
+          {
+            "id": 3,
+            "name": "Automatic Voltage Stabilizer",
+            "price": 12000,
+            "oldPrice": 16000,
+            "rating": 4.5,
+            "reviews": 312,
+            "specs": [
+              "1 KVA – 7 KVA Capacity",
+              "90V – 280V AC Input",
+              "200V – 240V ±10% Output",
+              "Sine Wave Output"
+            ],
+            "features": [
+              "Automatic voltage correction",
+              "Fast response",
+              "Compact design",
+              "Energy efficient",
+              "Low maintenance",
+              "Suitable for home & commercial use"
+            ],
+            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "badge": "",
+            "category": "voltage",
+            "subCategory": "Automatic Voltage Stabilizers",
+            "description": "Automatic Voltage Stabilizer maintains proper voltage for domestic and commercial appliances like refrigerators, televisions, air conditioners, pumps and lighting systems.",
+            "fullSpecs": [
+              { "label": "Capacity", "value": "1 KVA, 2 KVA, 3 KVA, 5 KVA, 7 KVA" },
+              { "label": "Input Voltage", "value": "90V – 280V AC" },
+              { "label": "Output Voltage", "value": "200V – 240V ±10%" },
+              { "label": "Input Frequency", "value": "50Hz ±10%" },
+              { "label": "Output Frequency", "value": "50Hz ±1%" },
+              { "label": "Output Waveform", "value": "Sine Wave" }
+            ],
+            "images": [
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "ups": {
+    "name": "UPS Systems",
+    "icon": "🔌",
+    "subCategories": [
+      {
+        "name": "Online UPS",
+        "items": [
+          {
+            "id": 4,
+            "name": "Online UPS System",
+            "price": 55000,
+            "oldPrice": 70000,
+            "rating": 4.9,
+            "reviews": 156,
+            "specs": [
+              "1 KVA – 50 KVA Capacity",
+              "180V – 270V AC Input",
+              "230V AC Output",
+              "Zero Transfer Time"
+            ],
+            "features": [
+              "True Online Technology",
+              "Zero transfer time",
+              "Pure sine wave output",
+              "Battery charging system",
+              "Reliable backup",
+              "High efficiency"
+            ],
+            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "badge": "Premium",
+            "category": "ups",
+            "subCategory": "Online UPS",
+            "description": "Best Electric Online UPS provides uninterrupted power with zero transfer time. It continuously supplies power through the inverter while charging batteries simultaneously.",
+            "fullSpecs": [
+              { "label": "Capacity", "value": "1 KVA – 50 KVA" },
+              { "label": "Input Voltage", "value": "180V – 270V AC" },
+              { "label": "Output Voltage", "value": "230V AC" },
+              { "label": "Input Frequency", "value": "50Hz ±10%" },
+              { "label": "Output Frequency", "value": "50Hz ±1%" },
+              { "label": "Output Waveform", "value": "Sine Wave" },
+              { "label": "Backup Time", "value": "10–30 Minutes" },
+              { "label": "DC Voltage", "value": "96V / 120V / 180V / 360V DC" },
+              { "label": "Indicators", "value": "Mains, Charging, UPS ON, Battery Low" },
+              { "label": "Alarms", "value": "Mains Fail, Battery Low" }
+            ],
+            "images": [
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Offline UPS",
+        "items": [
+          {
+            "id": 5,
+            "name": "Offline UPS System",
+            "price": 8500,
+            "oldPrice": 12000,
+            "rating": 4.3,
+            "reviews": 423,
+            "specs": [
+              "500VA – 2000VA Capacity",
+              "180V – 270V AC Input",
+              "220V – 240V AC Output",
+              "4 ms Transfer Time"
+            ],
+            "features": [
+              "Automatic battery switching",
+              "Fast transfer time",
+              "PWM & MOSFET Technology",
+              "Quasi sine wave output",
+              "Battery protection",
+              "Reliable backup"
+            ],
+            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "badge": "",
+            "category": "ups",
+            "subCategory": "Offline UPS",
+            "description": "Offline UPS automatically switches to battery during power failure and protects equipment against voltage fluctuations.",
+            "fullSpecs": [
+              { "label": "Capacity", "value": "500VA, 800VA, 1250VA, 1600VA, 2000VA" },
+              { "label": "Input Voltage", "value": "180V – 270V AC" },
+              { "label": "Output Voltage", "value": "220V – 240V AC" },
+              { "label": "Input Frequency", "value": "50Hz ±10%" },
+              { "label": "Output Frequency", "value": "50Hz ±1%" },
+              { "label": "Transfer Time", "value": "4 ms" },
+              { "label": "Backup Time", "value": "10–30 Minutes" },
+              { "label": "Output Waveform", "value": "Quasi Sine Wave" },
+              { "label": "DC Voltage", "value": "12V / 24V / 48V" }
+            ],
+            "images": [
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "inverters": {
+    "name": "Inverters",
+    "icon": "🔄",
+    "subCategories": [
+      {
+        "name": "Sine Wave Inverters",
+        "items": [
+          {
+            "id": 6,
+            "name": "Sine Wave Inverter",
+            "price": 15000,
+            "oldPrice": 22000,
+            "rating": 4.6,
+            "reviews": 278,
+            "specs": [
+              "300VA – 1000 KVA Capacity",
+              "230V AC Input",
+              "230V AC Output",
+              "50Hz ±1% Output Frequency"
+            ],
+            "features": [
+              "PWM Technology",
+              "Constant Voltage & Current Charging",
+              "Fully Automatic",
+              "Low Maintenance",
+              "Silent Operation",
+              "Pollution Free",
+              "Indoor Installation",
+              "Auto Reset",
+              "Battery Protection",
+              "Overload Protection",
+              "Short Circuit Protection"
+            ],
+            "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
+            "badge": "Best Seller",
+            "category": "inverters",
+            "subCategory": "Sine Wave Inverters",
+            "description": "Best Electric Sine Wave Inverter provides uninterrupted backup power for homes, hospitals and commercial establishments. It converts DC power into AC power with automatic charging and overload protection.",
+            "fullSpecs": [
+              { "label": "Capacity", "value": "300VA – 1000 KVA" },
+              { "label": "Input Voltage", "value": "230V AC" },
+              { "label": "Output Voltage", "value": "230V AC" },
+              { "label": "Input Frequency", "value": "50Hz ±10%" },
+              { "label": "Output Frequency", "value": "50Hz ±1%" },
+              { "label": "Output Waveform", "value": "Quasi Sine Wave" },
+              { "label": "Protections", "value": "Battery Short Circuit, Overload, Low Battery, Over Charging" },
+              { "label": "Indicators", "value": "Low Battery, Charging, Overload, Charged, Inverter ON, Mains ON" }
+            ],
+            "images": [
+              "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "transformers": {
+    "name": "Transformers",
+    "icon": "⚡",
+    "subCategories": [
+      {
+        "name": "Isolation Transformers",
+        "items": [
+          {
+            "id": 7,
+            "name": "Isolation Transformer",
+            "price": 45000,
+            "oldPrice": 60000,
+            "rating": 4.7,
+            "reviews": 167,
+            "specs": [
+              "1 KVA – 2000 KVA Capacity",
+              "230V AC Input",
+              "230V AC Output",
+              "50Hz ±1% Output Frequency"
+            ],
+            "features": [
+              "Complete electrical isolation",
+              "Shock protection",
+              "Heavy-duty construction",
+              "Automatic operation",
+              "Low maintenance",
+              "Long service life"
+            ],
+            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "badge": "",
+            "category": "transformers",
+            "subCategory": "Isolation Transformers",
+            "description": "Isolation Transformers electrically isolate the power input from the output to protect sensitive equipment from electrical noise and shocks.",
+            "fullSpecs": [
+              { "label": "Capacity", "value": "1 KVA – 2000 KVA" },
+              { "label": "Input Voltage", "value": "230V AC" },
+              { "label": "Output Voltage", "value": "230V AC" },
+              { "label": "Input Frequency", "value": "50Hz ±10%" },
+              { "label": "Output Frequency", "value": "50Hz ±1%" },
+              { "label": "Output Waveform", "value": "Quasi Sine Wave" }
+            ],
+            "images": [
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "power": {
+    "name": "Power Solutions",
+    "icon": "💡",
+    "subCategories": [
+      {
+        "name": "Phase Correction",
+        "items": [
+          {
+            "id": 8,
+            "name": "Automatic Phase Sequence Corrector",
+            "price": 25000,
+            "oldPrice": 35000,
+            "rating": 4.5,
+            "reviews": 134,
+            "specs": [
+              "10 Amp – 1000 Amp Capacity",
+              "340V – 480V AC Input",
+              "340V – 480V AC Output",
+              "50Hz ±1% Output Frequency"
+            ],
+            "features": [
+              "Automatic phase correction",
+              "Prevents motor damage",
+              "Suitable for lifts & motors",
+              "Industrial use",
+              "Reliable operation",
+              "Low maintenance"
+            ],
+            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "badge": "Industrial",
+            "category": "power",
+            "subCategory": "Phase Correction",
+            "description": "This device automatically corrects wrong phase sequence in three-phase supply, preventing equipment damage and reducing production downtime.",
+            "fullSpecs": [
+              { "label": "Capacity", "value": "10 Amp – 1000 Amp" },
+              { "label": "Input Voltage", "value": "340V – 480V AC" },
+              { "label": "Output Voltage", "value": "340V – 480V AC" },
+              { "label": "Input Frequency", "value": "50Hz ±10%" },
+              { "label": "Output Frequency", "value": "50Hz ±1%" },
+              { "label": "Output Waveform", "value": "Quasi Sine Wave" }
+            ],
+            "images": [
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Phase & Neutral Balancing",
+        "items": [
+          {
+            "id": 9,
+            "name": "Automatic Phase & Neutral Balancing System",
+            "price": 125000,
+            "oldPrice": 160000,
+            "rating": 4.9,
+            "reviews": 89,
+            "specs": [
+              "415V, 3 Phase + Neutral, 4 Wire",
+              "50Hz ±5% Frequency",
+              "Magnetic Symmetry Working",
+              "Oil Cooled (ONAN)"
+            ],
+            "features": [
+              "Equalizes phase voltage",
+              "Reduces neutral current",
+              "Generates third phase if one phase fails",
+              "Prevents neutral failure hazards",
+              "Energy saving",
+              "Digital monitoring",
+              "Overload protection",
+              "Short circuit protection"
+            ],
+            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "badge": "Premium",
+            "category": "power",
+            "subCategory": "Phase & Neutral Balancing",
+            "description": "The Automatic Phase & Neutral Balancing System improves power quality by balancing phase voltages, reducing neutral current and protecting sensitive electrical equipment.",
+            "fullSpecs": [
+              { "label": "Input Supply", "value": "415V, 3 Phase + Neutral, 4 Wire" },
+              { "label": "Frequency", "value": "50Hz ±5%" },
+              { "label": "Working Principle", "value": "Magnetic Symmetry" },
+              { "label": "Phase Angle", "value": "Maintains 120°" },
+              { "label": "Neutral Protection", "value": "Yes" },
+              { "label": "Phase Equalization", "value": "Reduces imbalance by 40–60%" },
+              { "label": "Third Phase Generation", "value": "Yes" },
+              { "label": "Energy Saving", "value": "Yes" },
+              { "label": "Overload Protection", "value": "MCCB/MCB" },
+              { "label": "Neutral Current Protection", "value": "Yes" },
+              { "label": "Display", "value": "Digital 7-Segment Auto Scanning (Voltage, Current & Frequency)" },
+              { "label": "Cooling Type", "value": "Oil Cooled (ONAN)" },
+              { "label": "Oil Moisture Protection", "value": "Silica Gel Breather" }
+            ],
+            "images": [
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "batteries": {
+    "name": "Batteries",
+    "icon": "🔋",
+    "subCategories": [
+      {
+        "name": "Battery Range",
+        "items": [
+          {
+            "id": 10,
+            "name": "Battery Range",
+            "price": 8000,
+            "oldPrice": 12000,
+            "rating": 4.4,
+            "reviews": 567,
+            "specs": [
+              "12V 7Ah to 12V 200Ah",
+              "SMF Batteries",
+              "Tubular Batteries",
+              "Exide & Amaron Dealer"
+            ],
+            "features": [
+              "SMF Batteries",
+              "Tubular Batteries",
+              "Authorized dealer for Exide",
+              "Authorized dealer for Amaron",
+              "Deep discharge",
+              "Long life"
+            ],
+            "image": "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop",
+            "badge": "",
+            "category": "batteries",
+            "subCategory": "Battery Range",
+            "description": "Premium quality SMF and Tubular batteries for all UPS and inverter applications. Authorized dealer for Exide and Amaron.",
+            "fullSpecs": [
+              { "label": "Voltage Range", "value": "12V 7Ah to 12V 200Ah" },
+              { "label": "Types", "value": "SMF Batteries, Tubular Batteries" },
+              { "label": "Brands", "value": "Exide, Amaron" }
+            ],
+            "images": [
+              "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&h=400&fit=crop",
+              "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&h=400&fit=crop"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
 
   // Get all products function
   const getAllProducts = () => {
