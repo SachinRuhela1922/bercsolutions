@@ -31,7 +31,7 @@ function Support() {
                 <span className="support-quick-icon">📞</span>
                 <h3>Call Us</h3>
                 <p>Talk to our support team directly</p>
-                <a href="tel:+919876543210" className="support-quick-link">+91 98765 43210</a>
+                <a href="tel:+919876543210" className="support-quick-link">+91 84758 43925</a>
                 <span className="support-quick-time">Available 24/7</span>
               </div>
               <div className="support-quick-card">
@@ -52,7 +52,7 @@ function Support() {
                 <span className="support-quick-icon">📍</span>
                 <h3>Visit Us</h3>
                 <p>Visit our nearest service center</p>
-                <span className="support-quick-location">50+ centers across India</span>
+                <span className="support-quick-location">Sarvodhya COlony, Meerut</span>
                 <span className="support-quick-time">Mon-Sat, 9 AM - 6 PM</span>
               </div>
             </div>
@@ -325,7 +325,7 @@ function Support() {
               <div className="support-emergency-details">
                 <div>
                   <strong>Emergency Helpline</strong>
-                  <a href="tel:+919876543210">+91 98765 43210</a>
+                  <a href="tel:+918475843925">+91 84758 43925</a>
                 </div>
                 <div>
                   <strong>Emergency Email</strong>

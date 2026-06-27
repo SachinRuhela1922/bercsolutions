@@ -6,7 +6,6 @@ import "./Products.css";
 function Products() {
   const [activeCategory, setActiveCategory] = useState("all");
   const [activeSubCategory, setActiveSubCategory] = useState("all");
-  const [priceRange, setPriceRange] = useState(150000);
   const [selectedTag, setSelectedTag] = useState("all");
   const [sortBy, setSortBy] = useState("popularity");
   const [currentPage, setCurrentPage] = useState(1);
@@ -48,7 +47,7 @@ function Products() {
               "Reliable performance",
               "Suitable for continuous operation"
             ],
-            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT64onYLTabOCcrWsIQiDj3OcR4bwToXJFNWlceFuQItaqbZ_E82-EihqU&s=10",
             "badge": "Best Seller",
             "category": "voltage",
             "subCategory": "Servo Voltage Stabilizers",
@@ -63,8 +62,8 @@ function Products() {
               { "label": "Cut-Off", "value": "High & Low Output Side with Bypass" }
             ],
             "images": [
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKWB0D9N4eixMdhd4URR-EFz4VlDWLkN0JUjghIfHXGg&s=10",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS__7eD2Q9Hgw8JegUtc9KN7q1itHjtNSVq13iiJqAn7Q&s=10"
             ]
           },
           {
@@ -88,7 +87,7 @@ function Products() {
               "Continuous operation",
               "Low maintenance"
             ],
-            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOhz0Mq7lVA4Pu0GTI_t5SgMTVBqSCdywJuKXJ9m8k1g&s=10",
             "badge": "Industrial",
             "category": "voltage",
             "subCategory": "Servo Voltage Stabilizers",
@@ -104,8 +103,8 @@ function Products() {
               { "label": "Cut-Off", "value": "High & Low Output Side with Bypass" }
             ],
             "images": [
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKVDk4GWS_lUth-TPiWBaH4sT1AncxahoM50GZ-J_tSA&s=10",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3KhoP4wSPf8bq7ILHXR2uqX5zGHUW8VLuhcO-lfme6g&s=10"
             ]
           }
         ]
@@ -134,7 +133,7 @@ function Products() {
               "Low maintenance",
               "Suitable for home & commercial use"
             ],
-            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8hf_v2sUO9USGUCAxcX6q8sHaMtzTbYJTTheZiGOlWg&s=10",
             "badge": "",
             "category": "voltage",
             "subCategory": "Automatic Voltage Stabilizers",
@@ -148,8 +147,8 @@ function Products() {
               { "label": "Output Waveform", "value": "Sine Wave" }
             ],
             "images": [
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJlP4KwRcblkmocUmEa2W-Bkguv2-Y7GKoIRANExVayg&s=10",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHI0PEOItWeC3nUBLhlnDrxT2sRlaOqtkAuGu-UPNJFg&s=10"
             ]
           }
         ]
@@ -184,7 +183,7 @@ function Products() {
               "Reliable backup",
               "High efficiency"
             ],
-            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZzoj4alIJSj0Xz9LyAlaeoDVTeV2T2tP4C9mNbtDdnA&s=10",
             "badge": "Premium",
             "category": "ups",
             "subCategory": "Online UPS",
@@ -202,8 +201,8 @@ function Products() {
               { "label": "Alarms", "value": "Mains Fail, Battery Low" }
             ],
             "images": [
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFPk6ERCRVco8wQPWLbkQttA8q9wPkpjzMvq0L9UloAA&s=10",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxxwiwXJAYPGcyr8FC9zkO-4kKCE401ry5BeyEggNnMQ&s=10"
             ]
           }
         ]
@@ -232,7 +231,7 @@ function Products() {
               "Battery protection",
               "Reliable backup"
             ],
-            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiU5RW8CZ3kZ60_RBHnGFVim2Jw3v_Ngct3r9s7Zil9g&s=10",
             "badge": "",
             "category": "ups",
             "subCategory": "Offline UPS",
@@ -249,8 +248,8 @@ function Products() {
               { "label": "DC Voltage", "value": "12V / 24V / 48V" }
             ],
             "images": [
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7RZtUwgz5uzhiAkHWw87EOtcEni72yJsnXR1UibUqVA&s=10",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4wt30nwzcL-qg_98nvJDakFi3I3DLE16DerGCDBKeyA&s=10"
             ]
           }
         ]
@@ -290,7 +289,7 @@ function Products() {
               "Overload Protection",
               "Short Circuit Protection"
             ],
-            "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&h=300&fit=crop",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaelaIMm8Otu3KZG3OVkNr12byouthjBJ0HqiFNVRtBA&s=10",
             "badge": "Best Seller",
             "category": "inverters",
             "subCategory": "Sine Wave Inverters",
@@ -306,8 +305,8 @@ function Products() {
               { "label": "Indicators", "value": "Low Battery, Charging, Overload, Charged, Inverter ON, Mains ON" }
             ],
             "images": [
-              "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop",
-              "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=600&h=400&fit=crop"
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0X9_wL_46GYmPQondpZ91iMqdzbqeyXVN8bj40F817g&s=10",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD344vh6xvzb780IKbzLcspta0gzHaJ9Ez2f7ga3OPFg&s=10"
             ]
           }
         ]
@@ -342,7 +341,7 @@ function Products() {
               "Low maintenance",
               "Long service life"
             ],
-            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMiL4SrBz-9jNGX905M6VqqNMysGIgI7aXzfdn7CpK-g&s=10",
             "badge": "",
             "category": "transformers",
             "subCategory": "Isolation Transformers",
@@ -356,8 +355,8 @@ function Products() {
               { "label": "Output Waveform", "value": "Quasi Sine Wave" }
             ],
             "images": [
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZxzM1ZyGTu9YSvoW9E3V6A3ViHzV0-_BA7cJuJjsZHg&s=10",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtk_orff7f5_t7-hXYSwApJPpLiIHOmMKlSoEurhgTXQ&s=10"
             ]
           }
         ]
@@ -392,7 +391,7 @@ function Products() {
               "Reliable operation",
               "Low maintenance"
             ],
-            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrxC2yXk_X7fSo2PhI-0DhO0S404ceAIlh50QkHW66kg&s=10",
             "badge": "Industrial",
             "category": "power",
             "subCategory": "Phase Correction",
@@ -406,8 +405,8 @@ function Products() {
               { "label": "Output Waveform", "value": "Quasi Sine Wave" }
             ],
             "images": [
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7-nZ09ol3bltZ9YwQm-9jFYchxrbtvxFoaSGTP3Ykxg&s=10",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm0RYuXodOlK32BDi1340d0n9DLcI31rcipTM7wg6IrQ&s=10"
             ]
           }
         ]
@@ -438,7 +437,7 @@ function Products() {
               "Overload protection",
               "Short circuit protection"
             ],
-            "image": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=400&h=300&fit=crop",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8ArG-0dz2mNrGCmJNPmfP3EnBmaCnnh8HOvxb9JSqhA&s",
             "badge": "Premium",
             "category": "power",
             "subCategory": "Phase & Neutral Balancing",
@@ -459,8 +458,8 @@ function Products() {
               { "label": "Oil Moisture Protection", "value": "Silica Gel Breather" }
             ],
             "images": [
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop",
-              "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=400&fit=crop"
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrlKI8_h6ksF-CHpoB837NmXalvBEUYHe5qMhJHnI3rA&s=10",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn8dOZmhKuitlS1Wu5xEs7vRr-uTar-WXGEOp19BKMNg&s=10"
             ]
           }
         ]
@@ -495,7 +494,7 @@ function Products() {
               "Deep discharge",
               "Long life"
             ],
-            "image": "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=400&h=300&fit=crop",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbZAd4sGqqgFMTENlall6iNUo7a5kxKiA08C3ODA-OvA&s=10",
             "badge": "",
             "category": "batteries",
             "subCategory": "Battery Range",
@@ -506,8 +505,8 @@ function Products() {
               { "label": "Brands", "value": "Exide, Amaron" }
             ],
             "images": [
-              "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&h=400&fit=crop",
-              "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=600&h=400&fit=crop"
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-N_eCkGqBV9LDT3V_NvTMHl8Cf3MMCYI9X0XeuDn4QQ&s",
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbHqHN0OjFkUO18tfqKQ8MeH3L4ZJ3E3tS7Wpr2u-9_g&s"
             ]
           }
         ]
@@ -539,8 +538,6 @@ function Products() {
       result = result.filter(item => item.subCategory === activeSubCategory);
     }
 
-    result = result.filter(item => item.price <= priceRange);
-
     if (selectedTag !== "all") {
       if (selectedTag === "Best Seller") {
         result = result.filter(item => item.badge === "Best Seller");
@@ -548,8 +545,6 @@ function Products() {
         result = result.filter(item => item.badge === "Popular");
       } else if (selectedTag === "New") {
         result = result.filter(item => item.badge === "New");
-      } else if (selectedTag === "Budget") {
-        result = result.filter(item => item.price <= 10000);
       } else if (selectedTag === "Premium") {
         result = result.filter(item => item.price >= 50000);
       } else if (selectedTag === "Heavy Duty") {
@@ -583,7 +578,7 @@ function Products() {
     const filtered = applyFilters();
     setFilteredProducts(filtered);
     setCurrentPage(1);
-  }, [activeCategory, activeSubCategory, priceRange, selectedTag, sortBy]);
+  }, [activeCategory, activeSubCategory, selectedTag, sortBy]);
 
   // Pagination
   const indexOfLastProduct = currentPage * productsPerPage;
@@ -629,7 +624,6 @@ function Products() {
   const clearFilters = () => {
     setActiveCategory("all");
     setActiveSubCategory("all");
-    setPriceRange(150000);
     setSelectedTag("all");
     setSortBy("popularity");
   };
@@ -722,25 +716,6 @@ function Products() {
                   </div>
                 )}
 
-                <div className="products-sidebar-filter">
-                  <h4>Filter by Price</h4>
-                  <div className="products-price-range">
-                    <input 
-                      type="range" 
-                      min="5000" 
-                      max="150000" 
-                      step="1000" 
-                      value={priceRange}
-                      onChange={(e) => setPriceRange(Number(e.target.value))}
-                    />
-                    <div className="products-price-labels">
-                      <span>₹5,000</span>
-                      <span>₹{priceRange.toLocaleString()}</span>
-                      <span>₹1,50,000</span>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="products-sidebar-tags">
                   <h4>Popular Tags</h4>
                   <div className="products-tags">
@@ -769,12 +744,6 @@ function Products() {
                       Premium
                     </span>
                     <span 
-                      className={`products-tag ${selectedTag === "Budget" ? "active" : ""}`}
-                      onClick={() => handleTagClick("Budget")}
-                    >
-                      Budget
-                    </span>
-                    <span 
                       className={`products-tag ${selectedTag === "Heavy Duty" ? "active" : ""}`}
                       onClick={() => handleTagClick("Heavy Duty")}
                     >
@@ -783,7 +752,7 @@ function Products() {
                   </div>
                 </div>
 
-                {(activeCategory !== "all" || activeSubCategory !== "all" || selectedTag !== "all" || priceRange < 150000) && (
+                {(activeCategory !== "all" || activeSubCategory !== "all" || selectedTag !== "all") && (
                   <button className="products-clear-filters" onClick={clearFilters}>
                     Clear All Filters ✕
                   </button>
@@ -864,7 +833,6 @@ function Products() {
                               ))}
                             </div>
                             <div className="products-card-footer">
-                              <span className="products-price">₹{product.price.toLocaleString()}</span>
                               <div className="products-card-buttons">
                                 <button className="products-card-add" onClick={(e) => { e.stopPropagation(); alert(`Added ${product.name} to cart!`); }}>
                                   Add to Cart
@@ -967,10 +935,6 @@ function Products() {
                       {selectedProduct.rating % 1 >= 0.5 ? '⭐' : ''}
                     </span>
                     <span className="products-rating-text">{selectedProduct.rating} ({selectedProduct.reviews} reviews)</span>
-                  </div>
-                  
-                  <div className="products-modal-price">
-                    ₹{selectedProduct.price.toLocaleString()}
                   </div>
                   
                   <p className="products-modal-description">{selectedProduct.description}</p>

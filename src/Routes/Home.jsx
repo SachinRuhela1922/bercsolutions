@@ -54,8 +54,7 @@ function Home() {
         "id": 1,
         "name": "Single Phase Servo Voltage Stabilizer",
         "category": "voltage",
-        "price": "₹40,000",
-        "oldPrice": "₹55,000",
+        
         "rating": 4.8,
         "reviews": 234,
         "capacity": "1 KVA – 150 KVA",
@@ -74,7 +73,7 @@ function Home() {
         "description": "Best Electric Single Phase Servo Voltage Stabilizer is specially designed for continuous indoor use. It automatically maintains constant output voltage even when input voltage fluctuates.",
         "longDescription": "Best Electric Single Phase Servo Voltage Stabilizer is specially designed for continuous indoor use. It automatically maintains constant output voltage even when input voltage fluctuates. It is suitable for residential, commercial and industrial applications requiring stable power supply.",
         "images": [
-          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600",
+          "https://www.servostabilizerindia.in/wp-content/uploads/2024/12/15-KVA-3-Phase-without-background-3.png",
           "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
         ],
         "badge": "Best Seller",
@@ -92,8 +91,7 @@ function Home() {
         "id": 2,
         "name": "Three Phase Servo Voltage Stabilizer",
         "category": "voltage",
-        "price": "₹85,000",
-        "oldPrice": "₹1,10,000",
+        
         "rating": 4.7,
         "reviews": 189,
         "capacity": "3 KVA – 2000 KVA",
@@ -110,7 +108,7 @@ function Home() {
         "description": "Designed for industrial applications, the Three Phase Servo Voltage Stabilizer automatically regulates fluctuating voltage and delivers balanced output for heavy electrical equipment.",
         "longDescription": "Designed for industrial applications, the Three Phase Servo Voltage Stabilizer automatically regulates fluctuating voltage and delivers balanced output for heavy electrical equipment.",
         "images": [
-          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+          "https://5.imimg.com/data5/SELLER/Default/2023/9/345609079/LQ/GP/YT/934195/three-phase-servo-voltage-stabilizer-500x500.jpg"
         ],
         "badge": "Industrial",
         "specifications": {
@@ -128,8 +126,7 @@ function Home() {
         "id": 3,
         "name": "Automatic Voltage Stabilizer",
         "category": "voltage",
-        "price": "₹12,000",
-        "oldPrice": "₹16,000",
+        
         "rating": 4.5,
         "reviews": 312,
         "capacity": "1 KVA, 2 KVA, 3 KVA, 5 KVA, 7 KVA",
@@ -146,7 +143,7 @@ function Home() {
         "description": "Automatic Voltage Stabilizer maintains proper voltage for domestic and commercial appliances like refrigerators, televisions, air conditioners, pumps and lighting systems.",
         "longDescription": "Automatic Voltage Stabilizer maintains proper voltage for domestic and commercial appliances like refrigerators, televisions, air conditioners, pumps and lighting systems.",
         "images": [
-          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8hf_v2sUO9USGUCAxcX6q8sHaMtzTbYJTTheZiGOlWg&s=10"
         ],
         "badge": "",
         "specifications": {
@@ -164,8 +161,7 @@ function Home() {
         "id": 4,
         "name": "Online UPS System",
         "category": "ups",
-        "price": "₹55,000",
-        "oldPrice": "₹70,000",
+        
         "rating": 4.9,
         "reviews": 156,
         "capacity": "1 KVA – 50 KVA",
@@ -182,7 +178,7 @@ function Home() {
         "description": "Best Electric Online UPS provides uninterrupted power with zero transfer time. It continuously supplies power through the inverter while charging batteries simultaneously.",
         "longDescription": "Best Electric Online UPS provides uninterrupted power with zero transfer time. It continuously supplies power through the inverter while charging batteries simultaneously.",
         "images": [
-          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+          "https://ejq4r5ztkxr.exactdn.com/wp-content/uploads/2018/01/Line-Interactive-UPS.jpg"
         ],
         "badge": "Premium",
         "specifications": {
@@ -202,8 +198,7 @@ function Home() {
         "id": 5,
         "name": "Offline UPS System",
         "category": "ups",
-        "price": "₹8,500",
-        "oldPrice": "₹12,000",
+        
         "rating": 4.3,
         "reviews": 423,
         "capacity": "500VA, 800VA, 1250VA, 1600VA, 2000VA",
@@ -220,7 +215,7 @@ function Home() {
         "description": "Offline UPS automatically switches to battery during power failure and protects equipment against voltage fluctuations.",
         "longDescription": "Offline UPS automatically switches to battery during power failure and protects equipment against voltage fluctuations.",
         "images": [
-          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+          "https://5.imimg.com/data5/SELLER/Default/2024/7/438230904/AK/CL/EH/1747765/offline-ups-system-500x500.jpg"
         ],
         "badge": "",
         "specifications": {
@@ -241,8 +236,7 @@ function Home() {
         "id": 6,
         "name": "Sine Wave Inverter",
         "category": "inverters",
-        "price": "₹15,000",
-        "oldPrice": "₹22,000",
+        
         "rating": 4.6,
         "reviews": 278,
         "capacity": "300VA – 1000 KVA",
@@ -264,7 +258,7 @@ function Home() {
         "description": "Best Electric Sine Wave Inverter provides uninterrupted backup power for homes, hospitals and commercial establishments.",
         "longDescription": "Best Electric Sine Wave Inverter provides uninterrupted backup power for homes, hospitals and commercial establishments. It converts DC power into AC power with automatic charging and overload protection.",
         "images": [
-          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD344vh6xvzb780IKbzLcspta0gzHaJ9Ez2f7ga3OPFg&s=10"
         ],
         "badge": "Best Seller",
         "specifications": {
@@ -284,8 +278,7 @@ function Home() {
         "id": 7,
         "name": "Isolation Transformer",
         "category": "transformers",
-        "price": "₹45,000",
-        "oldPrice": "₹60,000",
+        
         "rating": 4.7,
         "reviews": 167,
         "capacity": "1 KVA – 2000 KVA",
@@ -302,7 +295,7 @@ function Home() {
         "description": "Isolation Transformers electrically isolate the power input from the output to protect sensitive equipment from electrical noise and shocks.",
         "longDescription": "Isolation Transformers electrically isolate the power input from the output to protect sensitive equipment from electrical noise and shocks.",
         "images": [
-          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPARWu0q7HScRhMEtdfZhm1x-cwl0HhcuVHKpsCgKP3g&s"
         ],
         "badge": "",
         "specifications": {
@@ -320,8 +313,7 @@ function Home() {
         "id": 8,
         "name": "Automatic Phase Sequence Corrector",
         "category": "power",
-        "price": "₹25,000",
-        "oldPrice": "₹35,000",
+        
         "rating": 4.5,
         "reviews": 134,
         "capacity": "10 Amp – 1000 Amp",
@@ -338,7 +330,7 @@ function Home() {
         "description": "This device automatically corrects wrong phase sequence in three-phase supply, preventing equipment damage and reducing production downtime.",
         "longDescription": "This device automatically corrects wrong phase sequence in three-phase supply, preventing equipment damage and reducing production downtime.",
         "images": [
-          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+          "https://tiimg.tistatic.com/fp/2/005/626/three-phase-sequence-corrector-207.jpg"
         ],
         "badge": "Industrial",
         "specifications": {
@@ -354,8 +346,7 @@ function Home() {
         "id": 9,
         "name": "Automatic Phase & Neutral Balancing System",
         "category": "power",
-        "price": "₹1,25,000",
-        "oldPrice": "₹1,60,000",
+        
         "rating": 4.9,
         "reviews": 89,
         "capacity": "415V, 3 Phase + Neutral, 4 Wire",
@@ -374,7 +365,7 @@ function Home() {
         "description": "The Automatic Phase & Neutral Balancing System improves power quality by balancing phase voltages, reducing neutral current and protecting sensitive electrical equipment.",
         "longDescription": "The Automatic Phase & Neutral Balancing System improves power quality by balancing phase voltages, reducing neutral current and protecting sensitive electrical equipment.",
         "images": [
-          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-a6eYr-QPC_lFBWp3VL2yYBJgDbtZLdxBjEo18Bb-ZeJ8UMeKtd2ay6s&s=10"
         ],
         "badge": "Premium",
         "specifications": {
@@ -399,8 +390,7 @@ function Home() {
         "id": 10,
         "name": "Battery Range",
         "category": "batteries",
-        "price": "₹8,000",
-        "oldPrice": "₹12,000",
+        
         "rating": 4.4,
         "reviews": 567,
         "capacity": "12V 7Ah to 12V 200Ah",
@@ -417,7 +407,7 @@ function Home() {
         "description": "Premium quality SMF and Tubular batteries for all UPS and inverter applications. Authorized dealer for Exide and Amaron.",
         "longDescription": "Premium quality SMF and Tubular batteries for all UPS and inverter applications. Authorized dealer for Exide and Amaron. Available in voltage range 12V 7Ah to 12V 200Ah.",
         "images": [
-          "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
+          "https://rukminim2.flixcart.com/image/480/640/xif0q/inverter-battery/f/h/6/47-3-value-plus-bold-series-150ah-short-jumbo-13-livguard-original-imahcm86kfyphghm.jpeg?q=90"
         ],
         "badge": "",
         "specifications": {

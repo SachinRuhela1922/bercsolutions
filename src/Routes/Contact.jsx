@@ -28,8 +28,8 @@ function Contact() {
                 <span className="contact-info-icon">📞</span>
                 <h3>Call Us</h3>
                 <p>Talk to our support team directly</p>
-                <a href="tel:+919876543210" className="contact-info-link">+91 98765 43210</a>
-                <a href="tel:+919876543211" className="contact-info-link">+91 98765 43211</a>
+                <a href="tel:+919876543210" className="contact-info-link">+91 84758 43925</a>
+                <a href="tel:+919876543211" className="contact-info-link">+91 84758 43925</a>
                 <span className="contact-info-time">Available 24/7</span>
               </div>
               <div className="contact-info-card">
@@ -45,9 +45,9 @@ function Contact() {
                 <h3>Visit Us</h3>
                 <p>Visit our nearest office or service center</p>
                 <span className="contact-info-address">
-                  123, Power House Road,<br />
-                  Near City Center,<br />
-                  Mumbai - 400001, India
+                  Sarvodhya Colony, Meerut,<br />
+                  Road hapur,<br />
+                  Uttar Pradesh - 245304, India
                 </span>
                 <span className="contact-info-time">Mon-Sat, 9 AM - 6 PM</span>
               </div>
@@ -144,7 +144,7 @@ function Contact() {
                 <div className="contact-map-details">
                   <div>
                     <strong>📌 Head Office</strong>
-                    <p>123, Power House Road, Near City Center, Mumbai - 400001</p>
+                    <p>Berc, Sarvodhya Colony, Meerut Road, Uttar Pradesh - 245304</p>
                   </div>
                   <div>
                     <strong>🕐 Working Hours</strong>

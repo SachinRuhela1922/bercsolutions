@@ -1,5 +1,6 @@
 // Footer.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 const Footer = () => {
@@ -27,11 +28,11 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Quick Links</h4>
           <ul className="footer-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#products">Products</a></li>
-            <li><a href="#service">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/products">Products</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
@@ -39,10 +40,10 @@ const Footer = () => {
         <div className="footer-section">
           <h4>Our Products</h4>
           <ul className="footer-links">
-            <li><a href="#solar-inverters">Solar Inverters</a></li>
-            <li><a href="#solar-panels">Solar Panels</a></li>
-            <li><a href="#battery-storage">Battery Storage</a></li>
-            <li><a href="#generators">Power Generators</a></li>
+            <li><Link to="/products?category=solar-inverters">Solar Inverters</Link></li>
+            <li><Link to="/products?category=solar-panels">Solar Panels</Link></li>
+            <li><Link to="/products?category=battery-storage">Battery Storage</Link></li>
+            <li><Link to="/products?category=generators">Power Generators</Link></li>
           </ul>
         </div>
 
@@ -73,11 +74,11 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="footer-bottom">
         <div className="footer-bottom-container">
-          <p>&copy; {currentYear} PowerGrid Solutions. All rights reserved.</p>
+          <p>&copy; {currentYear} Berc Group. All rights reserved.</p>
           <div className="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Sitemap</a>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms-conditions">Terms & Conditions</Link>
+            <Link to="/sitemap">Sitemap</Link>
           </div>
         </div>
       </div>
