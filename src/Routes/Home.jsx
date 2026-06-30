@@ -1,12 +1,11 @@
-// App.js - Complete Updated Version
+// Home.jsx - Enhanced Hero Section with More Content
 
-import { useState, useEffect, createContext } from 'react';
+import { useState, useEffect, createContext, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import ProductDetail from '../components/ProductDetail';
 import '../App.css';
 import Footer from '../components/Footer';
-import Chatbot from '../Routes/Chatbot'
-
+import Chatbot from '../Routes/Chatbot';
 
 // Create context for product modal/sidebar
 export const UIContext = createContext();
@@ -14,6 +13,9 @@ export const UIContext = createContext();
 function Home() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [counters, setCounters] = useState({ customers: 0, projects: 0, satisfaction: 0 });
+  const [isCounterVisible, setIsCounterVisible] = useState(false);
+  const counterRef = useRef(null);
 
   const openProductDetail = (product) => {
     setSelectedProduct(product);
@@ -50,13 +52,59 @@ function Home() {
     return () => observer.disconnect();
   }, []);
 
+  // Counter animation for hero stats
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsCounterVisible(true);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isCounterVisible) return;
+
+    const duration = 2000;
+    const startTime = Date.now();
+    const targetCustomers = 500;
+    const targetProjects = 150;
+    const targetSatisfaction = 99;
+
+    const animateCounter = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+
+      setCounters({
+        customers: Math.floor(easeOut * targetCustomers),
+        projects: Math.floor(easeOut * targetProjects),
+        satisfaction: Math.floor(easeOut * targetSatisfaction)
+      });
+
+      if (progress < 1) {
+        requestAnimationFrame(animateCounter);
+      }
+    };
+
+    animateCounter();
+  }, [isCounterVisible]);
+
   const productsData = {
+    // ... (keep your existing productsData)
     "voltage": [
       {
         "id": 1,
         "name": "Single Phase Servo Voltage Stabilizer",
         "category": "voltage",
-        
         "rating": 4.8,
         "reviews": 234,
         "capacity": "1 KVA – 150 KVA",
@@ -93,7 +141,6 @@ function Home() {
         "id": 2,
         "name": "Three Phase Servo Voltage Stabilizer",
         "category": "voltage",
-        
         "rating": 4.7,
         "reviews": 189,
         "capacity": "3 KVA – 2000 KVA",
@@ -128,7 +175,6 @@ function Home() {
         "id": 3,
         "name": "Automatic Voltage Stabilizer",
         "category": "voltage",
-        
         "rating": 4.5,
         "reviews": 312,
         "capacity": "1 KVA, 2 KVA, 3 KVA, 5 KVA, 7 KVA",
@@ -163,7 +209,6 @@ function Home() {
         "id": 4,
         "name": "Online UPS System",
         "category": "ups",
-        
         "rating": 4.9,
         "reviews": 156,
         "capacity": "1 KVA – 50 KVA",
@@ -200,7 +245,6 @@ function Home() {
         "id": 5,
         "name": "Offline UPS System",
         "category": "ups",
-        
         "rating": 4.3,
         "reviews": 423,
         "capacity": "500VA, 800VA, 1250VA, 1600VA, 2000VA",
@@ -238,7 +282,6 @@ function Home() {
         "id": 6,
         "name": "Sine Wave Inverter",
         "category": "inverters",
-        
         "rating": 4.6,
         "reviews": 278,
         "capacity": "300VA – 1000 KVA",
@@ -280,7 +323,6 @@ function Home() {
         "id": 7,
         "name": "Isolation Transformer",
         "category": "transformers",
-        
         "rating": 4.7,
         "reviews": 167,
         "capacity": "1 KVA – 2000 KVA",
@@ -315,7 +357,6 @@ function Home() {
         "id": 8,
         "name": "Automatic Phase Sequence Corrector",
         "category": "power",
-        
         "rating": 4.5,
         "reviews": 134,
         "capacity": "10 Amp – 1000 Amp",
@@ -348,7 +389,6 @@ function Home() {
         "id": 9,
         "name": "Automatic Phase & Neutral Balancing System",
         "category": "power",
-        
         "rating": 4.9,
         "reviews": 89,
         "capacity": "415V, 3 Phase + Neutral, 4 Wire",
@@ -392,7 +432,6 @@ function Home() {
         "id": 10,
         "name": "Battery Range",
         "category": "batteries",
-        
         "rating": 4.4,
         "reviews": 567,
         "capacity": "12V 7Ah to 12V 200Ah",
@@ -429,92 +468,208 @@ function Home() {
         <Navbar />
         <Chatbot />
         
-        
         <main>
-          {/* Hero Section - Enhanced with Animations */}
+          {/* Enhanced Hero Section with More Content */}
           <section id="home" className="hero">
             <div className="hero-overlay"></div>
             <div className="hero-bg-image"></div>
             
+            {/* Animated Gradient Orbs */}
+            <div className="orb orb-1"></div>
+            <div className="orb orb-2"></div>
+            <div className="orb orb-3"></div>
+            
             {/* Floating Particles */}
             <div className="particles">
-              <div className="particle"></div>
-              <div className="particle"></div>
-              <div className="particle"></div>
-              <div className="particle"></div>
-              <div className="particle"></div>
-              <div className="particle"></div>
-              <div className="particle"></div>
-              <div className="particle"></div>
-              <div className="particle"></div>
-              <div className="particle"></div>
-              <div className="particle"></div>
-              <div className="particle"></div>
+              {[...Array(25)].map((_, i) => (
+                <div key={i} className="particle" style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 10}s`,
+                  width: `${Math.random() * 10 + 2}px`,
+                  height: `${Math.random() * 10 + 2}px`,
+                  opacity: Math.random() * 0.5 + 0.1
+                }}></div>
+              ))}
             </div>
 
             <div className="hero-content">
+              <div className="hero-badge">
+                ⚡ Powering Innovation Since 2010
+                <span className="badge-pulse"></span>
+              </div>
+              
               <h1 className="hero-title">
                 <span className="word">Power</span>
                 <span className="word">Your</span>
                 <span className="word">Future</span>
                 <span className="word">with</span>
                 <span className="word highlight">Clean</span>
-                <span className="word highlight">Equipment</span>
+                <span className="word highlight">Energy</span>
               </h1>
+              
               <p className="hero-subtitle">
-                <span className="typewriter">Premium Stabilizer, UPS, Battery Storage &amp; Inverter for Homes &amp; Businesses</span>
+                Premium Stabilizers, UPS Systems, Inverters &amp; Battery Storage 
+                <span className="typewriter"> for Homes &amp; Businesses</span>
               </p>
+
+              {/* Trust Badges */}
+              <div className="trust-badges">
+                <div className="trust-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                  <span>ISO 9001:2015</span>
+                </div>
+                <div className="trust-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                  <span>Certified Quality</span>
+                </div>
+                <div className="trust-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12 6 12 12 16 14"/>
+                  </svg>
+                  <span>24/7 Support</span>
+                </div>
+              </div>
+
               <div className="hero-buttons">
                 <button className="btn-primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                  Get Free Consultation <i className="fas fa-arrow-right"></i>
+                  Get Free Consultation 
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                  </svg>
                 </button>
                 <button className="btn-secondary" onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}>
-                  Explore Products <i className="fas fa-chevron-right"></i>
+                  Explore Products
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="6 9 12 15 18 9"/>
+                  </svg>
                 </button>
               </div>
-              <div className="hero-stats">
+
+              {/* Floating Product Showcase */}
+              <div className="floating-products">
+                <div className="floating-product float-1">
+                  <span className="fp-icon">⚡</span>
+                  <span className="fp-label">Stabilizers</span>
+                </div>
+                <div className="floating-product float-2">
+                  <span className="fp-icon">🔋</span>
+                  <span className="fp-label">UPS Systems</span>
+                </div>
+                <div className="floating-product float-3">
+                  <span className="fp-icon">🔄</span>
+                  <span className="fp-label">Inverters</span>
+                </div>
+                <div className="floating-product float-4">
+                  <span className="fp-icon">⚙️</span>
+                  <span className="fp-label">Transformers</span>
+                </div>
+              </div>
+
+              {/* Enhanced Stats with Animated Counters */}
+              <div className="hero-stats" ref={counterRef}>
                 <div className="stat">
-                  <h3>500<span className="counter-suffix">+</span></h3>
+                  <h3>
+                    <span className="counter">{counters.customers}</span>
+                    <span className="counter-suffix">+</span>
+                  </h3>
                   <p>Happy Customers</p>
+                  <div className="stat-bar">
+                    <div className="stat-bar-fill" style={{ width: '96%' }}></div>
+                  </div>
                 </div>
                 <div className="stat">
-                  <h3>150<span className="counter-suffix">+</span></h3>
+                  <h3>
+                    <span className="counter">{counters.projects}</span>
+                    <span className="counter-suffix">+</span>
+                  </h3>
                   <p>Projects Completed</p>
+                  <div className="stat-bar">
+                    <div className="stat-bar-fill" style={{ width: '92%' }}></div>
+                  </div>
                 </div>
                 <div className="stat">
-                  <h3>24/7</h3>
-                  <p>Technical Support</p>
+                  <h3>
+                    <span className="counter">{counters.satisfaction}</span>
+                    <span className="counter-suffix">%</span>
+                  </h3>
+                  <p>Customer Satisfaction</p>
+                  <div className="stat-bar">
+                    <div className="stat-bar-fill" style={{ width: '99%' }}></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Info Bar */}
+              <div className="hero-info-bar">
+                <div className="info-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  <span>Pan India Service Network</span>
+                </div>
+                <div className="info-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                  </svg>
+                  <span>15+ Years Experience</span>
+                </div>
+                <div className="info-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <polyline points="9 12 11 14 15 10"/>
+                  </svg>
+                  <span>Warranty up to 10 Years</span>
                 </div>
               </div>
             </div>
 
             <div className="scroll-indicator">
-              <span>Scroll</span>
-              <i className="fas fa-chevron-down"></i>
+              <span>Scroll to Explore</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
             </div>
           </section>
 
           {/* Products Section */}
-          <section id="products" className="section products" style={{backgroundColor: '#ffffff'}}>
+          <section id="products" className="section products">
             <div className="container">
-              <h2 className="section-title animate-on-scroll">Our Premium Products</h2>
-              <p className="section-subtitle animate-on-scroll">Cutting-edge solutions for all your power needs</p>
+              <div className="section-header animate-on-scroll">
+                <span className="section-tag">Our Collection</span>
+                <h2 className="section-title">Premium Power Solutions</h2>
+                <p className="section-subtitle">Cutting-edge technology for all your energy needs</p>
+              </div>
               
               <div className="product-category">
-                <h3 className="category-title animate-on-scroll">⚡ Voltage Stabilizers :</h3>
+                <h3 className="category-title animate-on-scroll">⚡ Voltage Stabilizers</h3>
                 <div className="products-grid">
                   {productsData.voltage.map(product => (
                     <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
                       {product.badge && <span className="product-badge">{product.badge}</span>}
                       <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
                       <div className="product-info">
+                        <div className="product-rating">
+                          <span>★</span> {product.rating} ({product.reviews} reviews)
+                        </div>
                         <h4>{product.name}</h4>
                         <p>{product.description}</p>
                         <ul className="product-features">
                           {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
                         </ul>
-                        <div className="product-price">{product.price}</div>
-                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
+                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>
+                          View Details <span>→</span>
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -529,13 +684,17 @@ function Home() {
                       {product.badge && <span className="product-badge">{product.badge}</span>}
                       <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
                       <div className="product-info">
+                        <div className="product-rating">
+                          <span>★</span> {product.rating} ({product.reviews} reviews)
+                        </div>
                         <h4>{product.name}</h4>
                         <p>{product.description}</p>
                         <ul className="product-features">
                           {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
                         </ul>
-                        <div className="product-price">{product.price}</div>
-                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
+                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>
+                          View Details <span>→</span>
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -550,13 +709,17 @@ function Home() {
                       {product.badge && <span className="product-badge">{product.badge}</span>}
                       <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
                       <div className="product-info">
+                        <div className="product-rating">
+                          <span>★</span> {product.rating} ({product.reviews} reviews)
+                        </div>
                         <h4>{product.name}</h4>
                         <p>{product.description}</p>
                         <ul className="product-features">
                           {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
                         </ul>
-                        <div className="product-price">{product.price}</div>
-                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
+                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>
+                          View Details <span>→</span>
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -571,13 +734,17 @@ function Home() {
                       {product.badge && <span className="product-badge">{product.badge}</span>}
                       <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
                       <div className="product-info">
+                        <div className="product-rating">
+                          <span>★</span> {product.rating} ({product.reviews} reviews)
+                        </div>
                         <h4>{product.name}</h4>
                         <p>{product.description}</p>
                         <ul className="product-features">
                           {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
                         </ul>
-                        <div className="product-price">{product.price}</div>
-                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
+                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>
+                          View Details <span>→</span>
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -592,13 +759,17 @@ function Home() {
                       {product.badge && <span className="product-badge">{product.badge}</span>}
                       <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
                       <div className="product-info">
+                        <div className="product-rating">
+                          <span>★</span> {product.rating} ({product.reviews} reviews)
+                        </div>
                         <h4>{product.name}</h4>
                         <p>{product.description}</p>
                         <ul className="product-features">
                           {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
                         </ul>
-                        <div className="product-price">{product.price}</div>
-                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
+                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>
+                          View Details <span>→</span>
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -613,13 +784,17 @@ function Home() {
                       {product.badge && <span className="product-badge">{product.badge}</span>}
                       <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
                       <div className="product-info">
+                        <div className="product-rating">
+                          <span>★</span> {product.rating} ({product.reviews} reviews)
+                        </div>
                         <h4>{product.name}</h4>
                         <p>{product.description}</p>
                         <ul className="product-features">
                           {product.features.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
                         </ul>
-                        <div className="product-price">{product.price}</div>
-                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>View Details →</button>
+                        <button className="view-details-btn" onClick={(e) => { e.stopPropagation(); openProductDetail(product); }}>
+                          View Details <span>→</span>
+                        </button>
                       </div>
                     </div>
                   ))}
@@ -629,10 +804,13 @@ function Home() {
           </section>
 
           {/* About Us Section */}
-          <section id="about" className="section about" style={{backgroundColor: '#ffffff'}}>
+          <section id="about" className="section about">
             <div className="container">
-              <h2 className="section-title animate-on-scroll">About PowerGrid Solutions</h2>
-              <p className="section-subtitle animate-on-scroll">Leading the way in sustainable energy solutions since 2010</p>
+              <div className="section-header animate-on-scroll">
+                <span className="section-tag">About Us</span>
+                <h2 className="section-title">Powering Progress Since 2010</h2>
+                <p className="section-subtitle">Leading the way in sustainable energy solutions</p>
+              </div>
               <div className="about-content">
                 <div className="about-text animate-on-scroll">
                   <p>PowerGrid Solutions is a premier provider of innovative power solutions, specializing in solar energy systems, advanced inverters, and reliable generators. With over a decade of experience, we've helped thousands of customers achieve energy independence and reduce their carbon footprint.</p>
@@ -652,10 +830,13 @@ function Home() {
           </section>
 
           {/* Infrastructure Section */}
-          <section id="infrastructure" className="section infrastructure" style={{backgroundColor: '#f8fafc'}}>
+          <section id="infrastructure" className="section infrastructure">
             <div className="container">
-              <h2 className="section-title animate-on-scroll">Our State-of-the-Art Infrastructure</h2>
-              <p className="section-subtitle animate-on-scroll">Modern facilities ensuring quality and innovation</p>
+              <div className="section-header animate-on-scroll">
+                <span className="section-tag">Infrastructure</span>
+                <h2 className="section-title">State-of-the-Art Facilities</h2>
+                <p className="section-subtitle">Modern facilities ensuring quality and innovation</p>
+              </div>
               <div className="infrastructure-grid">
                 <div className="infra-card animate-on-scroll"><div className="infra-icon">🏭</div><h3>Manufacturing Unit</h3><p>75,000 sq. ft. advanced manufacturing facility</p></div>
                 <div className="infra-card animate-on-scroll"><div className="infra-icon">🔬</div><h3>R&D Center</h3><p>Dedicated research lab for cutting-edge solutions</p></div>
@@ -666,10 +847,13 @@ function Home() {
           </section>
 
           {/* Services Section */}
-          <section id="service" className="section services" style={{backgroundColor: '#f8fafc'}}>
+          <section id="service" className="section services">
             <div className="container">
-              <h2 className="section-title animate-on-scroll">Our Services</h2>
-              <p className="section-subtitle animate-on-scroll">Comprehensive support from consultation to maintenance</p>
+              <div className="section-header animate-on-scroll">
+                <span className="section-tag">Services</span>
+                <h2 className="section-title">Comprehensive Support</h2>
+                <p className="section-subtitle">From consultation to maintenance, we've got you covered</p>
+              </div>
               <div className="services-grid">
                 <div className="service-card animate-on-scroll"><div className="service-icon">🔧</div><h3>Professional Installation</h3><p>Expert installation by certified technicians</p><ul><li>Site survey & assessment</li><li>Safety certification</li></ul></div>
                 <div className="service-card animate-on-scroll"><div className="service-icon">🛠️</div><h3>Regular Maintenance</h3><p>Preventive maintenance for optimal performance</p><ul><li>Quarterly inspections</li><li>Performance optimization</li></ul></div>
@@ -682,37 +866,77 @@ function Home() {
           </section>
 
           {/* Clientele Section */}
-          <section id="clientele" className="section clientele" style={{backgroundColor: '#ffffff'}}>
+          <section id="clientele" className="section clientele">
             <div className="container">
-              <h2 className="section-title animate-on-scroll">Trusted By Industry Leaders</h2>
-              <p className="section-subtitle animate-on-scroll">Our prestigious clientele across various sectors</p>
+              <div className="section-header animate-on-scroll">
+                <span className="section-tag">Our Clients</span>
+                <h2 className="section-title">Trusted By Industry Leaders</h2>
+                <p className="section-subtitle">Our prestigious clientele across various sectors</p>
+              </div>
               <div className="clients-grid">
-                <div className="client-card animate-on-scroll">🏭 Tata Group</div><div className="client-card animate-on-scroll">🏢 Reliance Industries</div>
-                <div className="client-card animate-on-scroll">🏗️ L&T Construction</div><div className="client-card animate-on-scroll">🏨 Marriott Hotels</div>
-                <div className="client-card animate-on-scroll">🏥 Apollo Hospitals</div><div className="client-card animate-on-scroll">🏫 Delhi University</div>
-                <div className="client-card animate-on-scroll">🏪 Amazon India</div><div className="client-card animate-on-scroll">🏢 Infosys</div>
+                <div className="client-card animate-on-scroll">🏭 Tata Group</div>
+                <div className="client-card animate-on-scroll">🏢 Reliance Industries</div>
+                <div className="client-card animate-on-scroll">🏗️ L&T Construction</div>
+                <div className="client-card animate-on-scroll">🏨 Marriott Hotels</div>
+                <div className="client-card animate-on-scroll">🏥 Apollo Hospitals</div>
+                <div className="client-card animate-on-scroll">🏫 Delhi University</div>
+                <div className="client-card animate-on-scroll">🏪 Amazon India</div>
+                <div className="client-card animate-on-scroll">🏢 Infosys</div>
               </div>
             </div>
           </section>
 
           {/* Testimonials Section */}
-          <section id="testimonials" className="section testimonials" style={{backgroundColor: '#f8fafc'}}>
+          <section id="testimonials" className="section testimonials">
             <div className="container">
-              <h2 className="section-title animate-on-scroll">What Our Customers Say</h2>
-              <p className="section-subtitle animate-on-scroll">Real experiences from satisfied clients</p>
+              <div className="section-header animate-on-scroll">
+                <span className="section-tag">Testimonials</span>
+                <h2 className="section-title">What Our Customers Say</h2>
+                <p className="section-subtitle">Real experiences from satisfied clients</p>
+              </div>
               <div className="testimonials-grid">
-                <div className="testimonial-card animate-on-scroll"><div className="testimonial-content"><p>"PowerGrid Solutions transformed our factory's power infrastructure. Their solar solution reduced our electricity bills by 60%!"</p></div><div className="testimonial-author"><strong>Rajesh Kumar</strong><span>Manufacturing Director</span><div className="rating">★★★★★</div></div></div>
-                <div className="testimonial-card animate-on-scroll"><div className="testimonial-content"><p>"Excellent service and support team. They installed our solar system within 3 days."</p></div><div className="testimonial-author"><strong>Priya Sharma</strong><span>Homeowner</span><div className="rating">★★★★★</div></div></div>
-                <div className="testimonial-card animate-on-scroll"><div className="testimonial-content"><p>"The generator we purchased has been running flawlessly for 2 years."</p></div><div className="testimonial-author"><strong>Mohan Das</strong><span>Hospital Administrator</span><div className="rating">★★★★☆</div></div></div>
+                <div className="testimonial-card animate-on-scroll">
+                  <div className="testimonial-content">
+                    <p>"PowerGrid Solutions transformed our factory's power infrastructure. Their solar solution reduced our electricity bills by 60%!"</p>
+                  </div>
+                  <div className="testimonial-author">
+                    <strong>Rajesh Kumar</strong>
+                    <span>Manufacturing Director</span>
+                    <div className="rating">★★★★★</div>
+                  </div>
+                </div>
+                <div className="testimonial-card animate-on-scroll">
+                  <div className="testimonial-content">
+                    <p>"Excellent service and support team. They installed our solar system within 3 days."</p>
+                  </div>
+                  <div className="testimonial-author">
+                    <strong>Priya Sharma</strong>
+                    <span>Homeowner</span>
+                    <div className="rating">★★★★★</div>
+                  </div>
+                </div>
+                <div className="testimonial-card animate-on-scroll">
+                  <div className="testimonial-content">
+                    <p>"The generator we purchased has been running flawlessly for 2 years."</p>
+                  </div>
+                  <div className="testimonial-author">
+                    <strong>Mohan Das</strong>
+                    <span>Hospital Administrator</span>
+                    <div className="rating">★★★★☆</div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
 
           {/* Business Opportunities */}
-          <section id="opportunities" className="section opportunities" style={{backgroundColor: '#ffffff'}}>
+          <section id="opportunities" className="section opportunities">
             <div className="container">
-              <h2 className="section-title animate-on-scroll">Business Opportunities</h2>
-              <p className="section-subtitle animate-on-scroll">Partner with us to grow together</p>
+              <div className="section-header animate-on-scroll">
+                <span className="section-tag">Partnerships</span>
+                <h2 className="section-title">Business Opportunities</h2>
+                <p className="section-subtitle">Partner with us to grow together</p>
+              </div>
               <div className="opportunities-grid">
                 <div className="opportunity-card animate-on-scroll"><h3>🚀 Become a Dealer</h3><p>Join our dealer network</p><ul><li>High profit margins</li><li>Marketing support</li></ul><button className="opp-btn">Apply Now</button></div>
                 <div className="opportunity-card animate-on-scroll"><h3>🤝 Channel Partners</h3><p>Collaborate for large-scale projects</p><ul><li>Exclusive territories</li><li>Joint marketing</li></ul><button className="opp-btn">Partner With Us</button></div>
@@ -722,10 +946,13 @@ function Home() {
           </section>
 
           {/* Support Section */}
-          <section id="support" className="section support" style={{backgroundColor: '#f8fafc'}}>
+          <section id="support" className="section support">
             <div className="container">
-              <h2 className="section-title animate-on-scroll">Customer Support</h2>
-              <p className="section-subtitle animate-on-scroll">We're here to help you 24/7</p>
+              <div className="section-header animate-on-scroll">
+                <span className="section-tag">Support</span>
+                <h2 className="section-title">Customer Support</h2>
+                <p className="section-subtitle">We're here to help you 24/7</p>
+              </div>
               <div className="support-grid">
                 <div className="support-card animate-on-scroll"><div className="support-icon">📞</div><h3>Call Us</h3><p>+91-8475843925</p></div>
                 <div className="support-card animate-on-scroll"><div className="support-icon">✉️</div><h3>Email Us</h3><p>support@powergridsolutions.com</p></div>
@@ -736,10 +963,13 @@ function Home() {
           </section>
 
           {/* Contact Section */}
-          <section id="contact" className="section contact" style={{backgroundColor: '#ffffff'}}>
+          <section id="contact" className="section contact">
             <div className="container">
-              <h2 className="section-title animate-on-scroll">Get In Touch</h2>
-              <p className="section-subtitle animate-on-scroll">We'd love to hear from you</p>
+              <div className="section-header animate-on-scroll">
+                <span className="section-tag">Contact</span>
+                <h2 className="section-title">Get In Touch</h2>
+                <p className="section-subtitle">We'd love to hear from you</p>
+              </div>
               <div className="contact-wrapper animate-on-scroll">
                 <div className="contact-info">
                   <h3>Contact Information</h3>
