@@ -22,11 +22,11 @@ import "./ChatBot.css";
 const knowledgeBase = {
   // NOTE: Update phone/email/address/website below with Best Electric's real contact details.
   company: {
-    name: "Best Electric",
-    phone: "+91-XXXXXXXXXX",
+    name: "Berc Group",
+    phone: "+91-8077862015",
     email: "info@bestelectric.com",
-    address: "Update with Best Electric's registered office / factory address",
-    website: "www.bestelectric.com",
+    address: "Sarvodhya Colony Meerut Road, Hapur, Uttar Pradesh 245101",
+    website: "www.bercgroup.in",
     hours: "Monday to Saturday, 9:00 AM – 6:00 PM",
   },
 
