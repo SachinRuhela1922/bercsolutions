@@ -1,667 +1,479 @@
-/* ============================================================================
- * ChatBot.css
- * Complete plain-CSS stylesheet for ChatBot.jsx (no Tailwind, no CSS frameworks).
- * Import once in ChatBot.jsx: `import "./ChatBot.css";`
- * ========================================================================== */
+/* ============================================
+   CLIENTELE PAGE - POWER SOLUTIONS
+   ============================================ */
 
-/* ----------------------------------------------------------------------------
- * 1. Design tokens
- * -------------------------------------------------------------------------- */
-:root {
-  --cb-indigo-500: #6366f1;
-  --cb-indigo-600: #4f46e5;
-  --cb-violet-600: #7c3aed;
-  --cb-purple-600: #9333ea;
-  --cb-rose-500: #f43f5e;
-  --cb-emerald-400: #34d399;
-
-  --cb-slate-50: #f8fafc;
-  --cb-slate-100: #f1f5f9;
-  --cb-slate-200: #e2e8f0;
-  --cb-slate-300: #cbd5e1;
-  --cb-slate-400: #94a3b8;
-  --cb-slate-500: #64748b;
-  --cb-slate-600: #475569;
-  --cb-slate-700: #334155;
-  --cb-slate-800: #1e293b;
-  --cb-slate-900: #0f172a;
-
-  --cb-white: #ffffff;
-  --cb-radius-window: 24px;
-  --cb-radius-bubble: 18px;
-  --cb-radius-pill: 999px;
-
-  --cb-shadow-2xl: 0 25px 50px -12px rgba(15, 23, 42, 0.35);
-  --cb-shadow-md: 0 4px 12px rgba(79, 70, 229, 0.35);
-  --cb-shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
-  --cb-shadow-lg: 0 10px 25px rgba(124, 58, 237, 0.3);
-
-  --cb-gradient-brand: linear-gradient(135deg, var(--cb-indigo-500), var(--cb-violet-600), var(--cb-purple-600));
-  --cb-gradient-brand-header: linear-gradient(90deg, var(--cb-indigo-600), var(--cb-violet-600), var(--cb-purple-600));
-  --cb-gradient-bubble-user: linear-gradient(135deg, var(--cb-indigo-500), var(--cb-violet-600));
+.clientele-page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1a1a2e;
+  background: #f8fafc;
 }
 
-/* ----------------------------------------------------------------------------
- * 2. Keyframe animations
- * -------------------------------------------------------------------------- */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
+.clientele-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-@keyframes scaleFadeIn {
-  from { opacity: 0; transform: scale(0.92) translateY(12px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
-}
-
-@keyframes scaleFadeOut {
-  from { opacity: 1; transform: scale(1) translateY(0); }
-  to { opacity: 0; transform: scale(0.92) translateY(12px); }
-}
-
-@keyframes overlayFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes overlayFadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
-
-@keyframes pulseRing {
-  0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.55); }
-  70% { box-shadow: 0 0 0 12px rgba(99, 102, 241, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
-}
-
-@keyframes dotBounce {
-  0%, 80%, 100% { transform: translateY(0); opacity: 0.5; }
-  40% { transform: translateY(-4px); opacity: 1; }
-}
-
-/* Animation utility classes applied conditionally from JSX */
-.chatbot-message-in { animation: fadeInUp 0.25s ease-out; }
-.chatbot-pulse { animation: pulseRing 2.4s ease-out infinite; }
-.chatbot-overlay-in { animation: overlayFadeIn 0.2s ease-out forwards; }
-.chatbot-overlay-out { animation: overlayFadeOut 0.2s ease-in forwards; }
-.chatbot-window-in { animation: scaleFadeIn 0.25s ease-out forwards; }
-.chatbot-window-out { animation: scaleFadeOut 0.2s ease-in forwards; }
-
-/* ----------------------------------------------------------------------------
- * 3. Custom scrollbar (used on messages area, quick bar, textarea)
- * -------------------------------------------------------------------------- */
-.chatbot-scrollbar::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-.chatbot-scrollbar::-webkit-scrollbar-track {
-  background: transparent;
-}
-.chatbot-scrollbar::-webkit-scrollbar-thumb {
-  background-color: rgba(148, 163, 184, 0.5);
-  border-radius: var(--cb-radius-pill);
-}
-
-/* ----------------------------------------------------------------------------
- * 4. Floating Action Button
- * -------------------------------------------------------------------------- */
-.chatbot-fab {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9998;
-  width: 56px;
-  height: 56px;
-  border: none;
-  border-radius: 50%;
-  background: var(--cb-gradient-brand);
-  color: var(--cb-white);
-  box-shadow: var(--cb-shadow-2xl);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-.chatbot-fab:hover {
-  transform: scale(1.1);
-}
-.chatbot-fab:active {
-  transform: scale(0.95);
-}
-.chatbot-fab:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(165, 180, 252, 0.7);
-}
-.chatbot-fab-icon {
-  width: 28px;
-  height: 28px;
-}
-.chatbot-fab-badge {
-  position: absolute;
-  top: -4px;
-  right: -4px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: var(--cb-rose-500);
-  color: var(--cb-white);
-  font-size: 11px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 0 2px var(--cb-white);
-}
-
-@media (min-width: 640px) {
-  .chatbot-fab {
-    bottom: 24px;
-    right: 24px;
-    width: 64px;
-    height: 64px;
-  }
-  .chatbot-fab-icon {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-/* ----------------------------------------------------------------------------
- * 5. Overlay + Chat Window shell
- * -------------------------------------------------------------------------- */
-.chatbot-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
-  padding: 0;
-}
-
-.chatbot-window {
-  width: 100%;
-  max-width: 100%;
-  height: 88vh;
-  max-height: 640px;
-  margin: 0 12px;
-  display: flex;
-  flex-direction: column;
-  border-radius: var(--cb-radius-window) var(--cb-radius-window) 0 0;
-  overflow: hidden;
-  box-shadow: var(--cb-shadow-2xl);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(20px);
-}
-
-@media (min-width: 640px) {
-  .chatbot-overlay {
-    align-items: center;
-    justify-content: flex-end;
-    padding: 24px;
-  }
-  .chatbot-window {
-    width: 420px;
-    height: 640px;
-    margin: 0;
-    border-radius: var(--cb-radius-window);
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-  .chatbot-window {
-    width: 380px;
-  }
-}
-
-/* ----------------------------------------------------------------------------
- * 6. Header
- * -------------------------------------------------------------------------- */
-.chatbot-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 14px 16px;
-  background: var(--cb-gradient-brand-header);
-  color: var(--cb-white);
-  flex-shrink: 0;
-}
-
-.chatbot-header-left {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 0;
-}
-
-.chatbot-avatar {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.chatbot-avatar-icon {
-  width: 20px;
-  height: 20px;
-  color: var(--cb-white);
-}
-.chatbot-avatar-status {
-  position: absolute;
-  bottom: -2px;
-  right: -2px;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--cb-emerald-400);
-  box-shadow: 0 0 0 2px var(--cb-violet-600);
-}
-
-.chatbot-header-text {
-  min-width: 0;
-}
-.chatbot-company-name {
-  font-weight: 600;
-  font-size: 14px;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.chatbot-online-label {
-  font-size: 12px;
-  color: #e0e7ff;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 2px 0 0 0;
-}
-.chatbot-online-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--cb-emerald-400);
-}
-
-.chatbot-close-btn {
-  width: 32px;
-  height: 32px;
-  border: none;
-  border-radius: 50%;
-  background: transparent;
-  color: var(--cb-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.15s ease;
-}
-.chatbot-close-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-}
-.chatbot-close-btn:active {
-  background: rgba(255, 255, 255, 0.25);
-}
-.chatbot-close-btn:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px var(--cb-white);
-}
-.chatbot-close-icon {
-  width: 18px;
-  height: 18px;
-}
-
-/* ----------------------------------------------------------------------------
- * 7. Messages area + welcome screen
- * -------------------------------------------------------------------------- */
-.chatbot-messages {
-  flex: 1;
-  overflow-y: auto;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  background: linear-gradient(to bottom, rgba(248, 250, 252, 0.6), rgba(255, 255, 255, 0.4));
-}
-
-.chatbot-welcome {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+.clientele-subtitle {
   text-align: center;
-  gap: 20px;
-  padding: 0 8px;
-}
-.chatbot-welcome-icon-wrap {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: var(--cb-gradient-bubble-user);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--cb-shadow-lg);
-}
-.chatbot-welcome-icon {
-  width: 32px;
-  height: 32px;
-  color: var(--cb-white);
-}
-.chatbot-welcome-title {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--cb-slate-800);
-  margin: 0;
-}
-.chatbot-welcome-subtitle {
-  font-size: 14px;
-  color: var(--cb-slate-500);
-  margin: 4px 0 0 0;
-}
-.chatbot-chip-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  max-width: 320px;
+  color: #64748b;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
 }
 
-.chatbot-chip {
-  padding: 8px 14px;
-  font-size: 14px;
-  font-weight: 500;
-  border-radius: var(--cb-radius-pill);
-  background: rgba(255, 255, 255, 0.8);
-  color: var(--cb-indigo-600);
-  border: 1px solid rgba(199, 210, 254, 0.7);
-  cursor: pointer;
-  box-shadow: var(--cb-shadow-sm);
-  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
-}
-.chatbot-chip:hover {
-  background: #eef2ff;
-  border-color: #a5b4fc;
-}
-.chatbot-chip:active {
-  transform: scale(0.95);
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.clientele-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 5rem 0;
+  text-align: center;
+  color: white;
 }
 
-/* ----------------------------------------------------------------------------
- * 8. Message bubbles
- * -------------------------------------------------------------------------- */
-.chatbot-message-row {
-  display: flex;
-  width: 100%;
-}
-.chatbot-message-row.is-user {
-  justify-content: flex-end;
-}
-.chatbot-message-row.is-bot {
-  justify-content: flex-start;
+.clientele-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
 }
 
-.chatbot-message-col {
-  display: flex;
-  flex-direction: column;
-  max-width: 80%;
-}
-.chatbot-message-col.is-user {
-  align-items: flex-end;
-}
-.chatbot-message-col.is-bot {
-  align-items: flex-start;
-}
-
-.chatbot-bubble {
-  padding: 10px 16px;
-  font-size: 14px;
+.clientele-hero-content p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
   line-height: 1.6;
-  border-radius: var(--cb-radius-bubble);
-  box-shadow: var(--cb-shadow-sm);
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-.chatbot-bubble-user {
-  background: var(--cb-gradient-bubble-user);
-  color: var(--cb-white);
-  border-bottom-right-radius: 6px;
-}
-.chatbot-bubble-bot {
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--cb-slate-800);
-  border: 1px solid rgba(226, 232, 240, 0.6);
-  border-bottom-left-radius: 6px;
 }
 
-.chatbot-message-time {
-  font-size: 11px;
-  color: var(--cb-slate-400);
-  margin-top: 4px;
-  padding: 0 4px;
+/* ============================================
+   STATS SECTION
+   ============================================ */
+.clientele-stats {
+  padding: 4rem 0;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
 }
 
-.chatbot-md-line {
-  display: block;
-}
-.chatbot-md-bold {
-  font-weight: 600;
-}
-
-/* ----------------------------------------------------------------------------
- * 9. Typing indicator
- * -------------------------------------------------------------------------- */
-.chatbot-typing-bubble {
-  display: flex;
-  align-items: center;
-  color: var(--cb-slate-500);
-}
-.chatbot-typing-dots {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  margin-left: 6px;
-}
-.chatbot-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: currentColor;
-  opacity: 0.6;
-  animation: dotBounce 1.1s ease-in-out infinite;
-}
-.chatbot-dot-1 { animation-delay: -0.3s; }
-.chatbot-dot-2 { animation-delay: -0.15s; }
-.chatbot-dot-3 { animation-delay: 0s; }
-
-/* ----------------------------------------------------------------------------
- * 10. Quick suggestions bar
- * -------------------------------------------------------------------------- */
-.chatbot-quick-bar {
-  display: flex;
-  gap: 8px;
-  padding: 8px 12px 0 12px;
-  overflow-x: auto;
-  flex-shrink: 0;
-}
-.chatbot-quick-chip {
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: 12px;
-  font-weight: 500;
-  border-radius: var(--cb-radius-pill);
-  background: #eef2ff;
-  color: var(--cb-indigo-600);
-  border: 1px solid #e0e7ff;
-  cursor: pointer;
-  transition: background-color 0.15s ease, transform 0.15s ease;
-}
-.chatbot-quick-chip:hover {
-  background: #e0e7ff;
-}
-.chatbot-quick-chip:active {
-  transform: scale(0.95);
-}
-
-/* ----------------------------------------------------------------------------
- * 11. Input area
- * -------------------------------------------------------------------------- */
-.chatbot-input-area {
-  padding: 12px;
-  border-top: 1px solid rgba(226, 232, 240, 0.7);
-  background: rgba(255, 255, 255, 0.6);
-  flex-shrink: 0;
-}
-.chatbot-input-row {
-  display: flex;
-  align-items: flex-end;
-  gap: 8px;
-}
-.chatbot-textarea {
-  flex: 1;
-  resize: none;
-  max-height: 120px;
-  padding: 10px 16px;
-  font-size: 14px;
-  font-family: inherit;
-  border-radius: 18px;
-  background: rgba(241, 245, 249, 0.8);
-  color: var(--cb-slate-800);
-  border: 1px solid transparent;
-  outline: none;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
-}
-.chatbot-textarea::placeholder {
-  color: var(--cb-slate-400);
-}
-.chatbot-textarea:focus {
-  border-color: #a5b4fc;
-  box-shadow: 0 0 0 2px #c7d2fe;
-}
-
-.chatbot-send-btn {
-  width: 40px;
-  height: 40px;
-  border: none;
-  border-radius: 50%;
-  background: var(--cb-gradient-bubble-user);
-  color: var(--cb-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--cb-shadow-md);
-  cursor: pointer;
-  flex-shrink: 0;
-  transition: transform 0.15s ease, opacity 0.15s ease;
-}
-.chatbot-send-btn:hover:not(:disabled) {
-  transform: scale(1.05);
-}
-.chatbot-send-btn:active:not(:disabled) {
-  transform: scale(0.95);
-}
-.chatbot-send-btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-.chatbot-send-btn:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 2px #a5b4fc;
-}
-.chatbot-send-icon {
-  width: 16px;
-  height: 16px;
-}
-
-.chatbot-input-hint {
-  font-size: 11px;
-  color: var(--cb-slate-400);
-  margin: 6px 0 0 0;
+.clientele-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
   text-align: center;
 }
 
-/* ----------------------------------------------------------------------------
- * 12. Dark mode (applies when a `.dark` class is present on an ancestor,
- * e.g. <html class="dark"> — toggle this yourself in your app)
- * -------------------------------------------------------------------------- */
-.dark .chatbot-window {
-  background: rgba(15, 23, 42, 0.85);
-  border-color: rgba(51, 65, 85, 0.6);
-}
-.dark .chatbot-messages {
-  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.6));
-}
-.dark .chatbot-bubble-bot {
-  background: rgba(51, 65, 85, 0.9);
-  color: var(--cb-slate-100);
-  border-color: rgba(71, 85, 105, 0.6);
-}
-.dark .chatbot-message-time {
-  color: var(--cb-slate-500);
-}
-.dark .chatbot-welcome-title {
-  color: var(--cb-slate-100);
-}
-.dark .chatbot-welcome-subtitle {
-  color: var(--cb-slate-400);
-}
-.dark .chatbot-chip {
-  background: rgba(51, 65, 85, 0.7);
-  color: #c7d2fe;
-  border-color: var(--cb-slate-600);
-}
-.dark .chatbot-chip:hover {
-  background: var(--cb-slate-600);
-}
-.dark .chatbot-quick-chip {
-  background: rgba(51, 65, 85, 0.7);
-  color: #c7d2fe;
-  border-color: var(--cb-slate-600);
-}
-.dark .chatbot-quick-chip:hover {
-  background: var(--cb-slate-600);
-}
-.dark .chatbot-input-area {
-  background: rgba(30, 41, 59, 0.6);
-  border-color: rgba(51, 65, 85, 0.7);
-}
-.dark .chatbot-textarea {
-  background: rgba(51, 65, 85, 0.7);
-  color: var(--cb-slate-100);
-}
-.dark .chatbot-textarea::placeholder {
-  color: var(--cb-slate-500);
-}
-.dark .chatbot-input-hint {
-  color: var(--cb-slate-500);
-}
-.dark .chatbot-fab-badge {
-  box-shadow: 0 0 0 2px var(--cb-slate-900);
+.clientele-stat {
+  padding: 1rem;
 }
 
-/* ----------------------------------------------------------------------------
- * 13. Reduced motion accessibility
- * -------------------------------------------------------------------------- */
-@media (prefers-reduced-motion: reduce) {
-  .chatbot-message-in,
-  .chatbot-pulse,
-  .chatbot-overlay-in,
-  .chatbot-overlay-out,
-  .chatbot-window-in,
-  .chatbot-window-out,
-  .chatbot-dot {
-    animation: none !important;
+.clientele-stat-number {
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin-bottom: 0.3rem;
+}
+
+.clientele-stat-label {
+  display: block;
+  font-size: 1rem;
+  color: #64748b;
+}
+
+/* ============================================
+   SECTIONS (Residential, Commercial, Industrial)
+   ============================================ */
+.clientele-residential,
+.clientele-commercial,
+.clientele-industrial {
+  padding: 4rem 0;
+}
+
+.clientele-residential {
+  background: white;
+}
+
+.clientele-commercial {
+  background: #f8fafc;
+}
+
+.clientele-industrial {
+  background: white;
+}
+
+.clientele-residential h2,
+.clientele-commercial h2,
+.clientele-industrial h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.clientele-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.clientele-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.clientele-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border-color: #f59e0b;
+}
+
+.clientele-card-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.clientele-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.clientele-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.clientele-card-tag {
+  display: inline-block;
+  padding: 0.2rem 1rem;
+  background: #fef3c7;
+  color: #d97706;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* ============================================
+   TESTIMONIALS SECTION
+   ============================================ */
+.clientele-testimonials {
+  padding: 4rem 0;
+  background: #f8fafc;
+}
+
+.clientele-testimonials h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.clientele-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.clientele-testimonial {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.clientele-testimonial:hover {
+  border-color: #f59e0b;
+  transform: translateY(-3px);
+}
+
+.clientele-testimonial-rating {
+  color: #f59e0b;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.clientele-testimonial p {
+  color: #475569;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.clientele-testimonial-author strong {
+  display: block;
+  color: #1a1a2e;
+  margin-bottom: 0.2rem;
+}
+
+.clientele-testimonial-author span {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* ============================================
+   BRANDS SECTION
+   ============================================ */
+.clientele-brands {
+  padding: 4rem 0;
+  background: white;
+}
+
+.clientele-brands h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.clientele-brands-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1.5rem;
+}
+
+.clientele-brand {
+  background: #f8fafc;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.clientele-brand:hover {
+  border-color: #f59e0b;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.clientele-brand span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.clientele-brand p {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1a1a2e;
+}
+
+/* ============================================
+   LOCATIONS SECTION
+   ============================================ */
+.clientele-locations {
+  padding: 4rem 0;
+  background: #f8fafc;
+}
+
+.clientele-locations h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1a1a2e;
+  margin-bottom: 0.5rem;
+}
+
+.clientele-locations-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.clientele-location {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+}
+
+.clientele-location h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.clientele-location ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.clientele-location ul li {
+  padding: 0.4rem 0;
+  color: #475569;
+  font-size: 0.95rem;
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.clientele-location ul li:last-child {
+  border-bottom: none;
+}
+
+.clientele-location:hover {
+  border-color: #f59e0b;
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.clientele-cta {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  text-align: center;
+}
+
+.clientele-cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.clientele-cta-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.clientele-btn-primary {
+  padding: 0.8rem 2.5rem;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clientele-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+  .clientele-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clientele-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clientele-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clientele-brands-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .clientele-locations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .clientele-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .clientele-hero-content p {
+    font-size: 1rem;
+  }
+
+  .clientele-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .clientele-stat-number {
+    font-size: 2.2rem;
+  }
+
+  .clientele-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clientele-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clientele-brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clientele-locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clientele-residential h2,
+  .clientele-commercial h2,
+  .clientele-industrial h2,
+  .clientele-testimonials h2,
+  .clientele-brands h2,
+  .clientele-locations h2,
+  .clientele-cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .clientele-container {
+    padding: 0 1.2rem;
+  }
+
+  .clientele-hero {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .clientele-hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .clientele-stat-number {
+    font-size: 1.8rem;
+  }
+
+  .clientele-stat-label {
+    font-size: 0.9rem;
+  }
+
+  .clientele-brands-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .clientele-card {
+    padding: 1.5rem;
+  }
+
+  .clientele-testimonial {
+    padding: 1.5rem;
+  }
+
+  .clientele-location {
+    padding: 1.5rem;
   }
 }
