@@ -12,6 +12,7 @@ import Business from './Routes/Business';
 import Support from './Routes/Support';
 import Contact from './Routes/Contact';
 
+
 function App() {
   return (
     <>
@@ -27,6 +28,7 @@ function App() {
         <Route path="/opportunities" element={<Business />} />
         <Route path="/support" element={<Support />} />
         <Route path="/contact" element={<Contact />} />
+        
       </Routes>
 
       

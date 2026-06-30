@@ -5,6 +5,8 @@ import Navbar from '../components/Navbar';
 import ProductDetail from '../components/ProductDetail';
 import '../App.css';
 import Footer from '../components/Footer';
+import Chatbot from '../Routes/Chatbot'
+
 
 // Create context for product modal/sidebar
 export const UIContext = createContext();
@@ -425,6 +427,8 @@ function Home() {
     <UIContext.Provider value={{ openProductDetail, selectedProduct, closeProductDetail }}>
       <div className="App">
         <Navbar />
+        <Chatbot />
+        
         
         <main>
           {/* Hero Section - Enhanced with Animations */}
