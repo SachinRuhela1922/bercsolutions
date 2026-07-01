@@ -11,6 +11,7 @@ import Testimonials from './Routes/Testimonials';
 import Business from './Routes/Business';
 import Support from './Routes/Support';
 import Contact from './Routes/Contact';
+import ThankYou from './Routes/Thankyou';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/opportunities" element={<Business />} />
         <Route path="/support" element={<Support />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/thankyou" element={<ThankYou />} />
         
       </Routes>
 

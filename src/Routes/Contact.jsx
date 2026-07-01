@@ -13,7 +13,7 @@ function Contact() {
             <div className="contact-hero-content">
               <h1>Contact Us</h1>
               <p>
-                Get in touch with us for all your power solutions needs - 
+                Get in touch with us for all your power solutions needs -
                 Solar, Inverters, Batteries & Generators
               </p>
             </div>
@@ -69,26 +69,64 @@ function Contact() {
               <div className="contact-form-left">
                 <h2>Send Us a Message</h2>
                 <p>We'll get back to you within 24 hours</p>
-                
-                <form className="contact-form">
+
+                <form
+                  className="contact-form"
+                  action="https://formsubmit.co/io.sachinruhela@gmail.com"
+                  method="POST"
+                >
+                  {/* Hidden Fields */}
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Contact Form Submission - Berc Group"
+                  />
+
+                  <input type="hidden" name="_captcha" value="false" />
+
+                  {/* Optional: Redirect after submit */}
+                  <input
+                    type="hidden"
+                    name="_next"
+                    value="https://www.bercgroup.in/thankyou"
+                  />
+
                   <div className="contact-form-row">
                     <div className="contact-form-field">
                       <label>Full Name *</label>
-                      <input type="text" placeholder="Enter your full name" required />
+                      <input
+                        type="text"
+                        name="Full Name"
+                        placeholder="Enter your full name"
+                        required
+                      />
                     </div>
+
                     <div className="contact-form-field">
                       <label>Email Address *</label>
-                      <input type="email" placeholder="Enter your email" required />
+                      <input
+                        type="email"
+                        name="Email"
+                        placeholder="Enter your email"
+                        required
+                      />
                     </div>
                   </div>
+
                   <div className="contact-form-row">
                     <div className="contact-form-field">
                       <label>Phone Number *</label>
-                      <input type="tel" placeholder="Enter your phone number" required />
+                      <input
+                        type="tel"
+                        name="Phone Number"
+                        placeholder="Enter your phone number"
+                        required
+                      />
                     </div>
+
                     <div className="contact-form-field">
                       <label>Subject</label>
-                      <select>
+                      <select name="Subject">
                         <option value="">Select subject</option>
                         <option>General Inquiry</option>
                         <option>Product Information</option>
@@ -102,9 +140,10 @@ function Contact() {
                       </select>
                     </div>
                   </div>
+
                   <div className="contact-form-field">
                     <label>Product Interest</label>
-                    <select>
+                    <select name="Product Interest">
                       <option value="">Select product</option>
                       <option>Solar Panels</option>
                       <option>Inverters</option>
@@ -114,19 +153,25 @@ function Contact() {
                       <option>All Products</option>
                     </select>
                   </div>
+
                   <div className="contact-form-field">
                     <label>Message *</label>
-                    <textarea rows="5" placeholder="Describe your query in detail" required></textarea>
+                    <textarea
+                      name="Message"
+                      rows="5"
+                      placeholder="Describe your query in detail"
+                      required
+                    ></textarea>
                   </div>
-                  <div className="contact-form-field">
-                    <label>Attach File</label>
-                    <input type="file" />
-                    <span className="contact-form-hint">Upload invoice, image, or document (Max 5MB)</span>
-                  </div>
-                  <button type="submit" className="contact-form-btn">Send Message</button>
+
+                  
+
+                  <button type="submit" className="contact-form-btn">
+                    Send Message
+                  </button>
                 </form>
               </div>
-              
+
               <div className="contact-form-right">
                 <h3>Find Us Here</h3>
                 <div className="contact-map-placeholder">
@@ -157,12 +202,12 @@ function Contact() {
           </div>
         </section>
 
-        {/* Service Centers */}
+        {/* Service Centers
         <section className="contact-centers">
           <div className="contact-container">
             <h2>Our Service Centers</h2>
             <p className="contact-subtitle">Visit us at any of our 50+ locations across India</p>
-            
+
             <div className="contact-centers-grid">
               <div className="contact-center">
                 <h3>📍 North India</h3>
@@ -266,14 +311,14 @@ function Contact() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Business Hours */}
         <section className="contact-hours">
           <div className="contact-container">
             <h2>Business Hours</h2>
             <p className="contact-subtitle">We're here to serve you</p>
-            
+
             <div className="contact-hours-grid">
               <div className="contact-hours-card">
                 <h3>🕐 Office Hours</h3>
@@ -316,7 +361,7 @@ function Contact() {
           <div className="contact-container">
             <h2>Connect With Us</h2>
             <p className="contact-subtitle">Follow us on social media for updates</p>
-            
+
             <div className="contact-social-grid">
               <a href="#" className="contact-social-link">
                 <span>📱</span>
@@ -369,7 +414,7 @@ function Contact() {
           <div className="contact-container">
             <h2>Frequently Asked Questions</h2>
             <p className="contact-subtitle">Common questions about contacting us</p>
-            
+
             <div className="contact-faq-grid">
               <div className="contact-faq-item">
                 <h3>What is the best way to contact you?</h3>

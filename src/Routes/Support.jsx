@@ -13,7 +13,7 @@ function Support() {
             <div className="support-hero-content">
               <h1>Customer Support</h1>
               <p>
-                We're here to help you with all your power solutions needs - 
+                We're here to help you with all your power solutions needs -
                 Solar, Inverters, Batteries & Generators
               </p>
             </div>
@@ -25,7 +25,7 @@ function Support() {
           <div className="support-container">
             <h2>How Can We Help You?</h2>
             <p className="support-subtitle">Choose from our support options</p>
-            
+
             <div className="support-quick-grid">
               <div className="support-quick-card">
                 <span className="support-quick-icon">📞</span>
@@ -64,7 +64,7 @@ function Support() {
           <div className="support-container">
             <h2>Support Categories</h2>
             <p className="support-subtitle">Find help for your specific product</p>
-            
+
             <div className="support-categories-grid">
               <div className="support-category-card">
                 <span>☀️</span>
@@ -119,7 +119,7 @@ function Support() {
           <div className="support-container">
             <h2>Our Support Services</h2>
             <p className="support-subtitle">Comprehensive support for all your needs</p>
-            
+
             <div className="support-services-grid">
               <div className="support-service">
                 <span className="support-service-icon">🔧</span>
@@ -172,7 +172,7 @@ function Support() {
           <div className="support-container">
             <h2>Frequently Asked Questions</h2>
             <p className="support-subtitle">Quick answers to common questions</p>
-            
+
             <div className="support-faq-grid">
               <div className="support-faq-item">
                 <h3>How do I install my solar panel system?</h3>
@@ -210,7 +210,7 @@ function Support() {
           </div>
         </section>
 
-        {/* Support Locations */}
+        {/* Support Locations
         <section className="support-locations">
           <div className="support-container">
             <h2>Our Service Centers</h2>
@@ -259,57 +259,120 @@ function Support() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Contact Form */}
         <section className="support-contact">
           <div className="support-container">
             <h2>Get In Touch</h2>
             <p className="support-subtitle">We'll get back to you within 24 hours</p>
-            
+
             <div className="support-contact-form">
-              <form className="support-form">
-                <div className="support-form-group">
-                  <div className="support-form-field">
-                    <label>Full Name *</label>
-                    <input type="text" placeholder="Enter your full name" required />
+              <form
+                className="support-contact"
+                action="https://formsubmit.co/io.sachinruhela@gmail.com"
+                method="POST"
+              >
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Support Request - Berc Group"
+                />
+
+                <input type="hidden" name="_captcha" value="false" />
+
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="https://www.bercgroup.in/thank-you"
+                />
+
+                <div className="support-container">
+                  <h2>Get In Touch</h2>
+                  <p className="support-subtitle">
+                    We'll get back to you within 24 hours
+                  </p>
+
+                  <div className="support-contact-form">
+
+                    {/* Form ki jagah div hai, class same hai */}
+                    <div className="support-form">
+
+                      <div className="support-form-group">
+                        <div className="support-form-field">
+                          <label>Full Name *</label>
+                          <input
+                            type="text"
+                            name="Full Name"
+                            placeholder="Enter your full name"
+                            required
+                          />
+                        </div>
+
+                        <div className="support-form-field">
+                          <label>Email Address *</label>
+                          <input
+                            type="email"
+                            name="Email"
+                            placeholder="Enter your email"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div className="support-form-group">
+                        <div className="support-form-field">
+                          <label>Phone Number *</label>
+                          <input
+                            type="tel"
+                            name="Phone Number"
+                            placeholder="Enter your phone number"
+                            required
+                          />
+                        </div>
+
+                        <div className="support-form-field">
+                          <label>Product Type</label>
+                          <select name="Product Type">
+                            <option value="">Select product</option>
+                            <option>Solar Panels</option>
+                            <option>Inverters</option>
+                            <option>Batteries</option>
+                            <option>Generators</option>
+                            <option>Other</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div className="support-form-field">
+                        <label>Subject</label>
+                        <input
+                          type="text"
+                          name="Subject"
+                          placeholder="Brief subject"
+                        />
+                      </div>
+
+                      <div className="support-form-field">
+                        <label>Message *</label>
+                        <textarea
+                          name="Message"
+                          rows="5"
+                          placeholder="Describe your issue or query in detail"
+                          required
+                        ></textarea>
+                      </div>
+
+                      <button
+                        type="submit"
+                        className="support-form-btn"
+                      >
+                        Submit Request
+                      </button>
+
+                    </div>
                   </div>
-                  <div className="support-form-field">
-                    <label>Email Address *</label>
-                    <input type="email" placeholder="Enter your email" required />
-                  </div>
                 </div>
-                <div className="support-form-group">
-                  <div className="support-form-field">
-                    <label>Phone Number *</label>
-                    <input type="tel" placeholder="Enter your phone number" required />
-                  </div>
-                  <div className="support-form-field">
-                    <label>Product Type</label>
-                    <select>
-                      <option value="">Select product</option>
-                      <option>Solar Panels</option>
-                      <option>Inverters</option>
-                      <option>Batteries</option>
-                      <option>Generators</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                </div>
-                <div className="support-form-field">
-                  <label>Subject</label>
-                  <input type="text" placeholder="Brief subject" />
-                </div>
-                <div className="support-form-field">
-                  <label>Message *</label>
-                  <textarea rows="5" placeholder="Describe your issue or query in detail" required></textarea>
-                </div>
-                <div className="support-form-field">
-                  <label>Attach File</label>
-                  <input type="file" />
-                  <span className="support-form-hint">Upload invoice, image, or document (Max 5MB)</span>
-                </div>
-                <button type="submit" className="support-form-btn">Submit Request</button>
               </form>
             </div>
           </div>
