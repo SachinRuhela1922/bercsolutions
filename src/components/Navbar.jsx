@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import {Link} from 'react-router-dom'
 import './Navbar.css';
+import logo from '../assets/logo.png'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -88,7 +89,7 @@ const Navbar = () => {
         <div className="logo">
           <a href="/">
             <div className="logo-content">
-              <span className="logo-icon">⚡</span>
+              <span className="logo-icon"><img src={logo} alt="" className='logo-image' /></span>
               <span className="logo-text">Berc Group</span>
             </div>
           </a>

@@ -7,18 +7,7 @@ import React, {
 } from "react";
 import "./ChatBot.css";
 
-/* ============================================================================
- * ChatBot.jsx
- * A self-contained, production-ready chatbot widget.
- * - Single file, plain CSS (ChatBot.css), React Hooks only.
- * - Answers strictly from the local `knowledgeBase` using a fuzzy,
- *   synonym-aware search engine (no backend, no external services).
- * ========================================================================== */
 
-/* ----------------------------------------------------------------------------
- * 1. KNOWLEDGE BASE
- * Edit this object to change everything the bot knows / says.
- * -------------------------------------------------------------------------- */
 const knowledgeBase = {
   // NOTE: Update phone/email/address/website below with Best Electric's real contact details.
   company: {
