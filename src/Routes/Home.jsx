@@ -467,18 +467,18 @@ function Home() {
       <div className="App">
         <Navbar />
         <Chatbot />
-        
+
         <main>
           {/* Enhanced Hero Section with More Content */}
           <section id="home" className="hero">
             <div className="hero-overlay"></div>
             <div className="hero-bg-image"></div>
-            
+
             {/* Animated Gradient Orbs */}
             <div className="orb orb-1"></div>
             <div className="orb orb-2"></div>
             <div className="orb orb-3"></div>
-            
+
             {/* Floating Particles */}
             <div className="particles">
               {[...Array(25)].map((_, i) => (
@@ -498,7 +498,7 @@ function Home() {
                 ⚡ Powering Innovation Since 2010
                 <span className="badge-pulse"></span>
               </div>
-              
+
               <h1 className="hero-title">
                 <span className="word">Power</span>
                 <span className="word">Your</span>
@@ -507,9 +507,9 @@ function Home() {
                 <span className="word highlight">Clean</span>
                 <span className="word highlight">Energy</span>
               </h1>
-              
+
               <p className="hero-subtitle">
-                Premium Stabilizers, UPS Systems, Inverters &amp; Battery Storage 
+                Premium Stabilizers, UPS Systems, Inverters &amp; Battery Storage
                 <span className="typewriter"> for Homes &amp; Businesses</span>
               </p>
 
@@ -517,21 +517,21 @@ function Home() {
               <div className="trust-badges">
                 <div className="trust-badge">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                    <polyline points="22 4 12 14.01 9 11.01"/>
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
                   </svg>
                   <span>ISO 9001:2015</span>
                 </div>
                 <div className="trust-badge">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                   </svg>
                   <span>Certified Quality</span>
                 </div>
                 <div className="trust-badge">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="12" cy="12" r="10"/>
-                    <polyline points="12 6 12 12 16 14"/>
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
                   </svg>
                   <span>24/7 Support</span>
                 </div>
@@ -539,16 +539,16 @@ function Home() {
 
               <div className="hero-buttons">
                 <button className="btn-primary" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
-                  Get Free Consultation 
+                  Get Free Consultation
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <line x1="5" y1="12" x2="19" y2="12"/>
-                    <polyline points="12 5 19 12 12 19"/>
+                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <polyline points="12 5 19 12 12 19" />
                   </svg>
                 </button>
                 <button className="btn-secondary" onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}>
                   Explore Products
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                    <polyline points="6 9 12 15 18 9"/>
+                    <polyline points="6 9 12 15 18 9" />
                   </svg>
                 </button>
               </div>
@@ -611,23 +611,23 @@ function Home() {
               <div className="hero-info-bar">
                 <div className="info-item">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
                   </svg>
                   <span>Pan India Service Network</span>
                 </div>
                 <div className="info-item">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                    <line x1="8" y1="21" x2="16" y2="21"/>
-                    <line x1="12" y1="17" x2="12" y2="21"/>
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                    <line x1="8" y1="21" x2="16" y2="21" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
                   </svg>
                   <span>15+ Years Experience</span>
                 </div>
                 <div className="info-item">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                    <polyline points="9 12 11 14 15 10"/>
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    <polyline points="9 12 11 14 15 10" />
                   </svg>
                   <span>Warranty up to 10 Years</span>
                 </div>
@@ -637,7 +637,7 @@ function Home() {
             <div className="scroll-indicator">
               <span>Scroll to Explore</span>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <polyline points="6 9 12 15 18 9"/>
+                <polyline points="6 9 12 15 18 9" />
               </svg>
             </div>
           </section>
@@ -650,14 +650,14 @@ function Home() {
                 <h2 className="section-title">Premium Power Solutions</h2>
                 <p className="section-subtitle">Cutting-edge technology for all your energy needs</p>
               </div>
-              
+
               <div className="product-category">
                 <h3 className="category-title animate-on-scroll">⚡ Voltage Stabilizers</h3>
                 <div className="products-grid">
                   {productsData.voltage.map(product => (
                     <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
                       {product.badge && <span className="product-badge">{product.badge}</span>}
-                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
+                      <div className="product-img-placeholder" style={{ backgroundImage: `url(${product.images[0]})` }}></div>
                       <div className="product-info">
                         <div className="product-rating">
                           <span>★</span> {product.rating} ({product.reviews} reviews)
@@ -682,7 +682,7 @@ function Home() {
                   {productsData.upssystems.map(product => (
                     <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
                       {product.badge && <span className="product-badge">{product.badge}</span>}
-                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
+                      <div className="product-img-placeholder" style={{ backgroundImage: `url(${product.images[0]})` }}></div>
                       <div className="product-info">
                         <div className="product-rating">
                           <span>★</span> {product.rating} ({product.reviews} reviews)
@@ -707,7 +707,7 @@ function Home() {
                   {productsData.inverters.map(product => (
                     <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
                       {product.badge && <span className="product-badge">{product.badge}</span>}
-                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
+                      <div className="product-img-placeholder" style={{ backgroundImage: `url(${product.images[0]})` }}></div>
                       <div className="product-info">
                         <div className="product-rating">
                           <span>★</span> {product.rating} ({product.reviews} reviews)
@@ -732,7 +732,7 @@ function Home() {
                   {productsData.transformers.map(product => (
                     <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
                       {product.badge && <span className="product-badge">{product.badge}</span>}
-                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
+                      <div className="product-img-placeholder" style={{ backgroundImage: `url(${product.images[0]})` }}></div>
                       <div className="product-info">
                         <div className="product-rating">
                           <span>★</span> {product.rating} ({product.reviews} reviews)
@@ -757,7 +757,7 @@ function Home() {
                   {productsData.powers.map(product => (
                     <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
                       {product.badge && <span className="product-badge">{product.badge}</span>}
-                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
+                      <div className="product-img-placeholder" style={{ backgroundImage: `url(${product.images[0]})` }}></div>
                       <div className="product-info">
                         <div className="product-rating">
                           <span>★</span> {product.rating} ({product.reviews} reviews)
@@ -782,7 +782,7 @@ function Home() {
                   {productsData.batteries.map(product => (
                     <div key={product.id} className="product-card animate-on-scroll" onClick={() => openProductDetail(product)}>
                       {product.badge && <span className="product-badge">{product.badge}</span>}
-                      <div className="product-img-placeholder" style={{backgroundImage: `url(${product.images[0]})`}}></div>
+                      <div className="product-img-placeholder" style={{ backgroundImage: `url(${product.images[0]})` }}></div>
                       <div className="product-info">
                         <div className="product-rating">
                           <span>★</span> {product.rating} ({product.reviews} reviews)
@@ -978,19 +978,73 @@ function Home() {
                   <div className="info-item"><span>✉️</span><div><strong>Email</strong><p>info@powergridsolutions.com</p></div></div>
                   <div className="working-hours"><h4>Working Hours</h4><p>Monday - Friday: 9:00 AM - 7:00 PM</p><p>Saturday: 10:00 AM - 5:00 PM</p></div>
                 </div>
-                <form className="contact-form">
-                  <input type="text" placeholder="Your Name" required />
-                  <input type="email" placeholder="Your Email" required />
-                  <input type="tel" placeholder="Phone Number" />
-                  <select><option>Select Service</option><option>Solar Installation</option><option>Generator Purchase</option></select>
-                  <textarea rows="5" placeholder="Your Message"></textarea>
-                  <button type="submit" className="submit-btn">Send Message</button>
+                <form
+                  className="contact-form"
+                  action="https://formsubmit.co/io.sachinruhela@gmail.com"
+                  method="POST"
+                >
+                  <input
+                    type="hidden"
+                    name="_subject"
+                    value="New Contact Form Submission - Berc Group"
+                  />
+
+                  <input
+                    type="hidden"
+                    name="_captcha"
+                    value="false"
+                  />
+
+                  <input
+                    type="hidden"
+                    name="_next"
+                    value="https://www.bercgroup.in/thankyou"
+                  />
+
+                  <input
+                    type="text"
+                    name="Full Name"
+                    placeholder="Your Name"
+                    required
+                  />
+
+                  <input
+                    type="email"
+                    name="Email"
+                    placeholder="Your Email"
+                    required
+                  />
+
+                  <input
+                    type="tel"
+                    name="Phone Number"
+                    placeholder="Phone Number"
+                  />
+
+                  <select name="Service">
+                    <option value="">Select Service</option>
+                    <option>Solar Installation</option>
+                    <option>Generator Purchase</option>
+                  </select>
+
+                  <textarea
+                    name="Message"
+                    rows="5"
+                    placeholder="Your Message"
+                  ></textarea>
+
+                  <button
+                    type="submit"
+                    className="submit-btn"
+                  >
+                    Send Message
+                  </button>
                 </form>
               </div>
             </div>
           </section>
         </main>
-        
+
         <Footer />
         {/* Product Detail Sidebar */}
         <ProductDetail product={selectedProduct} isOpen={isSidebarOpen} onClose={closeProductDetail} />

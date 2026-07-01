@@ -284,7 +284,7 @@ function Support() {
                 <input
                   type="hidden"
                   name="_next"
-                  value="https://www.bercgroup.in/thank-you"
+                  value="https://www.bercgroup.in/thankyou"
                 />
 
                 <div className="support-container">
