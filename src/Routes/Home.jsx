@@ -108,7 +108,7 @@ function Home() {
         "rating": 4.8,
         "reviews": 234,
         "capacity": "1 KVA – 150 KVA",
-        "warranty": "10-year",
+        "warranty": "2-year with terms applied",
         "efficiency": "96%",
         "features": [
           "Automatic voltage correction",
@@ -144,7 +144,7 @@ function Home() {
         "rating": 4.7,
         "reviews": 189,
         "capacity": "3 KVA – 2000 KVA",
-        "warranty": "10-year",
+        "warranty": "2-year with terms applied",
         "efficiency": "97%",
         "features": [
           "Three phase voltage correction",
@@ -178,7 +178,7 @@ function Home() {
         "rating": 4.5,
         "reviews": 312,
         "capacity": "1 KVA, 2 KVA, 3 KVA, 5 KVA, 7 KVA",
-        "warranty": "5-year",
+        "warranty": "2-year with terms applied",
         "efficiency": "92%",
         "features": [
           "Automatic voltage correction",
@@ -212,7 +212,7 @@ function Home() {
         "rating": 4.9,
         "reviews": 156,
         "capacity": "1 KVA – 50 KVA",
-        "warranty": "3-year",
+        "warranty": "2-year with terms applied",
         "efficiency": "95%",
         "features": [
           "True Online Technology",
@@ -248,7 +248,7 @@ function Home() {
         "rating": 4.3,
         "reviews": 423,
         "capacity": "500VA, 800VA, 1250VA, 1600VA, 2000VA",
-        "warranty": "2-year",
+        "warranty": "2-year with terms applied",
         "efficiency": "88%",
         "features": [
           "Automatic battery switching",
@@ -285,7 +285,7 @@ function Home() {
         "rating": 4.6,
         "reviews": 278,
         "capacity": "300VA – 1000 KVA",
-        "warranty": "5-year",
+        "warranty": "2-year with terms applied",
         "efficiency": "90%",
         "features": [
           "PWM Technology",
@@ -326,7 +326,7 @@ function Home() {
         "rating": 4.7,
         "reviews": 167,
         "capacity": "1 KVA – 2000 KVA",
-        "warranty": "8-year",
+        "warranty": "2-year with terms applied",
         "efficiency": "98%",
         "features": [
           "Complete electrical isolation",
@@ -360,7 +360,7 @@ function Home() {
         "rating": 4.5,
         "reviews": 134,
         "capacity": "10 Amp – 1000 Amp",
-        "warranty": "3-year",
+        "warranty": "2-year with terms applied",
         "efficiency": "99%",
         "features": [
           "Automatic phase correction",
@@ -392,7 +392,7 @@ function Home() {
         "rating": 4.9,
         "reviews": 89,
         "capacity": "415V, 3 Phase + Neutral, 4 Wire",
-        "warranty": "5-year",
+        "warranty": "2-year with terms applied",
         "efficiency": "95%",
         "features": [
           "Equalizes phase voltage",
@@ -435,7 +435,7 @@ function Home() {
         "rating": 4.4,
         "reviews": 567,
         "capacity": "12V 7Ah to 12V 200Ah",
-        "warranty": "3-year",
+        "warranty": "2-year with terms applied",
         "efficiency": "90%",
         "features": [
           "SMF Batteries",
