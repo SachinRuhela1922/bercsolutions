@@ -454,12 +454,12 @@ function Contact() {
               <div className="contact-emergency-details">
                 <div>
                   <strong>Emergency Helpline</strong>
-                  <a href="tel:+919876543210">+91 98765 43210</a>
+                  <a href="tel:+919760401780">+91 9760401780, +91 9873890236</a>
                   <span>Available 24/7</span>
                 </div>
                 <div>
                   <strong>Emergency Email</strong>
-                  <a href="mailto:emergency@company.com">emergency@company.com</a>
+                  <a href="mailto:emergency@company.com">bestelectricrepairingcenter@gmail.com</a>
                   <span>Response within 30 minutes</span>
                 </div>
                 <div>
