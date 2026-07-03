@@ -410,11 +410,11 @@ function Support() {
               <div className="support-emergency-details">
                 <div>
                   <strong>Emergency Helpline</strong>
-                  <a href="tel:+918475843925">+91 84758 43925</a>
+                  <a href="tel:+919760401780">+91 9760401780</a>
                 </div>
                 <div>
                   <strong>Emergency Email</strong>
-                  <a href="mailto:emergency@company.com">emergency@company.com</a>
+                  <a href="mailto:bestelectricrepairingcenter@gmail.com">bestelectricrepairingcenter@gmail.com</a>
                 </div>
                 <div>
                   <strong>Response Time</strong>
