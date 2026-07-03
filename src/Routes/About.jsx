@@ -215,77 +215,7 @@ function About() {
         </section>
 
         {/* Team Section */}
-        <section className="about-team">
-          <div className="about-container">
-            <div className="about-team-header">
-              <span className="about-section-tag">MEET THE TEAM</span>
-              <h2>The People Behind the Magic</h2>
-              <p>Passionate creators building the future together</p>
-            </div>
-            <div className="about-team-grid">
-              <div className="about-team-card">
-                <div className="about-team-img">
-                  <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=center" 
-                    alt="Alex Rivera" 
-                  />
-                </div>
-                <h4>Alex Rivera</h4>
-                <p>CEO & Creative Director</p>
-                <div className="about-team-social">
-                  <a href="#">📱</a>
-                  <a href="#">🐦</a>
-                  <a href="#">🔗</a>
-                </div>
-              </div>
-              <div className="about-team-card">
-                <div className="about-team-img">
-                  <img 
-                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=center" 
-                    alt="Jamie Chen" 
-                  />
-                </div>
-                <h4>Jamie Chen</h4>
-                <p>Lead Developer</p>
-                <div className="about-team-social">
-                  <a href="#">📱</a>
-                  <a href="#">🐦</a>
-                  <a href="#">🔗</a>
-                </div>
-              </div>
-              <div className="about-team-card">
-                <div className="about-team-img">
-                  <img 
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=center" 
-                    alt="Taylor Smith" 
-                  />
-                </div>
-                <h4>Taylor Smith</h4>
-                <p>UX/UI Designer</p>
-                <div className="about-team-social">
-                  <a href="#">📱</a>
-                  <a href="#">🐦</a>
-                  <a href="#">🔗</a>
-                </div>
-              </div>
-              <div className="about-team-card">
-                <div className="about-team-img">
-                  <img 
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=center" 
-                    alt="Maria Garcia" 
-                  />
-                </div>
-                <h4>Maria Garcia</h4>
-                <p>Marketing Director</p>
-                <div className="about-team-social">
-                  <a href="#">📱</a>
-                  <a href="#">🐦</a>
-                  <a href="#">🔗</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* CTA Section */}
         <section className="about-cta">
