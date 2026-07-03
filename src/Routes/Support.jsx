@@ -31,7 +31,7 @@ function Support() {
                 <span className="support-quick-icon">📞</span>
                 <h3>Call Us</h3>
                 <p>Talk to our support team directly</p>
-                <a href="tel:+919876543210" className="support-quick-link">+91 84758 43925</a>
+                <a href="tel:+919760401780" className="support-quick-link">+91 9760401780, +91 9873890236</a>
                 <span className="support-quick-time">Available 24/7</span>
               </div>
               <div className="support-quick-card">
@@ -45,14 +45,14 @@ function Support() {
                 <span className="support-quick-icon">✉️</span>
                 <h3>Email Us</h3>
                 <p>Send us your queries via email</p>
-                <a href="mailto:support@company.com" className="support-quick-link">support@company.com</a>
+                <a href="mailto:support@company.com" className="support-quick-link">bestelectricrepairingcenter@gmail.com</a>
                 <span className="support-quick-time">Response within 24 hours</span>
               </div>
               <div className="support-quick-card">
                 <span className="support-quick-icon">📍</span>
                 <h3>Visit Us</h3>
                 <p>Visit our nearest service center</p>
-                <span className="support-quick-location">Sarvodhya COlony, Meerut</span>
+                <span className="support-quick-location">Best Electric & Repairing Center, Sarvodhya Colony, Meerut Road, Hapur-245101</span>
                 <span className="support-quick-time">Mon-Sat, 9 AM - 6 PM</span>
               </div>
             </div>
