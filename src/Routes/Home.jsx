@@ -303,7 +303,7 @@ function Home() {
         "description": "Best Electric Sine Wave Inverter provides uninterrupted backup power for homes, hospitals and commercial establishments.",
         "longDescription": "Best Electric Sine Wave Inverter provides uninterrupted backup power for homes, hospitals and commercial establishments. It converts DC power into AC power with automatic charging and overload protection.",
         "images": [
-          "https://www.ubuy.co.in/productuk/T3D9W5GTU-4000w-dc-12v-24v-48v-60v-72v-pure-sine-wave-inverter-charger-dc-input-ac-output-120v-230v-low-frequency-solar-power-inverter-converter-size-12v-to?srsltid=AfmBOooID_tQl7TipXPX6TCz4jt6RU7rMdWrSkaEFy-xKCuwV3u6fBhw"
+          "https://m.media-amazon.com/images/I/71aAeTd5jbL._AC_SL1500_.jpg"
         ],
         "badge": "Best Seller",
         "specifications": {
