@@ -286,7 +286,7 @@ function Support() {
         {/* Contact Form */}
         <section className="support-contact">
           <div className="support-container">
-            <h2>Get In Touch</h2>
+            
             <p className="support-subtitle">We'll get back to you within 24 hours</p>
 
             <div className="support-contact-form">
@@ -410,7 +410,7 @@ function Support() {
               <div className="support-emergency-details">
                 <div>
                   <strong>Emergency Helpline</strong>
-                  <a href="tel:+919760401780">+91 9760401780</a>
+                  <a href="tel:+919760401780">+91 9760401780, +91 9873890236</a>
                 </div>
                 <div>
                   <strong>Emergency Email</strong>
