@@ -373,7 +373,7 @@ function Home() {
         "description": "This device automatically corrects wrong phase sequence in three-phase supply, preventing equipment damage and reducing production downtime.",
         "longDescription": "This device automatically corrects wrong phase sequence in three-phase supply, preventing equipment damage and reducing production downtime.",
         "images": [
-          "https://tiimg.tistatic.com/fp/2/005/626/three-phase-sequence-corrector-207.jpg"
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkRknKsrScIlVcKxp2KZfxG7qf2DenOtvYxY0TyAaDYPZoJedmnRfFdpyq&s=10"
         ],
         "badge": "Industrial",
         "specifications": {
@@ -448,7 +448,7 @@ function Home() {
         "description": "Premium quality SMF and Tubular batteries for all UPS and inverter applications. Authorized dealer for Exide and Amaron.",
         "longDescription": "Premium quality SMF and Tubular batteries for all UPS and inverter applications. Authorized dealer for Exide and Amaron. Available in voltage range 12V 7Ah to 12V 200Ah.",
         "images": [
-          "https://rukminim2.flixcart.com/image/480/640/xif0q/inverter-battery/f/h/6/47-3-value-plus-bold-series-150ah-short-jumbo-13-livguard-original-imahcm86kfyphghm.jpeg?q=90"
+          "https://res.cloudinary.com/rsc/image/upload/b_rgb:FFFFFF,c_pad,dpr_1.0,f_auto,q_auto,w_700/c_pad,w_700/R8838866-01"
         ],
         "badge": "",
         "specifications": {
