@@ -510,7 +510,7 @@ function Home() {
 
               <p className="hero-subtitle">
                 Premium Stabilizers, UPS Systems, Inverters &amp; Battery Storage
-                <span className="typewriter">  &nbsp  for Homes &amp; Businesses</span>
+                <span className="typewriter">  &nbsp;  for Homes &amp; Businesses</span>
               </p>
 
               {/* Trust Badges */}
