@@ -326,8 +326,8 @@ function Business() {
                 <button className="opportunities-btn-secondary">Download Brochure</button>
               </div>
               <div className="opportunities-cta-contact">
-                <p>📞 For inquiries: +91 98765 43210</p>
-                <p>✉️ partners@company.com</p>
+                <p>📞 For inquiries: +91 9760401780, +91 9873890236</p>
+                <p>✉️ bestelectricrepairingcenter@gmail.com</p>
               </div>
             </div>
           </div>
