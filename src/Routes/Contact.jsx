@@ -175,7 +175,7 @@ function Contact() {
                 <h3>Find Us Here</h3>
                 <div className="contact-map-placeholder">
                   <iframe
-                    src="https://maps.app.goo.gl/28oESa6S7EaMKJez6"
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3803.239111126539!2d77.76950407550498!3d28.747355975602296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDQ0JzUwLjUiTiA3N8KwNDYnMTkuNSJF!5e1!3m2!1sen!2sin!4v1783081025180!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
