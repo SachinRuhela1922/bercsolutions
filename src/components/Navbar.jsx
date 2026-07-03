@@ -90,7 +90,7 @@ const Navbar = () => {
           <a href="/">
             <div className="logo-content">
               <span className="logo-icon"><img src={logo} alt="" className='logo-image' /></span>
-              <span className="logo-text">Berc Group</span>
+              <span className="logo-text">BERC GROUP</span>
             </div>
           </a>
         </div>
