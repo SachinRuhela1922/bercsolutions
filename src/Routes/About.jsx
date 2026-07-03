@@ -198,6 +198,12 @@ function About() {
                 <h3>Client Partnership</h3>
                 <p>We treat our clients as true partners, working together to achieve shared success.</p>
               </div>
+
+              <div className="about-value-card">
+                <div className="about-value-icon">🤝</div>
+                <h3>Quality Excellence</h3>
+                <p>Committed to delivering reliable, high-quality results that exceed expectations.</p>
+              </div>
               
               <div className="about-value-card">
                 <div className="about-value-icon">🌍</div>
