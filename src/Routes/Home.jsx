@@ -973,9 +973,9 @@ function Home() {
               <div className="contact-wrapper animate-on-scroll">
                 <div className="contact-info">
                   <h3>Contact Information</h3>
-                  <div className="info-item"><span>📍</span><div><strong>Head Office</strong><p>PowerGrid Solutions, Sarvodya Colony, Meerut Road, Hapur, 245304</p></div></div>
-                  <div className="info-item"><span>📞</span><div><strong>Phone</strong><p>+91 8475843925</p></div></div>
-                  <div className="info-item"><span>✉️</span><div><strong>Email</strong><p>info@powergridsolutions.com</p></div></div>
+                  <div className="info-item"><span>📍</span><div><strong>Head Office</strong><p>Best Electric & Repairing Center, Sarvodaya Colony, Meerut Road, Hapur - 245101</p></div></div>
+                  <div className="info-item"><span>📞</span><div><strong>Phone</strong><p>+91 9760401780, +91 9873890236</p></div></div>
+                  <div className="info-item"><span>✉️</span><div><strong>Email</strong><p>bestelectricrepairingcenter@gmail.com</p></div></div>
                   <div className="working-hours"><h4>Working Hours</h4><p>Monday - Friday: 9:00 AM - 7:00 PM</p><p>Saturday: 10:00 AM - 5:00 PM</p></div>
                 </div>
                 <form
