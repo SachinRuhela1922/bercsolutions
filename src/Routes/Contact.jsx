@@ -28,26 +28,25 @@ function Contact() {
                 <span className="contact-info-icon">📞</span>
                 <h3>Call Us</h3>
                 <p>Talk to our support team directly</p>
-                <a href="tel:+919876543210" className="contact-info-link">+91 84758 43925</a>
-                <a href="tel:+919876543211" className="contact-info-link">+91 84758 43925</a>
+                <a href="tel:+919760401780" className="contact-info-link">+91 9760401780</a>
+                <a href="tel:+919873890236" className="contact-info-link">+91 9873890236</a>
                 <span className="contact-info-time">Available 24/7</span>
               </div>
               <div className="contact-info-card">
                 <span className="contact-info-icon">✉️</span>
                 <h3>Email Us</h3>
                 <p>Send us your queries via email</p>
-                <a href="mailto:info@company.com" className="contact-info-link">info@company.com</a>
-                <a href="mailto:support@company.com" className="contact-info-link">support@company.com</a>
-                <a href="mailto:sales@company.com" className="contact-info-link">sales@company.com</a>
+                <a href="mailto:bestelectricrepairingcenter@gmail.com" className="contact-info-link">bestelectricrepairingcenter@gmail.com</a>
+               
               </div>
               <div className="contact-info-card">
                 <span className="contact-info-icon">📍</span>
                 <h3>Visit Us</h3>
                 <p>Visit our nearest office or service center</p>
                 <span className="contact-info-address">
-                  Sarvodhya Colony, Meerut,<br />
-                  Road hapur,<br />
-                  Uttar Pradesh - 245304, India
+                  Best Electric & Repairing Center,<br />
+                  Sarvodaya Colony, Meerut Road,<br />
+                 Hapur - 245101
                 </span>
                 <span className="contact-info-time">Mon-Sat, 9 AM - 6 PM</span>
               </div>
