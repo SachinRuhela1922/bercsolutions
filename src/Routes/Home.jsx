@@ -1025,6 +1025,10 @@ function Home() {
                     <option value="">Select Service</option>
                     <option>Solar Installation</option>
                     <option>Generator Purchase</option>
+                    <option>Servo Stabilizer Purchase</option>
+                    <option>Transformer Purchase</option>
+                    <option>Servo Stabilizer Installation</option>
+                    <option>Transformer Installation</option>
                   </select>
 
                   <textarea
