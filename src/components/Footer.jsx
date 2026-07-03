@@ -44,6 +44,8 @@ const Footer = () => {
             <li><Link to="/products?category=solar-panels">Solar Panels</Link></li>
             <li><Link to="/products?category=battery-storage">Battery Storage</Link></li>
             <li><Link to="/products?category=generators">Power Generators</Link></li>
+            <li><Link to="/products?category=generators">Stabilizers</Link></li>
+            <li><Link to="/products?category=generators">Transformers</Link></li>
           </ul>
         </div>
 
