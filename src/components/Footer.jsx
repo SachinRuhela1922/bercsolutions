@@ -55,15 +55,15 @@ const Footer = () => {
           <ul className="footer-contact">
             <li>
               <span className="contact-icon">📍</span>
-              <span>Berc, Sarvodya Colony, Meerut Road, Hapur - 245304</span>
+              <span>Best Electric & Repairing Center, Sarvodaya Colony, Meerut Road, Hapur - 245101</span>
             </li>
             <li>
               <span className="contact-icon">📞</span>
-              <span>+91 8475843925</span>
+              <span>+91 9760401780, +91 9873890236</span>
             </li>
             <li>
               <span className="contact-icon">✉️</span>
-              <span>info@bercsolutions.com</span>
+              <span>bestelectricrepairingcenter@gmail.com</span>
             </li>
             <li>
               <span className="contact-icon">⏰</span>
