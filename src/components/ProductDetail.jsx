@@ -113,13 +113,7 @@ const ProductDetail = ({ product, isOpen, onClose }) => {
                   <p>100% secure transactions</p>
                 </div>
               </div>
-              <div className="guarantee-item">
-                <span className="guarantee-icon">🚚</span>
-                <div>
-                  <strong>Free Delivery</strong>
-                  <p>Pan India delivery</p>
-                </div>
-              </div>
+              
               <div className="guarantee-item">
                 <span className="guarantee-icon">✅</span>
                 <div>
