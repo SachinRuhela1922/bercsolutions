@@ -647,7 +647,7 @@ function Products() {
             <div className="products-hero-content">
               <h1>Our Products</h1>
               <p>
-                Premium quality solar panels, inverters, batteries, generators, 
+                Premium quality inverters, Stabilizer, transformer, batteries, generators, 
                 and hybrid systems for all your power needs
               </p>
             </div>
