@@ -813,7 +813,7 @@ function Home() {
               </div>
               <div className="about-content">
                 <div className="about-text animate-on-scroll">
-                  <p>PowerGrid Solutions is a premier provider of innovative power solutions, specializing in solar energy systems, advanced inverters, and reliable generators. With over a decade of experience, we've helped thousands of customers achieve energy independence and reduce their carbon footprint.</p>
+                  <p>BERC Group is a premier provider of innovative power solutions, specializing in solar energy systems, advanced inverters, and reliable generators. With over a decade of experience, we've helped thousands of customers achieve energy independence and reduce their carbon footprint.</p>
                   <div className="about-features">
                     <div className="feature"><span className="feature-icon">✓</span><span>ISO 9001:2015 Certified</span></div>
                     <div className="feature"><span className="feature-icon">✓</span><span>15+ Years of Excellence</span></div>
@@ -874,14 +874,12 @@ function Home() {
                 <p className="section-subtitle">Our prestigious clientele across various sectors</p>
               </div>
               <div className="clients-grid">
-                <div className="client-card animate-on-scroll">🏭 Tata Group</div>
-                <div className="client-card animate-on-scroll">🏢 Reliance Industries</div>
-                <div className="client-card animate-on-scroll">🏗️ L&T Construction</div>
-                <div className="client-card animate-on-scroll">🏨 Marriott Hotels</div>
-                <div className="client-card animate-on-scroll">🏥 Apollo Hospitals</div>
-                <div className="client-card animate-on-scroll">🏫 Delhi University</div>
-                <div className="client-card animate-on-scroll">🏪 Amazon India</div>
-                <div className="client-card animate-on-scroll">🏢 Infosys</div>
+                <div className="client-card animate-on-scroll">🏭 Muthoot Finance Limited</div>
+                <div className="client-card animate-on-scroll">🏢 State Bank of India</div>
+                <div className="client-card animate-on-scroll">🏗️ Muthoot Homefin India Limited</div>
+                <div className="client-card animate-on-scroll">🏨 Satya Microcapital Pvt. Ltd.</div>
+                <div className="client-card animate-on-scroll">🏥 Shri Narayan Hospital</div>
+                
               </div>
             </div>
           </section>
@@ -897,7 +895,7 @@ function Home() {
               <div className="testimonials-grid">
                 <div className="testimonial-card animate-on-scroll">
                   <div className="testimonial-content">
-                    <p>"PowerGrid Solutions transformed our factory's power infrastructure. Their solar solution reduced our electricity bills by 60%!"</p>
+                    <p>"BERC Group transformed our factory's power infrastructure. Their solar solution reduced our electricity bills by 60%!"</p>
                   </div>
                   <div className="testimonial-author">
                     <strong>Rajesh Kumar</strong>
@@ -940,8 +938,7 @@ function Home() {
               <div className="opportunities-grid">
                 <div className="opportunity-card animate-on-scroll"><h3>🚀 Become a Dealer</h3><p>Join our dealer network</p><ul><li>High profit margins</li><li>Marketing support</li></ul><button className="opp-btn">Apply Now</button></div>
                 <div className="opportunity-card animate-on-scroll"><h3>🤝 Channel Partners</h3><p>Collaborate for large-scale projects</p><ul><li>Exclusive territories</li><li>Joint marketing</li></ul><button className="opp-btn">Partner With Us</button></div>
-                <div className="opportunity-card animate-on-scroll"><h3>💼 Franchise Opportunity</h3><p>Own a PowerGrid Solutions franchise</p><ul><li>Turnkey setup</li><li>Training & development</li></ul><button className="opp-btn">Get Franchise</button></div>
-              </div>
+                </div>
             </div>
           </section>
 
@@ -954,10 +951,10 @@ function Home() {
                 <p className="section-subtitle">We're here to help you 24/7</p>
               </div>
               <div className="support-grid">
-                <div className="support-card animate-on-scroll"><div className="support-icon">📞</div><h3>Call Us</h3><p>+91-8475843925</p></div>
-                <div className="support-card animate-on-scroll"><div className="support-icon">✉️</div><h3>Email Us</h3><p>support@powergridsolutions.com</p></div>
+                <div className="support-card animate-on-scroll"><div className="support-icon">📞</div><h3>Call Us</h3><p>+91-9760401780, +91-9873890236</p></div>
+                <div className="support-card animate-on-scroll"><div className="support-icon">✉️</div><h3>Email Us</h3><p>bestelectricrepairingcenter@gmail.com</p></div>
                 <div className="support-card animate-on-scroll"><div className="support-icon">💬</div><h3>Live Chat</h3><p>Available 24/7</p></div>
-                <div className="support-card animate-on-scroll"><div className="support-icon">📱</div><h3>WhatsApp</h3><p>+91-8475843925</p></div>
+                <div className="support-card animate-on-scroll"><div className="support-icon">📱</div><h3>WhatsApp</h3><p>+91-9760401780</p></div>
               </div>
             </div>
           </section>
