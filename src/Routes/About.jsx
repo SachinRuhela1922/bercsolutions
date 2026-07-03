@@ -84,8 +84,7 @@ function About() {
                 Transform Ideas into Reality
               </h1>
               <p className="about-hero-desc">
-                We are a passionate team of innovators, designers, and engineers 
-                dedicated to crafting digital experiences that make a difference.
+                We are a passionate team of innovators, manufacture and technician dedicated to provide services and resolving issues for the one's goods.
               </p>
               <div className="about-hero-buttons">
                 <button className="about-btn-primary">Explore Our Work</button>
@@ -133,14 +132,10 @@ function About() {
                 <span className="about-section-tag">OUR STORY</span>
                 <h2>Building the Future,<br />One Project at a Time</h2>
                 <p>
-                  Founded in 2014, we started with a simple belief: technology should 
-                  serve humanity, not the other way around. Today, we're a global team 
-                  of 50+ creative minds working across 15 countries.
+                  Founded in 2013, we started with a simple belief technology and service should serve humanity, not the other way around. Today, we're a global team of 50+ creative minds working across 15 countries.
                 </p>
                 <p>
-                  We've helped 280+ businesses transform their digital presence, 
-                  from startups to Fortune 500 companies, always pushing the boundaries 
-                  of what's possible.
+                  We've helped 280+ businesses transform their service providing aspect, from startups to Fortune 200 companies, always pushing the boundaries of what's possible.
                 </p>
                 <div className="about-story-mission">
                   <div>
@@ -179,10 +174,7 @@ function About() {
                 <span className="about-stat-number">{counts.clients}+</span>
                 <span className="about-stat-label">Happy Clients</span>
               </div>
-              <div className="about-stat-item">
-                <span className="about-stat-number">{counts.awards}+</span>
-                <span className="about-stat-label">Awards Won</span>
-              </div>
+              
             </div>
           </div>
         </section>
@@ -206,11 +198,7 @@ function About() {
                 <h3>Client Partnership</h3>
                 <p>We treat our clients as true partners, working together to achieve shared success.</p>
               </div>
-              <div className="about-value-card">
-                <div className="about-value-icon">🎨</div>
-                <h3>Design Excellence</h3>
-                <p>Every pixel matters. We craft beautiful, intuitive experiences that users love.</p>
-              </div>
+              
               <div className="about-value-card">
                 <div className="about-value-icon">🌍</div>
                 <h3>Global Impact</h3>
