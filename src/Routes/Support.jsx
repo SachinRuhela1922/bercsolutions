@@ -287,7 +287,6 @@ function Support() {
         <section className="support-contact">
           <div className="support-container">
             
-            <p className="support-subtitle">We'll get back to you within 24 hours</p>
 
             <div className="support-contact-form">
               <form
