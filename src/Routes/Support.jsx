@@ -78,6 +78,28 @@ function Support() {
                 <button className="support-category-btn">Get Help</button>
               </div>
               <div className="support-category-card">
+                <span>☀️</span>
+                <h3>Stabilizers</h3>
+                <ul>
+                  <li>Installation support</li>
+                  <li>Performance issues</li>
+                  <li>Warranty claims</li>
+                  <li>Cleaning & maintenance</li>
+                </ul>
+                <button className="support-category-btn">Get Help</button>
+              </div>
+              <div className="support-category-card">
+                <span>🔄</span>
+                <h3>Transformers</h3>
+                <ul>
+                  <li>Installation support</li>
+                  <li>Performance issues</li>
+                  <li>Warranty claims</li>
+                  <li>Cleaning & maintenance</li>
+                </ul>
+                <button className="support-category-btn">Get Help</button>
+              </div>
+              <div className="support-category-card">
                 <span>⚡</span>
                 <h3>Inverters</h3>
                 <ul>
