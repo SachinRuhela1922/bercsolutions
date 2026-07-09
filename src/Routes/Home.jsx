@@ -448,7 +448,7 @@ function Home() {
         "description": "Premium quality SMF and Tubular batteries for all UPS and inverter applications. Authorized dealer for Exide and Amaron.",
         "longDescription": "Premium quality SMF and Tubular batteries for all UPS and inverter applications. Authorized dealer for Exide and Amaron. Available in voltage range 12V 7Ah to 12V 200Ah.",
         "images": [
-          "https://res.cloudinary.com/rsc/image/upload/b_rgb:FFFFFF,c_pad,dpr_1.0,f_auto,q_auto,w_700/c_pad,w_700/R8838866-01"
+          "https://res.cloudinary.com/dvjpc8yfu/image/upload/v1783581054/file_00000000489872078aaa960783ae1e3b_j3tba2.png"
         ],
         "badge": "",
         "specifications": {
