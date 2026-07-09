@@ -123,7 +123,7 @@ function Home() {
         "description": "Best Electric Single Phase Servo Voltage Stabilizer is specially designed for continuous indoor use. It automatically maintains constant output voltage even when input voltage fluctuates.",
         "longDescription": "Best Electric Single Phase Servo Voltage Stabilizer is specially designed for continuous indoor use. It automatically maintains constant output voltage even when input voltage fluctuates. It is suitable for residential, commercial and industrial applications requiring stable power supply.",
         "images": [
-          "https://www.servostabilizerindia.in/wp-content/uploads/2024/12/15-KVA-3-Phase-without-background-3.png",
+          "https://res.cloudinary.com/dvjpc8yfu/image/upload/v1783581054/file_000000007058720987094cd123eb0306_n895xj.png",
           "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600"
         ],
         "badge": "Best Seller",
