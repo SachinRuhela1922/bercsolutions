@@ -494,7 +494,7 @@ function Products() {
               "Deep discharge",
               "Long life"
             ],
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbZAd4sGqqgFMTENlall6iNUo7a5kxKiA08C3ODA-OvA&s=10",
+            "image": "https://res.cloudinary.com/dvjpc8yfu/image/upload/v1783581054/file_00000000489872078aaa960783ae1e3b_j3tba2.png",
             "badge": "",
             "category": "batteries",
             "subCategory": "Battery Range",
@@ -505,8 +505,8 @@ function Products() {
               { "label": "Brands", "value": "Exide, Amaron" }
             ],
             "images": [
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-N_eCkGqBV9LDT3V_NvTMHl8Cf3MMCYI9X0XeuDn4QQ&s",
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbHqHN0OjFkUO18tfqKQ8MeH3L4ZJ3E3tS7Wpr2u-9_g&s"
+              "https://res.cloudinary.com/dvjpc8yfu/image/upload/v1783581054/file_00000000489872078aaa960783ae1e3b_j3tba2.png",
+              "https://res.cloudinary.com/dvjpc8yfu/image/upload/v1783581054/file_00000000489872078aaa960783ae1e3b_j3tba2.png"
             ]
           }
         ]
