@@ -47,7 +47,7 @@ function Products() {
               "Reliable performance",
               "Suitable for continuous operation"
             ],
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT64onYLTabOCcrWsIQiDj3OcR4bwToXJFNWlceFuQItaqbZ_E82-EihqU&s=10",
+            "image": "https://res.cloudinary.com/dvjpc8yfu/image/upload/v1783581054/file_000000007058720987094cd123eb0306_n895xj.png",
             "badge": "Best Seller",
             "category": "voltage",
             "subCategory": "Servo Voltage Stabilizers",
@@ -62,8 +62,8 @@ function Products() {
               { "label": "Cut-Off", "value": "High & Low Output Side with Bypass" }
             ],
             "images": [
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKWB0D9N4eixMdhd4URR-EFz4VlDWLkN0JUjghIfHXGg&s=10",
-              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS__7eD2Q9Hgw8JegUtc9KN7q1itHjtNSVq13iiJqAn7Q&s=10"
+              "https://res.cloudinary.com/dvjpc8yfu/image/upload/v1783581054/file_000000007058720987094cd123eb0306_n895xj.png",
+              "https://res.cloudinary.com/dvjpc8yfu/image/upload/v1783581054/file_000000007058720987094cd123eb0306_n895xj.png"
             ]
           },
           {
