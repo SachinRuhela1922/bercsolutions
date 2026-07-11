@@ -30,7 +30,7 @@ function ThankYou() {
             Back to Home
           </Link>
 
-          <Link to="/products" className="secondary-btn">
+          <Link to="/" className="secondary-btn">
             View Products
           </Link>
         </div>
