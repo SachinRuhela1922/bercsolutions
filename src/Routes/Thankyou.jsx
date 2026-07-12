@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-// import Footer from "../components/Footer";
-// import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 import "./ThankYou.css";
 
 function ThankYou() {
   return (
     <>
-    {/* <Navbar /> */}
+    <Navbar />
     <div className="thankyou-page">
       <div className="thankyou-card">
         <div className="success-icon">✓</div>
@@ -36,7 +36,7 @@ function ThankYou() {
         </div>
       </div>
     </div>
-    {/* <Footer /> */}
+    <Footer />
     </>
   );
 }
